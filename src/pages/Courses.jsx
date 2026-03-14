@@ -78,7 +78,6 @@ const Courses = () => {
                     <div
                       key={ls.id}
                       className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
-                      style={{ '--card-accent': ls.color }}
                       id={`course-${ls.id}`}
                     >
                       <div className="edu-detail-card-top">

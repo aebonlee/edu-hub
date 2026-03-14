@@ -300,14 +300,14 @@
   border: 1px solid rgba(0, 70, 200, 0.15);
   border-radius: var(--radius-lg);
   padding: 32px;
-  border-top: 3px solid var(--card-accent, var(--primary-blue));
+  border-top: 3px solid var(--primary-blue);
   transition: var(--transition-base);
   display: flex;
   flex-direction: column;
 }
 
 .edu-detail-card.highlighted {
-  box-shadow: 0 0 0 2px var(--card-accent, var(--primary-blue));
+  box-shadow: 0 0 0 2px var(--primary-blue);
 }
 
 .edu-detail-card:hover {
@@ -361,7 +361,7 @@
   color: var(--text-primary);
   margin-bottom: 10px;
   padding-bottom: 6px;
-  border-bottom: 2px solid var(--card-accent, var(--primary-blue));
+  border-bottom: 2px solid var(--primary-blue);
   display: inline-block;
 }
 
@@ -382,7 +382,7 @@
   content: '\2713';
   position: absolute;
   left: 0;
-  color: var(--card-accent, var(--primary-blue));
+  color: var(--primary-blue);
   font-weight: 700;
 }
 
