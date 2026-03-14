@@ -106,30 +106,30 @@ const Courses = () => {
                   ))}
                 </div>
 
-                {/* Curriculum */}
-                <div className="edu-detail-block">
-                  <h4>{t('site.courses.curriculum')}</h4>
-                  <ul>
-                    {(language === 'en' ? ls.curriculumEn : ls.curriculum).map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Features */}
-                <div className="edu-detail-block">
-                  <h4>{t('site.courses.features')}</h4>
-                  <ul>
-                    {(language === 'en' ? ls.featuresEn : ls.features).map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Target */}
-                <div className="edu-detail-block">
-                  <h4>{t('site.courses.target')}</h4>
-                  <p>{language === 'en' ? ls.targetEn : ls.target}</p>
+                {/* Curriculum / Features / Target — 2-column layout */}
+                <div className="edu-detail-blocks-row">
+                  <div className="edu-detail-block">
+                    <h4>{t('site.courses.curriculum')}</h4>
+                    <ul>
+                      {(language === 'en' ? ls.curriculumEn : ls.curriculum).map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="edu-detail-block-right">
+                    <div className="edu-detail-block">
+                      <h4>{t('site.courses.features')}</h4>
+                      <ul>
+                        {(language === 'en' ? ls.featuresEn : ls.features).map((item, i) => (
+                          <li key={i}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="edu-detail-block">
+                      <h4>{t('site.courses.target')}</h4>
+                      <p>{language === 'en' ? ls.targetEn : ls.target}</p>
+                    </div>
+                  </div>
                 </div>
 
                 {ls.url === '#' ? (
