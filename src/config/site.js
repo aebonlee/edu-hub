@@ -7,7 +7,7 @@ const site = {
   // 사이트 기본 정보
   name: 'DreamIT Edu Hub',
   nameKo: '드림아이티 에듀 허브',
-  description: 'DreamIT Edu Hub - IT 학습사이트 허브. 교양, 경영, 컴퓨터, 자격증 분야 학습 플랫폼',
+  description: 'DreamIT Edu Hub - 학습사이트 허브. 교양, 경영, 컴퓨터, 자격증 분야 20개 학습 플랫폼',
   url: 'https://edu-hub.dreamitbiz.com',
 
   // 부모 사이트
@@ -55,6 +55,10 @@ const site = {
       path: '/courses/business',
       activePath: '/courses/business',
       dropdown: [
+        { path: '/courses/accounting', labelKey: 'site.nav.accounting' },
+        { path: '/courses/marketing', labelKey: 'site.nav.marketing' },
+        { path: '/courses/management', labelKey: 'site.nav.management' },
+        { path: '/courses/finance', labelKey: 'site.nav.finance' },
         { path: '/courses/marketing-intro', labelKey: 'site.nav.marketingIntro' },
         { path: '/courses/self-branding', labelKey: 'site.nav.selfBranding' },
         { path: '/courses/ux-design', labelKey: 'site.nav.uxDesign' },
@@ -236,6 +240,130 @@ const site = {
     },
 
     // ── 경영전공분야 (business) ──
+    {
+      id: 'accounting',
+      name: '회계학 원리',
+      nameEn: 'Accounting Principles',
+      url: '#',
+      icon: '🧮',
+      color: '#059669',
+      category: 'business',
+      description: '재무회계와 관리회계의 기초 원리를 체계적으로 학습합니다.',
+      descriptionEn: 'Systematically learn the fundamentals of financial and management accounting.',
+      techStack: ['재무회계', '관리회계', '원가회계', '세무'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '회계의 기본 개념과 원칙',
+        '재무제표의 이해와 분석',
+        '분개와 전기 실습',
+        '원가계산과 관리회계',
+        '세무회계 기초'
+      ],
+      curriculumEn: [
+        'Basic accounting concepts and principles',
+        'Understanding and analyzing financial statements',
+        'Journal entry and posting practice',
+        'Cost calculation and management accounting',
+        'Tax accounting basics'
+      ],
+      features: ['실습 문제 풀이', '사례 분석', '자격시험 대비'],
+      featuresEn: ['Practice problem solving', 'Case analysis', 'Certification exam prep'],
+      target: '경영학 전공자, 회계 입문자',
+      targetEn: 'Business majors, accounting beginners'
+    },
+    {
+      id: 'marketing',
+      name: '마케팅 전략',
+      nameEn: 'Marketing Strategy',
+      url: '#',
+      icon: '📊',
+      color: '#E11D48',
+      category: 'business',
+      description: '디지털 마케팅과 전통 마케팅의 핵심 전략을 학습합니다.',
+      descriptionEn: 'Learn core strategies of digital and traditional marketing.',
+      techStack: ['디지털마케팅', 'STP', '4P', '브랜딩'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '마케팅 기본 이론 (STP, 4P)',
+        '디지털 마케팅 전략',
+        '소비자 행동 분석',
+        '브랜드 관리와 전략',
+        '마케팅 캠페인 기획'
+      ],
+      curriculumEn: [
+        'Marketing theory (STP, 4P)',
+        'Digital marketing strategy',
+        'Consumer behavior analysis',
+        'Brand management and strategy',
+        'Marketing campaign planning'
+      ],
+      features: ['사례 중심 학습', '캠페인 시뮬레이션', '실무 프로젝트'],
+      featuresEn: ['Case-based learning', 'Campaign simulation', 'Practical projects'],
+      target: '마케팅 전공자, 실무 마케터',
+      targetEn: 'Marketing majors, working marketers'
+    },
+    {
+      id: 'management',
+      name: '경영전략론',
+      nameEn: 'Management Strategy',
+      url: '#',
+      icon: '🏢',
+      color: '#6D28D9',
+      category: 'business',
+      description: '기업 경영전략의 수립과 실행에 대한 이론과 사례를 학습합니다.',
+      descriptionEn: 'Learn theories and cases of corporate strategy formulation and execution.',
+      techStack: ['전략기획', 'SWOT', '경쟁분석', '리더십'],
+      difficulty: 'advanced',
+      curriculum: [
+        '경영전략의 기본 프레임워크',
+        'SWOT 분석과 경쟁전략',
+        '기업 성장 전략',
+        '글로벌 경영전략',
+        '전략적 의사결정 사례'
+      ],
+      curriculumEn: [
+        'Basic strategy frameworks',
+        'SWOT analysis and competitive strategy',
+        'Corporate growth strategy',
+        'Global management strategy',
+        'Strategic decision-making cases'
+      ],
+      features: ['기업 사례 분석', '전략 시뮬레이션', '토론 학습'],
+      featuresEn: ['Corporate case analysis', 'Strategy simulation', 'Discussion-based learning'],
+      target: '경영학 전공자, 예비 경영인',
+      targetEn: 'Business majors, aspiring managers'
+    },
+    {
+      id: 'finance',
+      name: '재무관리',
+      nameEn: 'Financial Management',
+      url: '#',
+      icon: '💰',
+      color: '#0E7490',
+      category: 'business',
+      description: '기업 재무관리와 투자 분석의 핵심 이론을 학습합니다.',
+      descriptionEn: 'Learn core theories of corporate finance and investment analysis.',
+      techStack: ['재무분석', '투자론', '포트폴리오', '리스크관리'],
+      difficulty: 'advanced',
+      curriculum: [
+        '재무관리의 기본 원리',
+        '화폐의 시간가치와 투자평가',
+        '자본구조와 배당정책',
+        '포트폴리오 이론',
+        '리스크 관리와 파생상품'
+      ],
+      curriculumEn: [
+        'Fundamentals of financial management',
+        'Time value of money and investment evaluation',
+        'Capital structure and dividend policy',
+        'Portfolio theory',
+        'Risk management and derivatives'
+      ],
+      features: ['Excel 실습', '투자 시뮬레이션', '재무제표 분석'],
+      featuresEn: ['Excel practice', 'Investment simulation', 'Financial statement analysis'],
+      target: '경영·금융 전공자, 재무 분석가 지망생',
+      targetEn: 'Finance majors, aspiring financial analysts'
+    },
     {
       id: 'marketing-intro',
       name: '마케팅개론',

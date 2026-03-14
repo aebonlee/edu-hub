@@ -221,6 +221,21 @@ stats-card, site-card, detail-card, benefit-card, value-card, team-card, mission
 | `src/config/site.js` | 메뉴 드롭다운 4개 경로 교체, learningSites 경영 4개 항목 전면 교체 |
 | `src/utils/translations.js` | 경영분야 네비게이션 번역 키 4개 교체 (ko/en) |
 
-### 8.3 특이사항
-- 4개 모두 실제 외부 URL 보유 → "준비중" 대신 "사이트 방문하기" 버튼 활성화
-- 기존 `accounting/marketing/management/finance` ID → `marketing-intro/self-branding/ux-design/digital-biz` ID로 변경
+### 8.3 기존 과목 유지 + 신규 4개 추가
+기존 4개 과목(회계학 원리, 마케팅 전략, 경영전략론, 재무관리)을 그대로 유지하고, 신규 4개 과목을 추가하여 경영분야를 총 **8개 과목**으로 확장하였습니다.
+
+**기존 유지 (준비중):**
+- 회계학 원리 (`accounting`) — url: '#'
+- 마케팅 전략 (`marketing`) — url: '#'
+- 경영전략론 (`management`) — url: '#'
+- 재무관리 (`finance`) — url: '#'
+
+**신규 추가 (실제 사이트):**
+- 마케팅개론 (`marketing-intro`) — marketing.dreamitbiz.com
+- 셀프 브랜딩 마케팅 (`self-branding`) — self-branding.dreamitbiz.com
+- 고객경험디자인 (`ux-design`) — uxdesign.dreamitbiz.com
+- 디지털비즈니스전략세미나 (`digital-biz`) — digitalbiz.dreamitbiz.com
+
+### 8.4 전체 사이트 수 변경
+- 총 학습사이트: 16개 → **20개**
+- 홈페이지 stat, CTA 문구 반영

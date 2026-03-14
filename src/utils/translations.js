@@ -184,6 +184,10 @@ export const translations = {
         writing: '글쓰기와 소통',
         presentation: '프레젠테이션',
         // 경영전공분야
+        accounting: '회계학 원리',
+        marketing: '마케팅 전략',
+        management: '경영전략론',
+        finance: '재무관리',
         marketingIntro: '마케팅개론',
         selfBranding: '셀프 브랜딩 마케팅',
         uxDesign: '고객경험디자인',
@@ -225,7 +229,7 @@ export const translations = {
         sitesSubtitle: '목표에 맞는 학습사이트를 선택하세요',
         visitSite: '사이트 방문',
         ctaBottomTitle: '지금 바로 학습을 시작하세요',
-        ctaBottomDesc: '16개의 전문 학습사이트에서 체계적인 교육을 경험하세요.',
+        ctaBottomDesc: '20개의 전문 학습사이트에서 체계적인 교육을 경험하세요.',
         ctaBottomBtn: '학습사이트 보기'
       },
       courses: {
@@ -492,6 +496,10 @@ export const translations = {
         writing: 'Writing & Communication',
         presentation: 'Presentation Skills',
         // Business
+        accounting: 'Accounting Principles',
+        marketing: 'Marketing Strategy',
+        management: 'Management Strategy',
+        finance: 'Financial Management',
         marketingIntro: 'Intro to Marketing',
         selfBranding: 'Self-Branding Marketing',
         uxDesign: 'CX Design',
@@ -533,7 +541,7 @@ export const translations = {
         sitesSubtitle: 'Choose a learning site that matches your goals',
         visitSite: 'Visit Site',
         ctaBottomTitle: 'Start Learning Today',
-        ctaBottomDesc: 'Experience structured education across 16 specialized learning sites.',
+        ctaBottomDesc: 'Experience structured education across 20 specialized learning sites.',
         ctaBottomBtn: 'View Learning Sites'
       },
       courses: {
