@@ -1,16 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import site from '../config/site';
 
-const FILTERS = ['all', 'beginner', 'intermediate', 'advanced'];
 const CATEGORY_IDS = site.categories.map((c) => c.id);
 
 const Courses = () => {
   const { id } = useParams();
   const { t, language } = useLanguage();
-  const [filter, setFilter] = useState('all');
 
   // Determine if id is a category slug or a specific site id
   const isCategory = id && CATEGORY_IDS.includes(id);
@@ -28,21 +26,17 @@ const Courses = () => {
     }
   }, [id, isSiteId]);
 
-  // Filter sites: category first, then difficulty
-  let sitesToShow = site.learningSites;
-  if (activeCategory) {
-    sitesToShow = sitesToShow.filter((s) => s.category === activeCategory);
-  }
-  if (filter !== 'all') {
-    sitesToShow = sitesToShow.filter((s) => s.difficulty === filter);
-  }
+  // Categories to display
+  const categoriesToShow = activeCategory
+    ? site.categories.filter((c) => c.id === activeCategory)
+    : site.categories;
 
   const getDifficulty = (level) => t(`site.difficulty.${level}`);
 
   // Page title based on context
   const getPageTitle = () => {
     if (isCategory) {
-      const catTitle = t(`site.courses.categoryTitle`);
+      const catTitle = t('site.courses.categoryTitle');
       return typeof catTitle === 'object' ? catTitle[id] : t('site.courses.title');
     }
     return t('site.courses.title');
@@ -65,90 +59,93 @@ const Courses = () => {
 
       <section className="edu-courses-section">
         <div className="container">
-          {/* Filter Buttons */}
-          <div className="edu-filter-bar">
-            {FILTERS.map((f) => (
-              <button
-                key={f}
-                className={`edu-filter-btn ${filter === f ? 'active' : ''}`}
-                onClick={() => setFilter(f)}
-              >
-                {f === 'all' ? t('site.courses.filterAll') : getDifficulty(f)}
-              </button>
-            ))}
-          </div>
+          {categoriesToShow.map((cat) => {
+            const sitesInCat = site.learningSites.filter((s) => s.category === cat.id);
+            const catName = language === 'en' ? cat.nameEn : cat.name;
 
-          {/* Course Detail Cards */}
-          <div className="edu-detail-grid">
-            {sitesToShow.map((ls) => (
-              <div
-                key={ls.id}
-                className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
-                style={{ '--card-accent': ls.color }}
-                id={`course-${ls.id}`}
-              >
-                <div className="edu-detail-card-top">
-                  <span className="edu-site-icon edu-site-icon-lg">{ls.icon}</span>
-                  <div>
-                    <h3>{language === 'en' ? ls.nameEn : ls.name}</h3>
-                    <span className={`edu-difficulty-badge ${ls.difficulty}`}>
-                      {getDifficulty(ls.difficulty)}
-                    </span>
-                  </div>
+            return (
+              <div key={cat.id} className="edu-category-section">
+                {/* Category Title */}
+                <div className="edu-category-title">
+                  <span className="edu-category-title-icon">{cat.icon}</span>
+                  <h3>{catName}</h3>
+                  <span className="edu-category-title-count">{sitesInCat.length}</span>
                 </div>
-                <p className="edu-detail-card-desc">
-                  {language === 'en' ? ls.descriptionEn : ls.description}
-                </p>
 
-                <div className="edu-tech-tags">
-                  {ls.techStack.map((tech) => (
-                    <span key={tech} className="edu-tech-tag">{tech}</span>
+                {/* Course Cards */}
+                <div className="edu-detail-grid">
+                  {sitesInCat.map((ls) => (
+                    <div
+                      key={ls.id}
+                      className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
+                      style={{ '--card-accent': ls.color }}
+                      id={`course-${ls.id}`}
+                    >
+                      <div className="edu-detail-card-top">
+                        <span className="edu-site-icon edu-site-icon-lg">{ls.icon}</span>
+                        <div>
+                          <h3>{language === 'en' ? ls.nameEn : ls.name}</h3>
+                          <span className={`edu-difficulty-badge ${ls.difficulty}`}>
+                            {getDifficulty(ls.difficulty)}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="edu-detail-card-desc">
+                        {language === 'en' ? ls.descriptionEn : ls.description}
+                      </p>
+
+                      <div className="edu-tech-tags">
+                        {ls.techStack.map((tech) => (
+                          <span key={tech} className="edu-tech-tag">{tech}</span>
+                        ))}
+                      </div>
+
+                      {/* Curriculum / Features / Target — 2-column layout */}
+                      <div className="edu-detail-blocks-row">
+                        <div className="edu-detail-block">
+                          <h4>{t('site.courses.curriculum')}</h4>
+                          <ul>
+                            {(language === 'en' ? ls.curriculumEn : ls.curriculum).map((item, i) => (
+                              <li key={i}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="edu-detail-block-right">
+                          <div className="edu-detail-block">
+                            <h4>{t('site.courses.features')}</h4>
+                            <ul>
+                              {(language === 'en' ? ls.featuresEn : ls.features).map((item, i) => (
+                                <li key={i}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="edu-detail-block">
+                            <h4>{t('site.courses.target')}</h4>
+                            <p>{language === 'en' ? ls.targetEn : ls.target}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {ls.url === '#' ? (
+                        <span className="btn btn-secondary edu-detail-card-btn edu-coming-soon">
+                          {t('site.courses.comingSoon')}
+                        </span>
+                      ) : (
+                        <a
+                          href={ls.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-primary edu-detail-card-btn"
+                        >
+                          {t('site.courses.visitSite')} →
+                        </a>
+                      )}
+                    </div>
                   ))}
                 </div>
-
-                {/* Curriculum / Features / Target — 2-column layout */}
-                <div className="edu-detail-blocks-row">
-                  <div className="edu-detail-block">
-                    <h4>{t('site.courses.curriculum')}</h4>
-                    <ul>
-                      {(language === 'en' ? ls.curriculumEn : ls.curriculum).map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="edu-detail-block-right">
-                    <div className="edu-detail-block">
-                      <h4>{t('site.courses.features')}</h4>
-                      <ul>
-                        {(language === 'en' ? ls.featuresEn : ls.features).map((item, i) => (
-                          <li key={i}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="edu-detail-block">
-                      <h4>{t('site.courses.target')}</h4>
-                      <p>{language === 'en' ? ls.targetEn : ls.target}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {ls.url === '#' ? (
-                  <span className="btn btn-secondary edu-detail-card-btn edu-coming-soon">
-                    {t('site.courses.comingSoon')}
-                  </span>
-                ) : (
-                  <a
-                    href={ls.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary edu-detail-card-btn"
-                  >
-                    {t('site.courses.visitSite')} →
-                  </a>
-                )}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
     </>
