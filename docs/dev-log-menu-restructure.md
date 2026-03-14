@@ -239,3 +239,163 @@ stats-card, site-card, detail-card, benefit-card, value-card, team-card, mission
 ### 8.4 전체 사이트 수 변경
 - 총 학습사이트: 16개 → **20개**
 - 홈페이지 stat, CTA 문구 반영
+
+### 8.5 커밋 이력
+
+| 커밋 | 메시지 |
+|------|--------|
+| `ec00a7d` | `feat: 경영전공분야 4개 과목 교체 (실제 사이트 URL 연결)` |
+| `60a9247` | `feat: 경영분야 기존 4과목 유지 + 신규 4과목 추가 (총 8개, 사이트 20개)` |
+
+---
+
+## 9. 경영분야 마케팅 과목 통합 (2026-03-15)
+
+### 9.1 변경 내용
+경영분야에 마케팅 관련 과목이 2개(마케팅 전략 — 준비중, 마케팅개론 — 실제 사이트) 중복되어 있어, **마케팅개론(실제 사이트)**만 유지하고 **마케팅 전략(준비중)**을 삭제하였습니다.
+
+**삭제 항목:**
+- `marketing` (마케팅 전략) — url: '#' (준비중)
+
+**유지 항목:**
+- `marketing-intro` (마케팅개론) — https://marketing.dreamitbiz.com
+
+### 9.2 수정 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/config/site.js` | 메뉴 드롭다운에서 마케팅 전략 제거, learningSites에서 marketing 항목 삭제 |
+| `src/utils/translations.js` | `site.nav.marketing` 키 삭제 |
+
+### 9.3 전체 사이트 수 변경
+- 경영분야: 8개 → **7개**
+- 총 학습사이트: 20개 → **19개** → 이후 컴퓨팅 사고 추가로 다시 20개
+
+### 9.4 커밋 이력
+
+| 커밋 | 메시지 |
+|------|--------|
+| `2c393ca` | `fix: 경영분야 마케팅 과목 1개로 통합 (마케팅개론만 유지)` |
+
+---
+
+## 10. 컴퓨터전공분야 '컴퓨팅 사고' 추가 (2026-03-15)
+
+### 10.1 변경 내용
+컴퓨터전공분야에 **컴퓨팅 사고** 과목을 추가하였습니다.
+
+| 과목명 | ID | URL | 난이도 |
+|--------|----|-----|--------|
+| 컴퓨팅 사고 | `computational-thinking` | https://koreatech.dreamitbiz.com | 입문 |
+
+### 10.2 수정 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/config/site.js` | 메뉴 드롭다운에 컴퓨팅 사고 경로 추가, learningSites에 항목 추가 |
+| `src/utils/translations.js` | `site.nav.computationalThinking` 번역 키 추가 (ko/en) |
+
+### 10.3 전체 사이트 수
+- 컴퓨터전공분야: 4개 → **5개**
+- 총 학습사이트: 19개 → **20개**
+
+### 10.4 커밋 이력
+
+| 커밋 | 메시지 |
+|------|--------|
+| `3106c8f` | `feat: 컴퓨터전공분야에 '컴퓨팅 사고' 과목 추가` |
+
+---
+
+## 11. 로고 변경 (2026-03-15)
+
+### 11.1 변경 내용
+상단 네비게이션 로고와 푸터 로고를 변경하였습니다.
+
+| 위치 | 변경 전 | 변경 후 |
+|------|---------|---------|
+| 상단 네비게이션 | DreamITEdu | **Edu Hub** |
+| 푸터 | DreamITEdu | **DreamIT Biz** (1줄) + **Edu Hub** (2줄) |
+
+### 11.2 구현 방식
+
+**site.js 브랜드 설정 분리:**
+```javascript
+brand: {
+  // 네비게이션 로고
+  parts: [
+    { text: 'Edu', className: 'brand-biz' },
+    { text: ' Hub', className: 'brand-dream' }
+  ],
+  // 푸터 1줄
+  footerLine1: [
+    { text: 'Dream', className: 'brand-dream' },
+    { text: 'IT', className: 'brand-it' },
+    { text: ' Biz', className: 'brand-biz' }
+  ],
+  // 푸터 2줄
+  footerLine2: [
+    { text: 'Edu', className: 'brand-biz' },
+    { text: ' Hub', className: 'brand-dream' }
+  ]
+}
+```
+
+**Footer.jsx:** `footerLine1` + `<br />` + `footerLine2` 렌더링
+
+### 11.3 수정 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/config/site.js` | `brand.parts` 변경, `footerLine1`/`footerLine2` 추가 |
+| `src/components/layout/Footer.jsx` | 2줄 로고 렌더링 |
+
+### 11.4 커밋 이력
+
+| 커밋 | 메시지 |
+|------|--------|
+| `2031f5d` | `style: 상단 로고 Edu Hub, 푸터 로고 DreamIT Biz / Edu Hub 2줄로 변경` |
+
+---
+
+## 12. 코스 카드 테두리 메인 블루 통일 (2026-03-15)
+
+### 12.1 변경 내용
+각 분야별로 다른 악센트 컬러(`--card-accent`)가 적용되던 코스 카드 상단 테두리를 **메인 블루(`var(--primary-blue)`)** 한 가지 색으로 통일하였습니다.
+
+| 항목 | 변경 전 | 변경 후 |
+|------|---------|---------|
+| 카드 상단 테두리 | `var(--card-accent)` (분야별 다른 색) | `var(--primary-blue)` (#0046C8) |
+| 커리큘럼 h4 밑줄 | `var(--card-accent)` | `var(--primary-blue)` |
+| 체크마크 색상 | `var(--card-accent)` | `var(--primary-blue)` |
+| JSX inline style | `--card-accent` 설정 | 제거 |
+
+### 12.2 수정 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/styles/site.css` | `border-top`, h4 `border-bottom`, `li::before` 색상을 `var(--primary-blue)`로 통일 |
+| `src/pages/Courses.jsx` | `style={{ '--card-accent': cat.accent }}` 인라인 스타일 제거 |
+
+### 12.3 커밋 이력
+
+| 커밋 | 메시지 |
+|------|--------|
+| `cf875aa` | `style: 코스 카드 테두리/포인트 컬러를 메인 블루(primary-blue)로 통일` |
+
+---
+
+## 전체 커밋 이력 요약
+
+| # | 커밋 | 메시지 | 주요 변경 |
+|---|------|--------|-----------|
+| 1 | `7a5fd10` | 메뉴 5개 카테고리 재구성 및 다크블루 테두리 통일 | 전면 재구성 |
+| 2 | `e863a12` | 코스 카드 2열 레이아웃 | 커리큘럼/특징/대상 2열 |
+| 3 | `faa2fb9` | 개발일지 추가 | docs |
+| 4 | `0bcb2f6` | 필터 삭제, 카테고리 타이틀, 테두리 세련화 | UI 개선 |
+| 5 | `ec00a7d` | 경영 4과목 교체 | 실제 URL 연결 |
+| 6 | `60a9247` | 기존 4과목 유지 + 신규 추가 | 경영 8개 |
+| 7 | `2c393ca` | 마케팅 1개 통합 | 중복 제거 |
+| 8 | `3106c8f` | 컴퓨팅 사고 추가 | 컴퓨터 5개 |
+| 9 | `2031f5d` | 로고 변경 | Edu Hub / DreamIT Biz |
+| 10 | `cf875aa` | 테두리 메인 블루 통일 | 악센트 컬러 제거 |
