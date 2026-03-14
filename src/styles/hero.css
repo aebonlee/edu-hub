@@ -177,12 +177,12 @@
 }
 
 .hero-title {
-    font-size: 60px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.15;
     color: var(--text-white);
     margin-bottom: 24px;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
 }
 
 .title-line {
@@ -197,11 +197,12 @@
 }
 
 .hero-description {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 36px;
     max-width: 600px;
+    font-weight: 300;
 }
 
 .hero-buttons {

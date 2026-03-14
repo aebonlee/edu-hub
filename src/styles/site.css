@@ -36,28 +36,28 @@
   text-align: center;
   padding: 32px 16px;
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-base);
 }
 
 .edu-stats-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-stats-number {
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--primary-blue);
   line-height: 1;
 }
 
 .edu-stats-suffix {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-blue);
 }
 
@@ -83,17 +83,17 @@
 
 .edu-site-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px;
   transition: var(--transition-base);
-  border-top: 3px solid var(--card-accent, var(--primary-blue));
+  border-top: 2px solid var(--card-accent, var(--primary-blue));
 }
 
 .edu-site-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
   border-top-color: var(--card-accent, var(--primary-blue));
 }
 
@@ -115,7 +115,7 @@
 
 .edu-site-card-header h3 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
@@ -146,16 +146,19 @@
 .edu-difficulty-badge.beginner {
   background: #ECFDF5;
   color: #059669;
+  border: 1px solid rgba(5, 150, 105, 0.2);
 }
 
 .edu-difficulty-badge.intermediate {
   background: #EFF6FF;
   color: #2563EB;
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .edu-difficulty-badge.advanced {
   background: #FEF3C7;
   color: #D97706;
+  border: 1px solid rgba(215, 119, 6, 0.2);
 }
 
 /* ── Tech Stack Tags ── */
@@ -169,8 +172,9 @@
 .edu-tech-tag {
   display: inline-block;
   padding: 4px 12px;
-  background: var(--bg-light-gray);
-  color: var(--text-secondary);
+  background: #EFF6FF;
+  color: #3B82F6;
+  border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: var(--radius-full);
   font-size: 13px;
   font-weight: 500;
@@ -187,7 +191,7 @@
 
 .edu-category-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 36px 32px;
   text-align: center;
@@ -198,9 +202,9 @@
 }
 
 .edu-category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-category-card-icon {
@@ -211,7 +215,7 @@
 
 .edu-category-card h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
@@ -262,7 +266,7 @@
   gap: 12px;
   margin-bottom: 28px;
   padding-bottom: 16px;
-  border-bottom: 2px solid rgba(0, 70, 200, 0.15);
+  border-bottom: 2px solid var(--border-light);
 }
 
 .edu-category-title-icon {
@@ -272,7 +276,7 @@
 
 .edu-category-title h3 {
   font-size: 24px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
 }
 
@@ -297,10 +301,10 @@
 
 .edu-detail-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px;
-  border-top: 3px solid var(--primary-blue);
+  border-top: 2px solid var(--primary-blue);
   transition: var(--transition-base);
   display: flex;
   flex-direction: column;
@@ -311,8 +315,9 @@
 }
 
 .edu-detail-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
   border-top-color: var(--card-accent, var(--primary-blue));
 }
 
@@ -325,7 +330,7 @@
 
 .edu-detail-card-top h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
@@ -357,7 +362,7 @@
 
 .edu-detail-block h4 {
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 10px;
   padding-bottom: 6px;
@@ -428,7 +433,7 @@
 
 .edu-benefit-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   text-align: center;
@@ -436,9 +441,9 @@
 }
 
 .edu-benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-benefit-icon {
@@ -449,7 +454,7 @@
 
 .edu-benefit-card h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 10px;
 }
@@ -470,7 +475,7 @@
   max-width: 700px;
   margin: 0 auto;
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-md);
@@ -478,7 +483,7 @@
 
 .edu-form-wrapper h3 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 28px;
   text-align: center;
@@ -526,7 +531,7 @@
 .edu-form-group textarea:focus {
   outline: none;
   border-color: var(--primary-blue);
-  box-shadow: 0 0 0 3px rgba(0, 70, 200, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .edu-form-group textarea {
@@ -563,7 +568,7 @@
 
 .edu-form-success h4 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
@@ -588,7 +593,7 @@
 
 .edu-mission-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 40px;
   text-align: center;
@@ -596,8 +601,8 @@
 }
 
 .edu-mission-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-mission-icon {
@@ -607,7 +612,7 @@
 
 .edu-mission-card h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 12px;
 }
@@ -636,7 +641,7 @@
 
 .edu-value-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px 24px;
   text-align: center;
@@ -644,9 +649,9 @@
 }
 
 .edu-value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-value-icon {
@@ -657,7 +662,7 @@
 
 .edu-value-card h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 10px;
 }
@@ -681,7 +686,7 @@
 
 .edu-team-card {
   background: var(--bg-white);
-  border: 1px solid rgba(0, 70, 200, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 32px;
   text-align: center;
@@ -689,8 +694,8 @@
 }
 
 .edu-team-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 70, 200, 0.12);
-  border-color: rgba(0, 70, 200, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px -5px rgba(37, 99, 235, 0.08);
+  border-color: var(--border-medium);
 }
 
 .edu-team-avatar {
@@ -700,7 +705,7 @@
 
 .edu-team-card h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
@@ -727,46 +732,46 @@
 
 [data-theme="dark"] .edu-stats-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-stats-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-site-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-site-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-detail-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-detail-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-category-title {
-  border-bottom-color: rgba(74, 144, 217, 0.25);
+  border-bottom-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-benefit-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-benefit-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-form-section {
@@ -775,7 +780,7 @@
 
 [data-theme="dark"] .edu-form-wrapper {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-form-group input,
@@ -793,12 +798,12 @@
 
 [data-theme="dark"] .edu-mission-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-mission-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-values-section {
@@ -807,32 +812,32 @@
 
 [data-theme="dark"] .edu-value-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-value-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-team-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-team-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-category-card {
   background: var(--bg-white);
-  border-color: rgba(74, 144, 217, 0.25);
+  border-color: var(--border-light);
 }
 
 [data-theme="dark"] .edu-category-card:hover {
-  border-color: rgba(74, 144, 217, 0.5);
-  box-shadow: 0 8px 24px rgba(74, 144, 217, 0.15);
+  border-color: var(--border-medium);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 10px -5px rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .edu-tech-tag {
