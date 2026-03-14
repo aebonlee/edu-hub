@@ -56,7 +56,6 @@ const site = {
       activePath: '/courses/business',
       dropdown: [
         { path: '/courses/accounting', labelKey: 'site.nav.accounting' },
-        { path: '/courses/marketing', labelKey: 'site.nav.marketing' },
         { path: '/courses/management', labelKey: 'site.nav.management' },
         { path: '/courses/finance', labelKey: 'site.nav.finance' },
         { path: '/courses/marketing-intro', labelKey: 'site.nav.marketingIntro' },
@@ -270,37 +269,6 @@ const site = {
       featuresEn: ['Practice problem solving', 'Case analysis', 'Certification exam prep'],
       target: '경영학 전공자, 회계 입문자',
       targetEn: 'Business majors, accounting beginners'
-    },
-    {
-      id: 'marketing',
-      name: '마케팅 전략',
-      nameEn: 'Marketing Strategy',
-      url: '#',
-      icon: '📊',
-      color: '#E11D48',
-      category: 'business',
-      description: '디지털 마케팅과 전통 마케팅의 핵심 전략을 학습합니다.',
-      descriptionEn: 'Learn core strategies of digital and traditional marketing.',
-      techStack: ['디지털마케팅', 'STP', '4P', '브랜딩'],
-      difficulty: 'intermediate',
-      curriculum: [
-        '마케팅 기본 이론 (STP, 4P)',
-        '디지털 마케팅 전략',
-        '소비자 행동 분석',
-        '브랜드 관리와 전략',
-        '마케팅 캠페인 기획'
-      ],
-      curriculumEn: [
-        'Marketing theory (STP, 4P)',
-        'Digital marketing strategy',
-        'Consumer behavior analysis',
-        'Brand management and strategy',
-        'Marketing campaign planning'
-      ],
-      features: ['사례 중심 학습', '캠페인 시뮬레이션', '실무 프로젝트'],
-      featuresEn: ['Case-based learning', 'Campaign simulation', 'Practical projects'],
-      target: '마케팅 전공자, 실무 마케터',
-      targetEn: 'Marketing majors, working marketers'
     },
     {
       id: 'management',
