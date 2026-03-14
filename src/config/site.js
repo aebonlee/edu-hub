@@ -55,10 +55,10 @@ const site = {
       path: '/courses/business',
       activePath: '/courses/business',
       dropdown: [
-        { path: '/courses/accounting', labelKey: 'site.nav.accounting' },
-        { path: '/courses/marketing', labelKey: 'site.nav.marketing' },
-        { path: '/courses/management', labelKey: 'site.nav.management' },
-        { path: '/courses/finance', labelKey: 'site.nav.finance' }
+        { path: '/courses/marketing-intro', labelKey: 'site.nav.marketingIntro' },
+        { path: '/courses/self-branding', labelKey: 'site.nav.selfBranding' },
+        { path: '/courses/ux-design', labelKey: 'site.nav.uxDesign' },
+        { path: '/courses/digital-biz', labelKey: 'site.nav.digitalBiz' }
       ]
     },
     {
@@ -237,128 +237,128 @@ const site = {
 
     // ── 경영전공분야 (business) ──
     {
-      id: 'accounting',
-      name: '회계학 원리',
-      nameEn: 'Accounting Principles',
-      url: '#',
-      icon: '🧮',
-      color: '#059669',
-      category: 'business',
-      description: '재무회계와 관리회계의 기초 원리를 체계적으로 학습합니다.',
-      descriptionEn: 'Systematically learn the fundamentals of financial and management accounting.',
-      techStack: ['재무회계', '관리회계', '원가회계', '세무'],
-      difficulty: 'intermediate',
-      curriculum: [
-        '회계의 기본 개념과 원칙',
-        '재무제표의 이해와 분석',
-        '분개와 전기 실습',
-        '원가계산과 관리회계',
-        '세무회계 기초'
-      ],
-      curriculumEn: [
-        'Basic accounting concepts and principles',
-        'Understanding and analyzing financial statements',
-        'Journal entry and posting practice',
-        'Cost calculation and management accounting',
-        'Tax accounting basics'
-      ],
-      features: ['실습 문제 풀이', '사례 분석', '자격시험 대비'],
-      featuresEn: ['Practice problem solving', 'Case analysis', 'Certification exam prep'],
-      target: '경영학 전공자, 회계 입문자',
-      targetEn: 'Business majors, accounting beginners'
-    },
-    {
-      id: 'marketing',
-      name: '마케팅 전략',
-      nameEn: 'Marketing Strategy',
-      url: '#',
+      id: 'marketing-intro',
+      name: '마케팅개론',
+      nameEn: 'Introduction to Marketing',
+      url: 'https://marketing.dreamitbiz.com',
       icon: '📈',
       color: '#DC2626',
       category: 'business',
-      description: '디지털 마케팅과 전통 마케팅의 핵심 전략을 학습합니다.',
-      descriptionEn: 'Learn core strategies of digital and traditional marketing.',
-      techStack: ['디지털마케팅', 'STP', '4P', '브랜딩'],
-      difficulty: 'intermediate',
+      description: '마케팅의 기본 개념부터 시장 분석, STP 전략, 4P Mix까지 마케팅 전반을 체계적으로 학습합니다.',
+      descriptionEn: 'Systematically learn marketing fundamentals from basic concepts to market analysis, STP strategy, and 4P Mix.',
+      techStack: ['STP전략', '4P Mix', '시장분석', '소비자행동'],
+      difficulty: 'beginner',
       curriculum: [
-        '마케팅 기본 이론 (STP, 4P)',
-        '디지털 마케팅 전략',
-        '소비자 행동 분석',
-        '브랜드 관리와 전략',
-        '마케팅 캠페인 기획'
+        '마케팅의 기본 개념과 환경 분석',
+        '소비자 행동과 시장 세분화(STP)',
+        '제품·가격·유통·촉진 전략(4P)',
+        '마케팅 리서치와 데이터 해석',
+        '마케팅 계획 수립 실습'
       ],
       curriculumEn: [
-        'Marketing theory (STP, 4P)',
-        'Digital marketing strategy',
-        'Consumer behavior analysis',
-        'Brand management and strategy',
-        'Marketing campaign planning'
+        'Marketing concepts and environmental analysis',
+        'Consumer behavior and market segmentation (STP)',
+        'Product, Price, Place, Promotion strategy (4P)',
+        'Marketing research and data interpretation',
+        'Marketing plan development practice'
       ],
-      features: ['사례 중심 학습', '캠페인 시뮬레이션', '실무 프로젝트'],
-      featuresEn: ['Case-based learning', 'Campaign simulation', 'Practical projects'],
-      target: '마케팅 전공자, 실무 마케터',
-      targetEn: 'Marketing majors, working marketers'
+      features: ['사례 분석 학습', '마케팅 플랜 실습', '퀴즈 평가'],
+      featuresEn: ['Case study learning', 'Marketing plan practice', 'Quiz assessments'],
+      target: '경영학 전공자, 마케팅 입문자',
+      targetEn: 'Business majors, marketing beginners'
     },
     {
-      id: 'management',
-      name: '경영전략론',
-      nameEn: 'Management Strategy',
-      url: '#',
-      icon: '🏢',
+      id: 'self-branding',
+      name: '셀프 브랜딩 마케팅',
+      nameEn: 'Self-Branding Marketing',
+      url: 'https://self-branding.dreamitbiz.com',
+      icon: '🌟',
       color: '#7C3AED',
       category: 'business',
-      description: '기업 경영전략의 수립과 실행에 대한 이론과 사례를 학습합니다.',
-      descriptionEn: 'Learn theories and cases of corporate strategy formulation and execution.',
-      techStack: ['전략기획', 'SWOT', '경쟁분석', '리더십'],
-      difficulty: 'advanced',
+      description: '개인 브랜드를 구축하고 SNS·콘텐츠를 활용한 셀프 마케팅 전략을 학습합니다.',
+      descriptionEn: 'Build your personal brand and learn self-marketing strategies using SNS and content.',
+      techStack: ['퍼스널브랜딩', 'SNS마케팅', '콘텐츠전략', '포트폴리오'],
+      difficulty: 'beginner',
       curriculum: [
-        '경영전략의 기본 프레임워크',
-        'SWOT 분석과 경쟁전략',
-        '기업 성장 전략',
-        '글로벌 경영전략',
-        '전략적 의사결정 사례'
+        '퍼스널 브랜드의 이해와 설계',
+        'SNS 채널별 마케팅 전략',
+        '콘텐츠 기획과 스토리텔링',
+        '온라인 포트폴리오 구축',
+        '개인 브랜드 성장 전략'
       ],
       curriculumEn: [
-        'Basic strategy frameworks',
-        'SWOT analysis and competitive strategy',
-        'Corporate growth strategy',
-        'Global management strategy',
-        'Strategic decision-making cases'
+        'Understanding and designing personal brand',
+        'Marketing strategy by SNS channel',
+        'Content planning and storytelling',
+        'Building online portfolio',
+        'Personal brand growth strategy'
       ],
-      features: ['기업 사례 분석', '전략 시뮬레이션', '토론 학습'],
-      featuresEn: ['Corporate case analysis', 'Strategy simulation', 'Discussion-based learning'],
-      target: '경영학 전공자, 예비 경영인',
-      targetEn: 'Business majors, aspiring managers'
+      features: ['브랜드 진단 도구', '실전 SNS 운영', '멘토링'],
+      featuresEn: ['Brand assessment tool', 'Hands-on SNS management', 'Mentoring'],
+      target: '프리랜서, 1인 창업자, 취업 준비생',
+      targetEn: 'Freelancers, solo entrepreneurs, job seekers'
     },
     {
-      id: 'finance',
-      name: '재무관리',
-      nameEn: 'Financial Management',
-      url: '#',
-      icon: '💰',
+      id: 'ux-design',
+      name: '고객경험디자인',
+      nameEn: 'Customer Experience Design',
+      url: 'https://uxdesign.dreamitbiz.com',
+      icon: '🎨',
       color: '#0891B2',
       category: 'business',
-      description: '기업 재무관리와 투자 분석의 핵심 이론을 학습합니다.',
-      descriptionEn: 'Learn core theories of corporate finance and investment analysis.',
-      techStack: ['재무분석', '투자론', '포트폴리오', '리스크관리'],
-      difficulty: 'advanced',
+      description: 'UX/CX 관점에서 고객 여정을 분석하고 최적의 경험을 설계하는 방법을 학습합니다.',
+      descriptionEn: 'Learn to analyze customer journeys and design optimal experiences from UX/CX perspectives.',
+      techStack: ['UX디자인', 'CX전략', '고객여정맵', '서비스디자인'],
+      difficulty: 'intermediate',
       curriculum: [
-        '재무관리의 기본 원리',
-        '화폐의 시간가치와 투자평가',
-        '자본구조와 배당정책',
-        '포트폴리오 이론',
-        '리스크 관리와 파생상품'
+        '고객경험(CX)의 이해와 중요성',
+        '고객 여정 맵 설계',
+        'UX 리서치 방법론',
+        '서비스 디자인 씽킹',
+        'CX 측정과 개선 전략'
       ],
       curriculumEn: [
-        'Fundamentals of financial management',
-        'Time value of money and investment evaluation',
-        'Capital structure and dividend policy',
-        'Portfolio theory',
-        'Risk management and derivatives'
+        'Understanding CX and its importance',
+        'Customer journey map design',
+        'UX research methodology',
+        'Service design thinking',
+        'CX measurement and improvement strategy'
       ],
-      features: ['Excel 실습', '투자 시뮬레이션', '재무제표 분석'],
-      featuresEn: ['Excel practice', 'Investment simulation', 'Financial statement analysis'],
-      target: '경영·금융 전공자, 재무 분석가 지망생',
-      targetEn: 'Finance majors, aspiring financial analysts'
+      features: ['실습 워크숍', '고객 여정 맵 도구', '사례 분석'],
+      featuresEn: ['Practice workshop', 'Journey map tool', 'Case analysis'],
+      target: 'UX/CX 디자이너, 서비스 기획자, 경영 전공자',
+      targetEn: 'UX/CX designers, service planners, business majors'
+    },
+    {
+      id: 'digital-biz',
+      name: '디지털비즈니스전략세미나',
+      nameEn: 'Digital Business Strategy Seminar',
+      url: 'https://digitalbiz.dreamitbiz.com',
+      icon: '🚀',
+      color: '#059669',
+      category: 'business',
+      description: '디지털 전환 시대의 비즈니스 모델 혁신과 전략적 의사결정을 학습합니다.',
+      descriptionEn: 'Learn business model innovation and strategic decision-making in the digital transformation era.',
+      techStack: ['디지털전환', 'BM혁신', '플랫폼전략', 'AI비즈니스'],
+      difficulty: 'advanced',
+      curriculum: [
+        '디지털 전환(DX)의 이해',
+        '디지털 비즈니스 모델 분석',
+        '플랫폼 비즈니스 전략',
+        'AI·데이터 기반 의사결정',
+        '디지털 혁신 사례 세미나'
+      ],
+      curriculumEn: [
+        'Understanding digital transformation (DX)',
+        'Digital business model analysis',
+        'Platform business strategy',
+        'AI and data-driven decision making',
+        'Digital innovation case seminars'
+      ],
+      features: ['세미나 형식 강의', '실제 기업 사례', '전략 수립 실습'],
+      featuresEn: ['Seminar-style lectures', 'Real business cases', 'Strategy development practice'],
+      target: '경영 전공자, 스타트업 종사자, 디지털 전략 관심자',
+      targetEn: 'Business majors, startup professionals, digital strategy enthusiasts'
     },
 
     // ── 컴퓨터전공분야 (computer) ──

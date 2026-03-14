@@ -184,10 +184,10 @@ export const translations = {
         writing: '글쓰기와 소통',
         presentation: '프레젠테이션',
         // 경영전공분야
-        accounting: '회계학 원리',
-        marketing: '마케팅 전략',
-        management: '경영전략론',
-        finance: '재무관리',
+        marketingIntro: '마케팅개론',
+        selfBranding: '셀프 브랜딩 마케팅',
+        uxDesign: '고객경험디자인',
+        digitalBiz: '디지털비즈니스전략세미나',
         // 컴퓨터전공분야
         db: 'DB 학습',
         react: 'React 학습',
@@ -492,10 +492,10 @@ export const translations = {
         writing: 'Writing & Communication',
         presentation: 'Presentation Skills',
         // Business
-        accounting: 'Accounting Principles',
-        marketing: 'Marketing Strategy',
-        management: 'Management Strategy',
-        finance: 'Financial Management',
+        marketingIntro: 'Intro to Marketing',
+        selfBranding: 'Self-Branding Marketing',
+        uxDesign: 'CX Design',
+        digitalBiz: 'Digital Biz Strategy',
         // Computer Science
         db: 'DB Learning',
         react: 'React Learning',

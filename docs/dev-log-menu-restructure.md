@@ -199,3 +199,28 @@ stats-card, site-card, detail-card, benefit-card, value-card, team-card, mission
 |------|-----------|
 | `src/pages/Courses.jsx` | 필터 삭제, 카테고리별 그룹핑 + 섹션 타이틀 렌더링 |
 | `src/styles/site.css` | 필터 CSS 삭제, 카테고리 타이틀 신규, 테두리 전면 세련화 |
+
+---
+
+## 8. 경영전공분야 4개 과목 교체 (2026-03-15)
+
+### 8.1 변경 내용
+경영전공분야의 기존 4개 과목(회계학 원리, 마케팅 전략, 경영전략론, 재무관리)을 실제 운영 사이트가 있는 4개 과목으로 교체하였습니다.
+
+| 과목명 | URL | 난이도 |
+|--------|-----|--------|
+| 마케팅개론 | https://marketing.dreamitbiz.com | 입문 |
+| 셀프 브랜딩 마케팅 | https://self-branding.dreamitbiz.com | 입문 |
+| 고객경험디자인 | https://uxdesign.dreamitbiz.com | 중급 |
+| 디지털비즈니스전략세미나 | https://digitalbiz.dreamitbiz.com | 고급 |
+
+### 8.2 수정 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/config/site.js` | 메뉴 드롭다운 4개 경로 교체, learningSites 경영 4개 항목 전면 교체 |
+| `src/utils/translations.js` | 경영분야 네비게이션 번역 키 4개 교체 (ko/en) |
+
+### 8.3 특이사항
+- 4개 모두 실제 외부 URL 보유 → "준비중" 대신 "사이트 방문하기" 버튼 활성화
+- 기존 `accounting/marketing/management/finance` ID → `marketing-intro/self-branding/ux-design/digital-biz` ID로 변경
