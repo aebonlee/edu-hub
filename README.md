@@ -1,6 +1,9 @@
-# DreamIT Biz 하위 사이트 템플릿
+# DreamIT Edu Hub
 
-본사이트(www.dreamitbiz.com)의 핵심 인프라(인증, 결제, 테마, 다국어)를 상속받는 하위 사이트 템플릿입니다.
+IT 학습사이트 허브 — DB, React, HTML, Web 학습 플랫폼을 소개하고, 강사 분양 신청을 받는 교육 포털 사이트입니다.
+
+- **도메인**: https://edu-hub.dreamitbiz.com
+- **기반**: React 19 + Vite 7 + Supabase
 
 ## 빠른 시작
 
@@ -10,111 +13,43 @@ npm install
 
 # 2. 환경변수 설정
 cp .env.example .env
-# .env 파일에 Supabase, PortOne 등 키를 입력하세요
+# .env 파일에 Supabase 키를 입력하세요
 
 # 3. 개발 서버 시작
 npm run dev
 ```
 
-## 사이트 커스터마이징
+## 페이지 구성
 
-### 1. 사이트 설정 (`src/config/site.js`)
+| 경로 | 페이지 | 설명 |
+|------|--------|------|
+| `/` | Home | Hero, 통계, 학습사이트 카드, CTA |
+| `/courses` | 학습사이트 | 난이도 필터, 4개 사이트 상세 |
+| `/courses/:id` | 학습사이트 | 특정 사이트 하이라이트 |
+| `/franchise` | 강사분양 | 혜택 소개, 지원서 폼 |
+| `/about` | 소개 | 미션/비전, 핵심가치, 운영팀 |
 
-사이트명, 메뉴, 푸터 링크, Family Site 목록 등을 수정합니다.
+## 학습사이트
 
-```js
-const site = {
-  name: 'DreamIT Books',        // 사이트명 (영문)
-  nameKo: '드림아이티 출판사',     // 사이트명 (한글)
-  description: '...',            // 사이트 설명
+| 사이트 | URL | 난이도 |
+|--------|-----|--------|
+| DB 학습 | https://db.dreamitbiz.com | 중급 |
+| React 학습 | https://react.dreamitbiz.com | 중급 |
+| HTML 학습 | https://html.dreamitbiz.com | 입문 |
+| Web 학습 | https://web.dreamitbiz.com | 고급 |
 
-  brand: {
-    parts: [                     // 로고 텍스트 (span 단위)
-      { text: 'Dream', className: 'brand-dream' },
-      { text: 'IT', className: 'brand-it' },
-      { text: 'Books', className: 'brand-biz' }
-    ]
-  },
+## 기술 스택
 
-  menuItems: [                   // 네비게이션 메뉴
-    { path: '/', labelKey: 'nav.home' },
-    {
-      labelKey: 'site.nav.books',
-      path: '/books',
-      activePath: '/books',
-      dropdown: [
-        { path: '/books/it', labelKey: 'site.nav.itBooks' },
-        { path: '/books/education', labelKey: 'site.nav.eduBooks' }
-      ]
-    },
-    { path: '/shop', labelKey: 'shop.title', activePath: '/shop' }
-  ],
-
-  footerLinks: [...],           // 푸터 바로가기
-  familySites: [...]            // Family Site 드롭다운
-};
-```
-
-### 2. 다국어 (`src/utils/translations.js`)
-
-`site` 키 아래에 사이트 전용 번역을 추가합니다.
-
-```js
-// ko
-site: {
-  nav: { books: '도서', itBooks: 'IT 도서' },
-  home: { title: '...', subtitle: '...' }
-}
-```
-
-### 3. 페이지 추가
-
-1. `src/pages/` 에 새 페이지 컴포넌트 생성
-2. `src/layouts/PublicLayout.jsx` 에 Route 추가
-3. `src/config/site.js` 의 `menuItems` 에 메뉴 항목 추가
-
-```jsx
-// PublicLayout.jsx
-const Books = lazy(() => import('../pages/Books'));
-// ...
-<Route path="/books" element={<Books />} />
-```
-
-### 4. 스타일 커스텀
-
-- `src/styles/site.css` — 사이트 전용 스타일
-- CSS 변수는 `src/styles/base.css` 에 정의되어 있음
-- 다크모드는 `src/styles/dark-mode.css` 에서 자동 처리
-
-## 상속되는 기능
-
-| 기능 | 설명 |
-|------|------|
-| Supabase 인증 | Google, Kakao, Email 로그인/가입 |
-| PortOne 결제 | 카드결제 (아임포트) |
-| 테마 시스템 | 다크/라이트/자동 + 5색 컬러 테마 |
-| 다국어 | 한국어/영어 전환 |
-| 장바구니 | sessionStorage 기반 장바구니 |
-| 토스트 알림 | 전역 알림 시스템 |
-
-## 환경변수
-
-| 변수 | 설명 |
-|------|------|
-| `VITE_SUPABASE_URL` | Supabase 프로젝트 URL |
-| `VITE_SUPABASE_ANON_KEY` | Supabase 공개 키 |
-| `VITE_PORTONE_STORE_ID` | PortOne 스토어 ID |
-| `VITE_PORTONE_CHANNEL_KEY` | PortOne 채널 키 |
-| `VITE_SITE_URL` | 배포 도메인 URL |
+- React 19, Vite 7, React Router 7
+- Supabase (Auth + Database)
+- GitHub Pages + GitHub Actions
+- 다국어 (ko/en), 다크모드 + 5개 컬러테마
 
 ## 빌드 & 배포
 
 ```bash
-# 프로덕션 빌드
-npm run build
-
-# 빌드 미리보기
-npm run preview
+npm run build    # 프로덕션 빌드
+npm run preview  # 빌드 미리보기
 ```
 
-빌드 결과물은 `dist/` 디렉토리에 생성됩니다.
+GitHub `main` 브랜치 push 시 GitHub Actions로 자동 배포됩니다.
