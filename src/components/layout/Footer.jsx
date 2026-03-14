@@ -11,8 +11,14 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <h3>
-              {site.brand.parts.map((part, i) => (
+              {site.brand.footerLine1.map((part, i) => (
                 <span key={i} className={part.className}>
+                  {part.text}
+                </span>
+              ))}
+              <br />
+              {site.brand.footerLine2.map((part, i) => (
+                <span key={`l2-${i}`} className={part.className}>
                   {part.text}
                 </span>
               ))}

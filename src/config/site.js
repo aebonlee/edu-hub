@@ -18,10 +18,20 @@ const site = {
 
   // 브랜드 로고 텍스트
   brand: {
+    // 상단 네비게이션 로고
     parts: [
+      { text: 'Edu', className: 'brand-biz' },
+      { text: ' Hub', className: 'brand-dream' }
+    ],
+    // 푸터 로고 (2줄)
+    footerLine1: [
       { text: 'Dream', className: 'brand-dream' },
       { text: 'IT', className: 'brand-it' },
-      { text: 'Edu', className: 'brand-biz' }
+      { text: ' Biz', className: 'brand-biz' }
+    ],
+    footerLine2: [
+      { text: 'Edu', className: 'brand-biz' },
+      { text: ' Hub', className: 'brand-dream' }
     ]
   },
 
