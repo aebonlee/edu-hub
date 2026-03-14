@@ -1,0 +1,96 @@
+import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
+
+const About = () => {
+  const { t } = useLanguage();
+
+  const values = [
+    { icon: '🎯', titleKey: 'value1Title', descKey: 'value1Desc' },
+    { icon: '🌍', titleKey: 'value2Title', descKey: 'value2Desc' },
+    { icon: '🚀', titleKey: 'value3Title', descKey: 'value3Desc' },
+    { icon: '🤝', titleKey: 'value4Title', descKey: 'value4Desc' }
+  ];
+
+  return (
+    <>
+      <SEOHead
+        title={t('site.about.title')}
+        description={t('site.about.subtitle')}
+        path="/about"
+      />
+
+      <section className="page-header">
+        <div className="container">
+          <h2>{t('site.about.title')}</h2>
+          <p>{t('site.about.subtitle')}</p>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="edu-mission-section">
+        <div className="container">
+          <div className="edu-mission-grid">
+            <div className="edu-mission-card">
+              <div className="edu-mission-icon">🎓</div>
+              <h3>{t('site.about.missionTitle')}</h3>
+              <p>{t('site.about.missionDesc')}</p>
+            </div>
+            <div className="edu-mission-card">
+              <div className="edu-mission-icon">🔭</div>
+              <h3>{t('site.about.visionTitle')}</h3>
+              <p>{t('site.about.visionDesc')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="edu-values-section">
+        <div className="container">
+          <h3 className="section-title text-center">{t('site.about.valuesTitle')}</h3>
+          <div className="edu-values-grid">
+            {values.map((v, i) => (
+              <div key={i} className="edu-value-card">
+                <span className="edu-value-icon">{v.icon}</span>
+                <h4>{t(`site.about.${v.titleKey}`)}</h4>
+                <p>{t(`site.about.${v.descKey}`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="edu-team-section">
+        <div className="container">
+          <div className="section-header">
+            <h3 className="section-title">{t('site.about.teamTitle')}</h3>
+            <p className="section-subtitle">{t('site.about.teamDesc')}</p>
+          </div>
+          <div className="edu-team-grid">
+            <div className="edu-team-card">
+              <div className="edu-team-avatar">👩‍💼</div>
+              <h4>이애본</h4>
+              <p className="edu-team-role">대표 / CEO</p>
+              <p className="edu-team-desc">DreamIT Biz 대표이사, IT 교육 기획 총괄</p>
+            </div>
+            <div className="edu-team-card">
+              <div className="edu-team-avatar">👨‍💻</div>
+              <h4>교육팀</h4>
+              <p className="edu-team-role">Education Team</p>
+              <p className="edu-team-desc">커리큘럼 개발 및 학습 콘텐츠 관리</p>
+            </div>
+            <div className="edu-team-card">
+              <div className="edu-team-avatar">👩‍🔧</div>
+              <h4>기술팀</h4>
+              <p className="edu-team-role">Tech Team</p>
+              <p className="edu-team-desc">플랫폼 개발 및 운영, 기술 지원</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default About;
