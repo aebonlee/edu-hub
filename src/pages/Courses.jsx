@@ -1,33 +1,64 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import site from '../config/site';
 
 const FILTERS = ['all', 'beginner', 'intermediate', 'advanced'];
+const CATEGORY_IDS = site.categories.map((c) => c.id);
 
 const Courses = () => {
   const { id } = useParams();
   const { t, language } = useLanguage();
-  const [filter, setFilter] = useState(id ? 'all' : 'all');
+  const [filter, setFilter] = useState('all');
 
-  const filtered = filter === 'all'
-    ? site.learningSites
-    : site.learningSites.filter((s) => s.difficulty === filter);
+  // Determine if id is a category slug or a specific site id
+  const isCategory = id && CATEGORY_IDS.includes(id);
+  const isSiteId = id && !isCategory && site.learningSites.some((s) => s.id === id);
+  const activeSite = isSiteId ? site.learningSites.find((s) => s.id === id) : null;
+  const activeCategory = isCategory ? id : (activeSite ? activeSite.category : null);
+
+  // Scroll to highlighted card
+  useEffect(() => {
+    if (isSiteId) {
+      const el = document.getElementById(`course-${id}`);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+      }
+    }
+  }, [id, isSiteId]);
+
+  // Filter sites: category first, then difficulty
+  let sitesToShow = site.learningSites;
+  if (activeCategory) {
+    sitesToShow = sitesToShow.filter((s) => s.category === activeCategory);
+  }
+  if (filter !== 'all') {
+    sitesToShow = sitesToShow.filter((s) => s.difficulty === filter);
+  }
 
   const getDifficulty = (level) => t(`site.difficulty.${level}`);
+
+  // Page title based on context
+  const getPageTitle = () => {
+    if (isCategory) {
+      const catTitle = t(`site.courses.categoryTitle`);
+      return typeof catTitle === 'object' ? catTitle[id] : t('site.courses.title');
+    }
+    return t('site.courses.title');
+  };
 
   return (
     <>
       <SEOHead
-        title={t('site.courses.title')}
+        title={getPageTitle()}
         description={t('site.courses.subtitle')}
         path="/courses"
       />
 
       <section className="page-header">
         <div className="container">
-          <h2>{t('site.courses.title')}</h2>
+          <h2>{getPageTitle()}</h2>
           <p>{t('site.courses.subtitle')}</p>
         </div>
       </section>
@@ -49,7 +80,7 @@ const Courses = () => {
 
           {/* Course Detail Cards */}
           <div className="edu-detail-grid">
-            {filtered.map((ls) => (
+            {sitesToShow.map((ls) => (
               <div
                 key={ls.id}
                 className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
@@ -101,14 +132,20 @@ const Courses = () => {
                   <p>{language === 'en' ? ls.targetEn : ls.target}</p>
                 </div>
 
-                <a
-                  href={ls.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary edu-detail-card-btn"
-                >
-                  {t('site.courses.visitSite')} →
-                </a>
+                {ls.url === '#' ? (
+                  <span className="btn btn-secondary edu-detail-card-btn edu-coming-soon">
+                    {t('site.courses.comingSoon')}
+                  </span>
+                ) : (
+                  <a
+                    href={ls.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary edu-detail-card-btn"
+                  >
+                    {t('site.courses.visitSite')} →
+                  </a>
+                )}
               </div>
             ))}
           </div>

@@ -4,15 +4,20 @@ import SEOHead from '../components/SEOHead';
 import useCountUp from '../hooks/useCountUp';
 import site from '../config/site';
 
+const CATEGORY_DESC_KEYS = {
+  'liberal-arts': 'site.home.categoryLiberalArtsDesc',
+  'business': 'site.home.categoryBusinessDesc',
+  'computer': 'site.home.categoryComputerDesc',
+  'certification': 'site.home.categoryCertificationDesc'
+};
+
 const Home = () => {
   const { t, language } = useLanguage();
 
-  const statSites = useCountUp(4, 1500);
+  const statSites = useCountUp(16, 1500);
   const statStudents = useCountUp(500, 2000);
-  const statInstructors = useCountUp(12, 1500);
+  const statCategories = useCountUp(4, 1500);
   const statCompletion = useCountUp(95, 2000);
-
-  const getDifficulty = (level) => t(`site.difficulty.${level}`);
 
   return (
     <>
@@ -79,10 +84,10 @@ const Home = () => {
               <span className="edu-stats-suffix">+</span>
               <p className="edu-stats-label">{t('site.home.statStudents')}</p>
             </div>
-            <div className="edu-stats-card" ref={statInstructors.ref}>
-              <span className="edu-stats-number">{statInstructors.count}</span>
+            <div className="edu-stats-card" ref={statCategories.ref}>
+              <span className="edu-stats-number">{statCategories.count}</span>
               <span className="edu-stats-suffix"></span>
-              <p className="edu-stats-label">{t('site.home.statInstructors')}</p>
+              <p className="edu-stats-label">{t('site.home.statCategories')}</p>
             </div>
             <div className="edu-stats-card" ref={statCompletion.ref}>
               <span className="edu-stats-number">{statCompletion.count}</span>
@@ -93,43 +98,32 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Learning Sites Section */}
+      {/* Category Cards Section */}
       <section className="edu-sites-section">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">{t('site.home.sitesTitle')}</h2>
-            <p className="section-subtitle">{t('site.home.sitesSubtitle')}</p>
+            <h2 className="section-title">{t('site.home.categoriesTitle')}</h2>
+            <p className="section-subtitle">{t('site.home.categoriesSubtitle')}</p>
           </div>
-          <div className="edu-sites-grid">
-            {site.learningSites.map((ls) => (
-              <div key={ls.id} className="edu-site-card" style={{ '--card-accent': ls.color }}>
-                <div className="edu-site-card-header">
-                  <span className="edu-site-icon">{ls.icon}</span>
-                  <div>
-                    <h3>{language === 'en' ? ls.nameEn : ls.name}</h3>
-                    <span className={`edu-difficulty-badge ${ls.difficulty}`}>
-                      {getDifficulty(ls.difficulty)}
-                    </span>
-                  </div>
+          <div className="edu-category-grid">
+            {site.categories.map((cat) => {
+              const coursesInCat = site.learningSites.filter((s) => s.category === cat.id);
+              return (
+                <div key={cat.id} className="edu-category-card">
+                  <div className="edu-category-card-icon">{cat.icon}</div>
+                  <h3>{language === 'en' ? cat.nameEn : cat.name}</h3>
+                  <span className="edu-category-count">
+                    {coursesInCat.length}{t('site.home.categoryCoursesCount')}
+                  </span>
+                  <p className="edu-category-desc">
+                    {t(CATEGORY_DESC_KEYS[cat.id])}
+                  </p>
+                  <Link to={cat.path} className="btn btn-secondary edu-category-btn">
+                    {t('site.home.categoryViewAll')} →
+                  </Link>
                 </div>
-                <p className="edu-site-card-desc">
-                  {language === 'en' ? ls.descriptionEn : ls.description}
-                </p>
-                <div className="edu-tech-tags">
-                  {ls.techStack.map((tech) => (
-                    <span key={tech} className="edu-tech-tag">{tech}</span>
-                  ))}
-                </div>
-                <a
-                  href={ls.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary edu-site-card-btn"
-                >
-                  {t('site.home.visitSite')} →
-                </a>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

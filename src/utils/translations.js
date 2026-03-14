@@ -174,28 +174,58 @@ export const translations = {
     site: {
       nav: {
         courses: '학습사이트',
+        liberalArts: '교양분야',
+        business: '경영전공분야',
+        computer: '컴퓨터전공분야',
+        certification: '자격증학습분야',
+        // 교양분야
+        statistics: '통계학 기초',
+        english: '실용 영어',
+        writing: '글쓰기와 소통',
+        presentation: '프레젠테이션',
+        // 경영전공분야
+        accounting: '회계학 원리',
+        marketing: '마케팅 전략',
+        management: '경영전략론',
+        finance: '재무관리',
+        // 컴퓨터전공분야
         db: 'DB 학습',
         react: 'React 학습',
         html: 'HTML 학습',
         web: 'Web 학습',
-        franchise: '강사분양'
+        // 자격증학습분야
+        engineer: '정보처리기사',
+        computerSkills: '컴퓨터활용능력',
+        sqld: 'SQLD',
+        linux: '리눅스마스터',
+        // 학습사이트분양
+        franchise: '학습사이트분양'
       },
       home: {
         title: 'DreamIT Edu Hub',
         subtitle: 'IT 교육의 새로운 기준',
-        heroDesc: '데이터베이스부터 풀스택 웹 개발까지,\n체계적인 커리큘럼으로 실무 역량을 키우세요.',
+        heroDesc: '교양부터 전공, 자격증까지\n체계적인 커리큘럼으로 실무 역량을 키우세요.',
         ctaStart: '학습 시작하기',
-        ctaFranchise: '강사 신청',
+        ctaFranchise: '사이트 분양 신청',
         statsTitle: '숫자로 보는 DreamIT Edu',
         statSites: '학습사이트',
         statStudents: '수강생',
         statInstructors: '전문 강사',
         statCompletion: '수료율',
+        statCategories: '학습 분야',
+        categoriesTitle: '학습 분야 둘러보기',
+        categoriesSubtitle: '관심 분야를 선택하여 학습을 시작하세요',
+        categoryCoursesCount: '개 코스',
+        categoryViewAll: '바로가기',
+        categoryLiberalArtsDesc: '통계학, 영어, 글쓰기, 프레젠테이션 등 교양 역량을 키우세요.',
+        categoryBusinessDesc: '회계, 마케팅, 경영전략, 재무관리 등 경영 전공 지식을 배우세요.',
+        categoryComputerDesc: 'DB, React, HTML, Web 등 컴퓨터 전공 실무를 학습하세요.',
+        categoryCertificationDesc: '정보처리기사, 컴활, SQLD, 리눅스마스터 자격증을 준비하세요.',
         sitesTitle: '학습사이트 둘러보기',
         sitesSubtitle: '목표에 맞는 학습사이트를 선택하세요',
         visitSite: '사이트 방문',
         ctaBottomTitle: '지금 바로 학습을 시작하세요',
-        ctaBottomDesc: '4개의 전문 학습사이트에서 체계적인 IT 교육을 경험하세요.',
+        ctaBottomDesc: '16개의 전문 학습사이트에서 체계적인 교육을 경험하세요.',
         ctaBottomBtn: '학습사이트 보기'
       },
       courses: {
@@ -208,12 +238,19 @@ export const translations = {
         curriculum: '커리큘럼',
         features: '특징',
         target: '대상',
-        visitSite: '사이트 방문하기'
+        visitSite: '사이트 방문하기',
+        comingSoon: '준비중',
+        categoryTitle: {
+          'liberal-arts': '교양분야',
+          'business': '경영전공분야',
+          'computer': '컴퓨터전공분야',
+          'certification': '자격증학습분야'
+        }
       },
       franchise: {
-        title: '강사 분양 신청',
-        subtitle: 'DreamIT Edu의 강사가 되어 함께 성장하세요',
-        benefitsTitle: '강사 분양 혜택',
+        title: '학습사이트 분양 신청',
+        subtitle: 'DreamIT Edu의 학습사이트를 분양받아 함께 성장하세요',
+        benefitsTitle: '학습사이트 분양 혜택',
         benefit1Title: '커리큘럼 제공',
         benefit1Desc: '검증된 교육 커리큘럼과 학습 자료를 제공합니다.',
         benefit2Title: '수익 공유',
@@ -445,28 +482,58 @@ export const translations = {
     site: {
       nav: {
         courses: 'Courses',
+        liberalArts: 'Liberal Arts',
+        business: 'Business',
+        computer: 'Computer Science',
+        certification: 'Certification',
+        // Liberal Arts
+        statistics: 'Statistics Basics',
+        english: 'Practical English',
+        writing: 'Writing & Communication',
+        presentation: 'Presentation Skills',
+        // Business
+        accounting: 'Accounting Principles',
+        marketing: 'Marketing Strategy',
+        management: 'Management Strategy',
+        finance: 'Financial Management',
+        // Computer Science
         db: 'DB Learning',
         react: 'React Learning',
         html: 'HTML Learning',
         web: 'Web Learning',
-        franchise: 'Franchise'
+        // Certification
+        engineer: 'Info Processing Engineer',
+        computerSkills: 'Computer Skills',
+        sqld: 'SQLD',
+        linux: 'Linux Master',
+        // Franchise
+        franchise: 'Site Franchise'
       },
       home: {
         title: 'DreamIT Edu Hub',
         subtitle: 'A New Standard in IT Education',
-        heroDesc: 'From databases to full-stack web development,\nbuild practical skills with structured curricula.',
+        heroDesc: 'From liberal arts to majors and certifications,\nbuild practical skills with structured curricula.',
         ctaStart: 'Start Learning',
-        ctaFranchise: 'Become an Instructor',
+        ctaFranchise: 'Apply for Franchise',
         statsTitle: 'DreamIT Edu in Numbers',
         statSites: 'Learning Sites',
         statStudents: 'Students',
         statInstructors: 'Instructors',
         statCompletion: 'Completion Rate',
+        statCategories: 'Categories',
+        categoriesTitle: 'Explore Learning Categories',
+        categoriesSubtitle: 'Choose a category to start learning',
+        categoryCoursesCount: ' courses',
+        categoryViewAll: 'View All',
+        categoryLiberalArtsDesc: 'Build essential skills in statistics, English, writing, and presentation.',
+        categoryBusinessDesc: 'Learn business knowledge in accounting, marketing, strategy, and finance.',
+        categoryComputerDesc: 'Master practical CS skills in DB, React, HTML, and Web development.',
+        categoryCertificationDesc: 'Prepare for IT certifications like Engineer, Computer Skills, SQLD, and Linux.',
         sitesTitle: 'Explore Learning Sites',
         sitesSubtitle: 'Choose a learning site that matches your goals',
         visitSite: 'Visit Site',
         ctaBottomTitle: 'Start Learning Today',
-        ctaBottomDesc: 'Experience structured IT education across 4 specialized learning sites.',
+        ctaBottomDesc: 'Experience structured education across 16 specialized learning sites.',
         ctaBottomBtn: 'View Learning Sites'
       },
       courses: {
@@ -479,11 +546,18 @@ export const translations = {
         curriculum: 'Curriculum',
         features: 'Features',
         target: 'Target Audience',
-        visitSite: 'Visit Site'
+        visitSite: 'Visit Site',
+        comingSoon: 'Coming Soon',
+        categoryTitle: {
+          'liberal-arts': 'Liberal Arts',
+          'business': 'Business',
+          'computer': 'Computer Science',
+          'certification': 'Certification'
+        }
       },
       franchise: {
-        title: 'Instructor Franchise',
-        subtitle: 'Become a DreamIT Edu instructor and grow together',
+        title: 'Site Franchise Application',
+        subtitle: 'Get a DreamIT Edu learning site and grow together',
         benefitsTitle: 'Franchise Benefits',
         benefit1Title: 'Curriculum Provided',
         benefit1Desc: 'We provide proven educational curricula and learning materials.',
