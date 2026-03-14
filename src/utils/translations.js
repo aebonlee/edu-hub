@@ -197,6 +197,7 @@ export const translations = {
         react: 'React 학습',
         html: 'HTML 학습',
         web: 'Web 학습',
+        computationalThinking: '컴퓨팅 사고',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -509,6 +510,7 @@ export const translations = {
         react: 'React Learning',
         html: 'HTML Learning',
         web: 'Web Learning',
+        computationalThinking: 'Computational Thinking',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',

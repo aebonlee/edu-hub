@@ -14,7 +14,7 @@ const CATEGORY_DESC_KEYS = {
 const Home = () => {
   const { t, language } = useLanguage();
 
-  const statSites = useCountUp(19, 1500);
+  const statSites = useCountUp(20, 1500);
   const statStudents = useCountUp(500, 2000);
   const statCategories = useCountUp(4, 1500);
   const statCompletion = useCountUp(95, 2000);
