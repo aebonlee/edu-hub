@@ -114,7 +114,7 @@ const site = {
   // Family Site 목록
   familySites: [
     { name: 'DB 학습', url: 'https://db-study.dreamitbiz.com' },
-    { name: 'React 학습', url: 'https://react.dreamitbiz.com' },
+    { name: 'React 학습', url: 'https://reactstudy.dreamitbiz.com' },
     { name: 'HTML 학습', url: 'https://html.dreamitbiz.com' },
     { name: 'Web 학습', url: 'https://webstudy.dreamitbiz.com' },
     { name: 'AHP 연구 플랫폼', url: 'https://ahp-basic.dreamitbiz.com' },
@@ -504,7 +504,7 @@ const site = {
       id: 'react',
       name: 'React 학습',
       nameEn: 'React Learning',
-      url: 'https://react.dreamitbiz.com',
+      url: 'https://reactstudy.dreamitbiz.com',
       icon: 'fa-brands fa-react',
       color: '#0EA5E9',
       category: 'computer',
