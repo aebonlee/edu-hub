@@ -116,7 +116,7 @@ const site = {
     { name: 'DB 학습', url: 'https://db-study.dreamitbiz.com' },
     { name: 'React 학습', url: 'https://react.dreamitbiz.com' },
     { name: 'HTML 학습', url: 'https://html.dreamitbiz.com' },
-    { name: 'Web 학습', url: 'https://web.dreamitbiz.com' },
+    { name: 'Web 학습', url: 'https://webstudy.dreamitbiz.com' },
     { name: 'AHP 연구 플랫폼', url: 'https://ahp-basic.dreamitbiz.com' },
     { name: '핵심역량 자가측정', url: 'https://competency.dreamitbiz.com' }
   ],
@@ -566,7 +566,7 @@ const site = {
       id: 'web',
       name: 'Web 학습',
       nameEn: 'Web Development',
-      url: 'https://web.dreamitbiz.com',
+      url: 'https://webstudy.dreamitbiz.com',
       icon: 'fa-solid fa-code',
       color: '#8B5CF6',
       category: 'computer',
