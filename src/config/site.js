@@ -54,6 +54,7 @@ const site = {
       path: '/courses/liberal-arts',
       activePath: '/courses/liberal-arts',
       dropdown: [
+        { path: '/courses/computational-thinking', labelKey: 'site.nav.computationalThinking' },
         { path: '/courses/statistics', labelKey: 'site.nav.statistics' },
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/writing', labelKey: 'site.nav.writing' },
@@ -82,8 +83,7 @@ const site = {
         { path: '/courses/db', labelKey: 'site.nav.db' },
         { path: '/courses/react', labelKey: 'site.nav.react' },
         { path: '/courses/html', labelKey: 'site.nav.html' },
-        { path: '/courses/web', labelKey: 'site.nav.web' },
-        { path: '/courses/computational-thinking', labelKey: 'site.nav.computationalThinking' }
+        { path: '/courses/web', labelKey: 'site.nav.web' }
       ]
     },
     {
@@ -124,6 +124,37 @@ const site = {
   // 학습사이트 목록
   learningSites: [
     // ── 교양분야 (liberal-arts) ──
+    {
+      id: 'computational-thinking',
+      name: '컴퓨팅 사고',
+      nameEn: 'Computational Thinking',
+      url: 'https://koreatech.dreamitbiz.com',
+      icon: 'fa-solid fa-brain',
+      color: '#2563EB',
+      category: 'liberal-arts',
+      description: '문제 해결을 위한 컴퓨팅 사고력과 알고리즘 설계 능력을 학습합니다.',
+      descriptionEn: 'Learn computational thinking and algorithm design skills for problem solving.',
+      techStack: ['알고리즘', '논리설계', '추상화', '패턴인식'],
+      difficulty: 'beginner',
+      curriculum: [
+        '컴퓨팅 사고의 이해',
+        '문제 분해와 패턴 인식',
+        '추상화와 알고리즘 설계',
+        '순서도와 의사코드 작성',
+        '실전 문제 해결 프로젝트'
+      ],
+      curriculumEn: [
+        'Understanding computational thinking',
+        'Problem decomposition and pattern recognition',
+        'Abstraction and algorithm design',
+        'Flowcharts and pseudocode writing',
+        'Practical problem-solving projects'
+      ],
+      features: ['단계별 사고 훈련', '실습 문제 제공', '자가 평가'],
+      featuresEn: ['Step-by-step thinking training', 'Practice problems', 'Self-assessment'],
+      target: 'IT 입문자, 비전공자, 논리적 사고력 향상을 원하는 학습자',
+      targetEn: 'IT beginners, non-CS majors, learners seeking logical thinking improvement'
+    },
     {
       id: 'statistics',
       name: '통계학 기초',
@@ -592,37 +623,6 @@ const site = {
       featuresEn: ['Full-stack projects', 'Real deployment practice', 'Code review'],
       target: '풀스택 개발자 지망생, 현직 개발자',
       targetEn: 'Aspiring full-stack developers and working developers'
-    },
-    {
-      id: 'computational-thinking',
-      name: '컴퓨팅 사고',
-      nameEn: 'Computational Thinking',
-      url: 'https://koreatech.dreamitbiz.com',
-      icon: 'fa-solid fa-brain',
-      color: '#2563EB',
-      category: 'computer',
-      description: '문제 해결을 위한 컴퓨팅 사고력과 알고리즘 설계 능력을 학습합니다.',
-      descriptionEn: 'Learn computational thinking and algorithm design skills for problem solving.',
-      techStack: ['알고리즘', '논리설계', '추상화', '패턴인식'],
-      difficulty: 'beginner',
-      curriculum: [
-        '컴퓨팅 사고의 이해',
-        '문제 분해와 패턴 인식',
-        '추상화와 알고리즘 설계',
-        '순서도와 의사코드 작성',
-        '실전 문제 해결 프로젝트'
-      ],
-      curriculumEn: [
-        'Understanding computational thinking',
-        'Problem decomposition and pattern recognition',
-        'Abstraction and algorithm design',
-        'Flowcharts and pseudocode writing',
-        'Practical problem-solving projects'
-      ],
-      features: ['단계별 사고 훈련', '실습 문제 제공', '자가 평가'],
-      featuresEn: ['Step-by-step thinking training', 'Practice problems', 'Self-assessment'],
-      target: 'IT 입문자, 비전공자, 논리적 사고력 향상을 원하는 학습자',
-      targetEn: 'IT beginners, non-CS majors, learners seeking logical thinking improvement'
     },
 
     // ── 자격증학습분야 (certification) ──
