@@ -29,7 +29,7 @@
 ### 컴퓨터전공분야 (Computer Science)
 | 사이트 | URL | 난이도 |
 |--------|-----|--------|
-| DB 학습 | https://db.dreamitbiz.com | 중급 |
+| DB 학습 | https://db-study.dreamitbiz.com | 중급 |
 | React 학습 | https://react.dreamitbiz.com | 중급 |
 | HTML 학습 | https://html.dreamitbiz.com | 입문 |
 | Web 학습 | https://web.dreamitbiz.com | 고급 |

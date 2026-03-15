@@ -113,7 +113,7 @@ const site = {
 
   // Family Site 목록
   familySites: [
-    { name: 'DB 학습', url: 'https://db.dreamitbiz.com' },
+    { name: 'DB 학습', url: 'https://db-study.dreamitbiz.com' },
     { name: 'React 학습', url: 'https://react.dreamitbiz.com' },
     { name: 'HTML 학습', url: 'https://html.dreamitbiz.com' },
     { name: 'Web 학습', url: 'https://web.dreamitbiz.com' },
@@ -473,7 +473,7 @@ const site = {
       id: 'db',
       name: 'DB 학습',
       nameEn: 'Database Learning',
-      url: 'https://db.dreamitbiz.com',
+      url: 'https://db-study.dreamitbiz.com',
       icon: 'fa-solid fa-database',
       color: '#2563EB',
       category: 'computer',
