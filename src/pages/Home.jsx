@@ -30,17 +30,17 @@ const Home = () => {
       <section className="hero">
         <div className="hero-bg-effect">
           <div className="particles">
-            {Array.from({ length: 20 }, (_, i) => (
+            {Array.from({ length: 8 }, (_, i) => (
               <div
                 key={i}
                 className="particle"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  '--duration': `${15 + Math.random() * 15}s`,
-                  animationDelay: `${Math.random() * 10}s`,
-                  width: `${4 + Math.random() * 6}px`,
-                  height: `${4 + Math.random() * 6}px`,
+                  left: `${10 + Math.random() * 80}%`,
+                  top: `${10 + Math.random() * 80}%`,
+                  '--duration': `${25 + Math.random() * 15}s`,
+                  animationDelay: `${Math.random() * 12}s`,
+                  width: `${3 + Math.random() * 4}px`,
+                  height: `${3 + Math.random() * 4}px`,
                 }}
               />
             ))}
