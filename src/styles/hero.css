@@ -71,9 +71,9 @@
     position: absolute;
     width: 6px;
     height: 6px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
     border-radius: 50%;
-    animation: float-particle var(--duration, 30s) infinite ease-in-out;
+    animation: float-particle var(--duration, 25s) infinite ease-in-out;
     will-change: transform, opacity;
 }
 
@@ -87,9 +87,9 @@
 
 @keyframes float-particle {
     0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-    15% { opacity: 0.3; }
-    85% { opacity: 0.3; }
-    50% { transform: translateY(-60px) translateX(30px); opacity: 0.2; }
+    12% { opacity: 0.5; }
+    88% { opacity: 0.5; }
+    50% { transform: translateY(-80px) translateX(40px); opacity: 0.35; }
 }
 
 /* ── Matrix rain (slide 1 — Red) ── */

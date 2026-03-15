@@ -14,10 +14,10 @@ const CATEGORY_DESC_KEYS = {
 const Home = () => {
   const { t, language } = useLanguage();
 
-  const statSites = useCountUp(20, 1500);
-  const statStudents = useCountUp(500, 2000);
-  const statCategories = useCountUp(4, 1500);
-  const statCompletion = useCountUp(95, 2000);
+  const statSites = useCountUp(20, 1500, true, 0);
+  const statStudents = useCountUp(500, 2000, true, 200);
+  const statCategories = useCountUp(4, 1500, true, 400);
+  const statCompletion = useCountUp(95, 2000, true, 600);
 
   return (
     <>
@@ -30,17 +30,17 @@ const Home = () => {
       <section className="hero">
         <div className="hero-bg-effect">
           <div className="particles">
-            {Array.from({ length: 8 }, (_, i) => (
+            {Array.from({ length: 14 }, (_, i) => (
               <div
                 key={i}
                 className="particle"
                 style={{
-                  left: `${10 + Math.random() * 80}%`,
-                  top: `${10 + Math.random() * 80}%`,
-                  '--duration': `${25 + Math.random() * 15}s`,
-                  animationDelay: `${Math.random() * 12}s`,
-                  width: `${3 + Math.random() * 4}px`,
-                  height: `${3 + Math.random() * 4}px`,
+                  left: `${5 + Math.random() * 90}%`,
+                  top: `${5 + Math.random() * 90}%`,
+                  '--duration': `${20 + Math.random() * 15}s`,
+                  animationDelay: `${Math.random() * 10}s`,
+                  width: `${4 + Math.random() * 5}px`,
+                  height: `${4 + Math.random() * 5}px`,
                 }}
               />
             ))}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useCountUp = (end, duration = 2000, startOnView = true) => {
+const useCountUp = (end, duration = 2000, startOnView = true, delay = 0) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const hasAnimated = useRef(false);
@@ -15,7 +15,11 @@ const useCountUp = (end, duration = 2000, startOnView = true) => {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          animate();
+          if (delay > 0) {
+            setTimeout(animate, delay);
+          } else {
+            animate();
+          }
         }
       },
       { threshold: 0.3 }
