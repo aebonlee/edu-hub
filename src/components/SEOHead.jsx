@@ -22,6 +22,8 @@ const SEOHead = ({ title, description, path = '', ogImage, noindex = false }) =>
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={`${BASE}${path}`} />
       <meta property="og:image" content={image} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="DreamIT Edu Hub" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
