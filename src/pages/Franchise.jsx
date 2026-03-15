@@ -61,10 +61,10 @@ const Franchise = () => {
   useAOS();
 
   const benefits = [
-    { icon: '📚', titleKey: 'benefit1Title', descKey: 'benefit1Desc' },
-    { icon: '💰', titleKey: 'benefit2Title', descKey: 'benefit2Desc' },
-    { icon: '🛠️', titleKey: 'benefit3Title', descKey: 'benefit3Desc' },
-    { icon: '🤝', titleKey: 'benefit4Title', descKey: 'benefit4Desc' }
+    { icon: 'fa-solid fa-book-open', titleKey: 'benefit1Title', descKey: 'benefit1Desc' },
+    { icon: 'fa-solid fa-coins', titleKey: 'benefit2Title', descKey: 'benefit2Desc' },
+    { icon: 'fa-solid fa-wrench', titleKey: 'benefit3Title', descKey: 'benefit3Desc' },
+    { icon: 'fa-solid fa-handshake', titleKey: 'benefit4Title', descKey: 'benefit4Desc' }
   ];
 
   return (
@@ -89,7 +89,7 @@ const Franchise = () => {
           <div className="edu-benefits-grid">
             {benefits.map((b, i) => (
               <div key={i} className="edu-benefit-card" data-aos="fade-up" data-aos-delay={i * 100}>
-                <span className="edu-benefit-icon">{b.icon}</span>
+                <span className="edu-benefit-icon"><i className={b.icon}></i></span>
                 <h4>{t(`site.franchise.${b.titleKey}`)}</h4>
                 <p>{t(`site.franchise.${b.descKey}`)}</p>
               </div>
@@ -106,7 +106,7 @@ const Franchise = () => {
 
             {success ? (
               <div className="edu-form-success">
-                <span className="edu-form-success-icon">✅</span>
+                <span className="edu-form-success-icon"><i className="fa-solid fa-circle-check"></i></span>
                 <h4>{t('site.franchise.formSuccess')}</h4>
                 <p>{t('site.franchise.formSuccessDesc')}</p>
               </div>

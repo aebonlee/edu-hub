@@ -1,5 +1,38 @@
 # DreamIT Edu Hub - 개발일지
 
+## 2026-03-15 — 이모지 → Font Awesome 아이콘 교체
+
+### 변경 개요
+사이트 전체 38개 컬러 이모지를 Font Awesome 6 Free 아이콘으로 교체하였습니다.
+아이콘 컨테이너(원형/라운드 배경)를 추가하여 전문적인 디자인으로 개선하였습니다.
+
+### 주요 변경
+
+| 항목 | 내용 |
+|------|------|
+| Font Awesome 6.5 CDN | `index.html`에 CDN link 추가 |
+| 카테고리 아이콘 4개 | 📚💼💻🏆 → `fa-book-open`, `fa-briefcase`, `fa-laptop-code`, `fa-award` |
+| 학습사이트 아이콘 20개 | 각 사이트별 의미에 맞는 FA 아이콘으로 교체 |
+| About 페이지 9개 | 미션/비전/가치/팀 아이콘 교체 |
+| Franchise 페이지 5개 | 혜택/성공 아이콘 교체 |
+| 아이콘 컨테이너 CSS | 원형/라운드 배경 + hover scale(1.08) 애니메이션 |
+| 다크모드 오버라이드 | 배경 opacity 0.08→0.12, success icon 다크 컬러 |
+| README.md | 20개 학습사이트 + 기술 스택 + 프로젝트 구조 포함 전면 재작성 |
+
+### 수정 파일 (8개)
+- `index.html` — FA6 CDN link 추가
+- `src/config/site.js` — 24개 이모지 → FA 클래스 문자열
+- `src/pages/About.jsx` — 9개 하드코딩 이모지 → `<i>` 요소
+- `src/pages/Franchise.jsx` — 5개 이모지 → `<i>` 요소
+- `src/pages/Courses.jsx` — 렌더링 패턴 `{icon}` → `<i className={icon}>`
+- `src/pages/Home.jsx` — 렌더링 패턴 변경
+- `src/styles/site.css` — 아이콘 컨테이너 CSS 전면 교체 + 다크모드 오버라이드
+- `README.md` — 전면 재작성
+
+> 상세: [docs/dev-log-emoji-to-fontawesome.md](docs/dev-log-emoji-to-fontawesome.md)
+
+---
+
 ## 2026-03-15 — 메뉴 페이지 디자인 개선
 
 ### 변경 개요

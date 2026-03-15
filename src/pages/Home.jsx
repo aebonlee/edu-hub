@@ -113,7 +113,7 @@ const Home = () => {
               const coursesInCat = site.learningSites.filter((s) => s.category === cat.id);
               return (
                 <div key={cat.id} className="edu-category-card" data-aos="fade-up" data-aos-delay={idx * 100}>
-                  <div className="edu-category-card-icon">{cat.icon}</div>
+                  <div className="edu-category-card-icon"><i className={cat.icon}></i></div>
                   <h3>{language === 'en' ? cat.nameEn : cat.name}</h3>
                   <span className="edu-category-count">
                     {coursesInCat.length}{t('site.home.categoryCoursesCount')}

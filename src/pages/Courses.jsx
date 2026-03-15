@@ -70,7 +70,7 @@ const Courses = () => {
               <div key={cat.id} className="edu-category-section" data-aos="fade-up">
                 {/* Category Title */}
                 <div className="edu-category-title">
-                  <span className="edu-category-title-icon">{cat.icon}</span>
+                  <span className="edu-category-title-icon"><i className={cat.icon}></i></span>
                   <h3>{catName}</h3>
                   <span className="edu-category-title-count">{sitesInCat.length}</span>
                 </div>
@@ -86,7 +86,7 @@ const Courses = () => {
                       data-aos-delay={idx * 100}
                     >
                       <div className="edu-detail-card-top">
-                        <span className="edu-site-icon edu-site-icon-lg">{ls.icon}</span>
+                        <span className="edu-site-icon edu-site-icon-lg" style={{ color: ls.color }}><i className={ls.icon}></i></span>
                         <div>
                           <h3>{language === 'en' ? ls.nameEn : ls.name}</h3>
                           <span className={`edu-difficulty-badge ${ls.difficulty}`}>

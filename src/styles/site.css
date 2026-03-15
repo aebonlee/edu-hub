@@ -169,12 +169,24 @@
 }
 
 .edu-site-icon {
-  font-size: 40px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 22px;
+  color: var(--primary-blue);
+  flex-shrink: 0;
+  transition: transform 0.2s;
 }
 
 .edu-site-icon-lg {
-  font-size: 48px;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  font-size: 24px;
 }
 
 .edu-site-card-header h3 {
@@ -272,9 +284,21 @@
 }
 
 .edu-category-card-icon {
-  font-size: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 28px;
+  color: var(--primary-blue);
   margin-bottom: 16px;
-  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.edu-category-card:hover .edu-category-card-icon {
+  transform: scale(1.08);
 }
 
 .edu-category-card h3 {
@@ -334,8 +358,15 @@
 }
 
 .edu-category-title-icon {
-  font-size: 32px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 16px;
+  color: var(--primary-blue);
 }
 
 .edu-category-title h3 {
@@ -511,9 +542,21 @@
 }
 
 .edu-benefit-icon {
-  font-size: 40px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 22px;
+  color: var(--primary-blue);
   margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.edu-benefit-card:hover .edu-benefit-icon {
+  transform: scale(1.08);
 }
 
 .edu-benefit-card h4 {
@@ -625,9 +668,16 @@
 }
 
 .edu-form-success-icon {
-  font-size: 48px;
-  display: block;
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(5, 150, 105, 0.1);
+  font-size: 28px;
+  color: #059669;
+  margin: 0 auto 16px;
 }
 
 .edu-form-success h4 {
@@ -670,8 +720,21 @@
 }
 
 .edu-mission-icon {
-  font-size: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 26px;
+  color: var(--primary-blue);
   margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.edu-mission-card:hover .edu-mission-icon {
+  transform: scale(1.08);
 }
 
 .edu-mission-card h3 {
@@ -719,9 +782,21 @@
 }
 
 .edu-value-icon {
-  font-size: 40px;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  font-size: 20px;
+  color: var(--primary-blue);
   margin-bottom: 16px;
+  transition: transform 0.2s;
+}
+
+.edu-value-card:hover .edu-value-icon {
+  transform: scale(1.08);
 }
 
 .edu-value-card h4 {
@@ -763,8 +838,17 @@
 }
 
 .edu-team-avatar {
-  font-size: 56px;
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-gradient, linear-gradient(135deg, #2563EB, #7C3AED));
+  font-size: 32px;
+  color: #fff;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.3);
 }
 
 .edu-team-card h4 {
@@ -930,6 +1014,25 @@
   color: var(--text-secondary);
 }
 
+/* ── Dark Mode Icon Container Overrides ── */
+[data-theme="dark"] .edu-category-card-icon,
+[data-theme="dark"] .edu-site-icon,
+[data-theme="dark"] .edu-category-title-icon,
+[data-theme="dark"] .edu-benefit-icon,
+[data-theme="dark"] .edu-mission-icon,
+[data-theme="dark"] .edu-value-icon {
+  background: rgba(96, 165, 250, 0.12);
+}
+
+[data-theme="dark"] .edu-team-avatar {
+  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.4);
+}
+
+[data-theme="dark"] .edu-form-success-icon {
+  background: rgba(5, 150, 105, 0.15);
+  color: #34D399;
+}
+
 /* ============================================
    Responsive
    ============================================ */
@@ -1037,7 +1140,9 @@
   }
 
   .edu-category-title-icon {
-    font-size: 26px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 }
 

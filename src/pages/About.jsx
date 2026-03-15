@@ -8,10 +8,10 @@ const About = () => {
   useAOS();
 
   const values = [
-    { icon: '🎯', titleKey: 'value1Title', descKey: 'value1Desc' },
-    { icon: '🌍', titleKey: 'value2Title', descKey: 'value2Desc' },
-    { icon: '🚀', titleKey: 'value3Title', descKey: 'value3Desc' },
-    { icon: '🤝', titleKey: 'value4Title', descKey: 'value4Desc' }
+    { icon: 'fa-solid fa-bullseye', titleKey: 'value1Title', descKey: 'value1Desc' },
+    { icon: 'fa-solid fa-earth-americas', titleKey: 'value2Title', descKey: 'value2Desc' },
+    { icon: 'fa-solid fa-rocket', titleKey: 'value3Title', descKey: 'value3Desc' },
+    { icon: 'fa-solid fa-handshake', titleKey: 'value4Title', descKey: 'value4Desc' }
   ];
 
   return (
@@ -34,12 +34,12 @@ const About = () => {
         <div className="container">
           <div className="edu-mission-grid">
             <div className="edu-mission-card" data-aos="fade-up">
-              <div className="edu-mission-icon">🎓</div>
+              <div className="edu-mission-icon"><i className="fa-solid fa-graduation-cap"></i></div>
               <h3>{t('site.about.missionTitle')}</h3>
               <p>{t('site.about.missionDesc')}</p>
             </div>
             <div className="edu-mission-card" data-aos="fade-up" data-aos-delay="100">
-              <div className="edu-mission-icon">🔭</div>
+              <div className="edu-mission-icon"><i className="fa-solid fa-binoculars"></i></div>
               <h3>{t('site.about.visionTitle')}</h3>
               <p>{t('site.about.visionDesc')}</p>
             </div>
@@ -54,7 +54,7 @@ const About = () => {
           <div className="edu-values-grid">
             {values.map((v, i) => (
               <div key={i} className="edu-value-card" data-aos="fade-up" data-aos-delay={i * 100}>
-                <span className="edu-value-icon">{v.icon}</span>
+                <span className="edu-value-icon"><i className={v.icon}></i></span>
                 <h4>{t(`site.about.${v.titleKey}`)}</h4>
                 <p>{t(`site.about.${v.descKey}`)}</p>
               </div>
@@ -72,19 +72,19 @@ const About = () => {
           </div>
           <div className="edu-team-grid">
             <div className="edu-team-card" data-aos="fade-up">
-              <div className="edu-team-avatar">👩‍💼</div>
+              <div className="edu-team-avatar"><i className="fa-solid fa-user-tie"></i></div>
               <h4>이애본</h4>
               <p className="edu-team-role">대표 / CEO</p>
               <p className="edu-team-desc">DreamIT Biz 대표이사, IT 교육 기획 총괄</p>
             </div>
             <div className="edu-team-card" data-aos="fade-up" data-aos-delay="100">
-              <div className="edu-team-avatar">👨‍💻</div>
+              <div className="edu-team-avatar"><i className="fa-solid fa-chalkboard-user"></i></div>
               <h4>교육팀</h4>
               <p className="edu-team-role">Education Team</p>
               <p className="edu-team-desc">커리큘럼 개발 및 학습 콘텐츠 관리</p>
             </div>
             <div className="edu-team-card" data-aos="fade-up" data-aos-delay="200">
-              <div className="edu-team-avatar">👩‍🔧</div>
+              <div className="edu-team-avatar"><i className="fa-solid fa-screwdriver-wrench"></i></div>
               <h4>기술팀</h4>
               <p className="edu-team-role">Tech Team</p>
               <p className="edu-team-desc">플랫폼 개발 및 운영, 기술 지원</p>
