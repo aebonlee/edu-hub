@@ -83,7 +83,9 @@ const site = {
         { path: '/courses/db', labelKey: 'site.nav.db' },
         { path: '/courses/react', labelKey: 'site.nav.react' },
         { path: '/courses/html', labelKey: 'site.nav.html' },
-        { path: '/courses/web', labelKey: 'site.nav.web' }
+        { path: '/courses/web', labelKey: 'site.nav.web' },
+        { path: '/courses/algorithm', labelKey: 'site.nav.algorithm' },
+        { path: '/courses/data-structure', labelKey: 'site.nav.dataStructure' }
       ]
     },
     {
@@ -623,6 +625,68 @@ const site = {
       featuresEn: ['Full-stack projects', 'Real deployment practice', 'Code review'],
       target: '풀스택 개발자 지망생, 현직 개발자',
       targetEn: 'Aspiring full-stack developers and working developers'
+    },
+    {
+      id: 'algorithm',
+      name: '알고리즘',
+      nameEn: 'Algorithm',
+      url: 'https://algorithm.dreamitbiz.com',
+      icon: 'fa-solid fa-diagram-project',
+      color: '#7C3AED',
+      category: 'computer',
+      description: '효율적인 문제 해결을 위한 알고리즘 설계와 분석 능력을 학습합니다.',
+      descriptionEn: 'Learn algorithm design and analysis skills for efficient problem solving.',
+      techStack: ['정렬', '탐색', '그래프', '동적프로그래밍'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '알고리즘 기초와 복잡도 분석',
+        '정렬과 탐색 알고리즘',
+        '재귀와 분할 정복',
+        '그래프 알고리즘 (BFS, DFS)',
+        '동적 프로그래밍과 그리디'
+      ],
+      curriculumEn: [
+        'Algorithm basics and complexity analysis',
+        'Sorting and searching algorithms',
+        'Recursion and divide & conquer',
+        'Graph algorithms (BFS, DFS)',
+        'Dynamic programming and greedy'
+      ],
+      features: ['코딩 테스트 대비', '시각화 학습', '단계별 풀이'],
+      featuresEn: ['Coding test preparation', 'Visual learning', 'Step-by-step solutions'],
+      target: '코딩 테스트 준비생, CS 전공자',
+      targetEn: 'Coding test candidates, CS majors'
+    },
+    {
+      id: 'data-structure',
+      name: '자료구조',
+      nameEn: 'Data Structure',
+      url: '#',
+      icon: 'fa-solid fa-sitemap',
+      color: '#0D9488',
+      category: 'computer',
+      description: '프로그래밍의 핵심인 자료구조의 개념과 구현을 체계적으로 학습합니다.',
+      descriptionEn: 'Systematically learn the concepts and implementation of data structures, the core of programming.',
+      techStack: ['배열', '연결리스트', '트리', '해시'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '자료구조 개요와 배열',
+        '연결 리스트와 스택/큐',
+        '트리와 이진 탐색 트리',
+        '힙과 우선순위 큐',
+        '해시 테이블과 그래프'
+      ],
+      curriculumEn: [
+        'Data structure overview and arrays',
+        'Linked lists, stacks, and queues',
+        'Trees and binary search trees',
+        'Heaps and priority queues',
+        'Hash tables and graphs'
+      ],
+      features: ['구현 실습', '시각화 도구', '성능 비교 분석'],
+      featuresEn: ['Implementation practice', 'Visualization tools', 'Performance comparison'],
+      target: 'CS 전공자, 개발자 지망생',
+      targetEn: 'CS majors, aspiring developers'
     },
 
     // ── 자격증학습분야 (certification) ──

@@ -198,6 +198,8 @@ export const translations = {
         html: 'HTML 학습',
         web: 'Web 학습',
         computationalThinking: '컴퓨팅 사고',
+        algorithm: '알고리즘',
+        dataStructure: '자료구조',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -511,6 +513,8 @@ export const translations = {
         html: 'HTML Learning',
         web: 'Web Learning',
         computationalThinking: 'Computational Thinking',
+        algorithm: 'Algorithm',
+        dataStructure: 'Data Structure',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',
