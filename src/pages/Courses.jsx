@@ -67,7 +67,7 @@ const Courses = () => {
             const catName = language === 'en' ? cat.nameEn : cat.name;
 
             return (
-              <div key={cat.id} className="edu-category-section" data-aos="fade-up">
+              <div key={cat.id} className="edu-category-section">
                 {/* Category Title */}
                 <div className="edu-category-title">
                   <span className="edu-category-title-icon"><i className={cat.icon}></i></span>
