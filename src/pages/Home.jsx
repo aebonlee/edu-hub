@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import useCountUp from '../hooks/useCountUp';
+import useAOS from '../hooks/useAOS';
 import site from '../config/site';
 
 const CATEGORY_DESC_KEYS = {
@@ -13,6 +14,8 @@ const CATEGORY_DESC_KEYS = {
 
 const Home = () => {
   const { t, language } = useLanguage();
+
+  useAOS();
 
   const statSites = useCountUp(20, 1500, true, 0);
   const statStudents = useCountUp(500, 2000, true, 200);
@@ -106,10 +109,10 @@ const Home = () => {
             <p className="section-subtitle">{t('site.home.categoriesSubtitle')}</p>
           </div>
           <div className="edu-category-grid">
-            {site.categories.map((cat) => {
+            {site.categories.map((cat, idx) => {
               const coursesInCat = site.learningSites.filter((s) => s.category === cat.id);
               return (
-                <div key={cat.id} className="edu-category-card">
+                <div key={cat.id} className="edu-category-card" data-aos="fade-up" data-aos-delay={idx * 100}>
                   <div className="edu-category-card-icon">{cat.icon}</div>
                   <h3>{language === 'en' ? cat.nameEn : cat.name}</h3>
                   <span className="edu-category-count">
@@ -129,7 +132,7 @@ const Home = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="cta-section">
+      <section className="cta-section" data-aos="fade-up">
         <div className="container">
           <div className="cta-content text-center">
             <h2>{t('site.home.ctaBottomTitle')}</h2>

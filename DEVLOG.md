@@ -1,5 +1,30 @@
 # DreamIT Edu Hub - 개발일지
 
+## 2026-03-15 — 메뉴 페이지 디자인 개선
+
+### 변경 개요
+Courses, Franchise, About 페이지 + Home CTA 섹션의 미완성 디자인을 개선하였습니다.
+기능 변경 없이 CSS 추가 + AOS 애니메이션 적용으로 구현하였습니다.
+
+### 주요 변경
+
+| 항목 | 내용 |
+|------|------|
+| `.page-header` CSS | 그라디언트 배경(`var(--hero-bg)`), 흰색 타이포, 반응형 패딩 |
+| `.cta-section` CSS | 그라디언트 배경, 흰색 타이포, 가운데 정렬 |
+| AOS 애니메이션 | Courses, Franchise, About, Home 4개 페이지에 fade-up + 시차 적용 |
+
+### 수정 파일 (5개)
+- `src/styles/site.css` — `.page-header`, `.cta-section`, `.cta-content` 정의 추가 + 768px 반응형
+- `src/pages/Courses.jsx` — useAOS + 카테고리/카드 `data-aos="fade-up"`
+- `src/pages/Franchise.jsx` — useAOS + 혜택카드/폼 `data-aos="fade-up"`
+- `src/pages/About.jsx` — useAOS + 미션/가치/팀 카드 `data-aos="fade-up"`
+- `src/pages/Home.jsx` — useAOS + 카테고리카드/CTA `data-aos="fade-up"`
+
+> 상세: [docs/dev-log-page-design-improvement.md](docs/dev-log-page-design-improvement.md)
+
+---
+
 ## 2026-03-15 (v1.0.0) - 초기 구현 완료
 
 ### 프로젝트 개요

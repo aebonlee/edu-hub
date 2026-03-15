@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
+import useAOS from '../hooks/useAOS';
 import site from '../config/site';
 
 const CATEGORY_IDS = site.categories.map((c) => c.id);
@@ -9,6 +10,8 @@ const CATEGORY_IDS = site.categories.map((c) => c.id);
 const Courses = () => {
   const { id } = useParams();
   const { t, language } = useLanguage();
+
+  useAOS();
 
   // Determine if id is a category slug or a specific site id
   const isCategory = id && CATEGORY_IDS.includes(id);
@@ -64,7 +67,7 @@ const Courses = () => {
             const catName = language === 'en' ? cat.nameEn : cat.name;
 
             return (
-              <div key={cat.id} className="edu-category-section">
+              <div key={cat.id} className="edu-category-section" data-aos="fade-up">
                 {/* Category Title */}
                 <div className="edu-category-title">
                   <span className="edu-category-title-icon">{cat.icon}</span>
@@ -74,11 +77,13 @@ const Courses = () => {
 
                 {/* Course Cards */}
                 <div className="edu-detail-grid">
-                  {sitesInCat.map((ls) => (
+                  {sitesInCat.map((ls, idx) => (
                     <div
                       key={ls.id}
                       className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
                       id={`course-${ls.id}`}
+                      data-aos="fade-up"
+                      data-aos-delay={idx * 100}
                     >
                       <div className="edu-detail-card-top">
                         <span className="edu-site-icon edu-site-icon-lg">{ls.icon}</span>

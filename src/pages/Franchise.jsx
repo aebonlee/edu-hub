@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
 import SEOHead from '../components/SEOHead';
+import useAOS from '../hooks/useAOS';
 import getSupabase from '../utils/supabase';
 import site from '../config/site';
 
@@ -57,6 +58,8 @@ const Franchise = () => {
     }
   };
 
+  useAOS();
+
   const benefits = [
     { icon: '📚', titleKey: 'benefit1Title', descKey: 'benefit1Desc' },
     { icon: '💰', titleKey: 'benefit2Title', descKey: 'benefit2Desc' },
@@ -85,7 +88,7 @@ const Franchise = () => {
           <h3 className="section-title text-center">{t('site.franchise.benefitsTitle')}</h3>
           <div className="edu-benefits-grid">
             {benefits.map((b, i) => (
-              <div key={i} className="edu-benefit-card">
+              <div key={i} className="edu-benefit-card" data-aos="fade-up" data-aos-delay={i * 100}>
                 <span className="edu-benefit-icon">{b.icon}</span>
                 <h4>{t(`site.franchise.${b.titleKey}`)}</h4>
                 <p>{t(`site.franchise.${b.descKey}`)}</p>
@@ -96,7 +99,7 @@ const Franchise = () => {
       </section>
 
       {/* Application Form */}
-      <section className="edu-form-section">
+      <section className="edu-form-section" data-aos="fade-up">
         <div className="container">
           <div className="edu-form-wrapper">
             <h3>{t('site.franchise.formTitle')}</h3>
