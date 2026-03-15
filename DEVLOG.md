@@ -1,5 +1,24 @@
 # DreamIT Edu Hub - 개발일지
 
+## 2026-03-15 — 학습사이트 URL 변경 (DB, Web, React)
+
+### 변경 개요
+3개 학습사이트의 서브도메인 URL을 신규 도메인으로 변경하였습니다.
+
+### 변경 내역
+
+| 사이트 | 변경 전 | 변경 후 |
+|--------|---------|---------|
+| DB 학습 | `db.dreamitbiz.com` | `db-study.dreamitbiz.com` |
+| Web 학습 | `web.dreamitbiz.com` | `webstudy.dreamitbiz.com` |
+| React 학습 | `react.dreamitbiz.com` | `reactstudy.dreamitbiz.com` |
+
+### 수정 파일 (2개, 각 사이트당 3곳)
+- `src/config/site.js` — `familySites[].url` + `learningSites[].url`
+- `README.md` — 학습사이트 목록 테이블
+
+---
+
 ## 2026-03-15 — 이모지 → Font Awesome 아이콘 교체
 
 ### 변경 개요
