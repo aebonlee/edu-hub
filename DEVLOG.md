@@ -1,5 +1,25 @@
 # DreamIT Edu Hub - 개발일지
 
+## 2026-03-15 — 페이지 첫 번째 카드 사라짐 버그 수정
+
+### 변경 개요
+메뉴별 페이지(Courses, About, Franchise 등) 이동 시 첫 번째 카드/섹션이 보이지 않는 버그를 수정하였습니다.
+
+### 원인 분석
+1. **ScrollToTop 미적용** — SPA 페이지 이동 시 스크롤 위치가 유지되어, 이전 페이지에서 스크롤이 내려간 상태로 새 페이지가 열리면 첫 번째 섹션이 뷰포트 위에 위치하여 AOS 옵저버가 감지하지 못함
+2. **AOS 옵저버 타이밍 이슈** — 페이지 로드 시 이미 뷰포트에 있는 요소를 IntersectionObserver가 즉시 감지하지 못하는 경우 발생
+
+### 수정 내역
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `src/hooks/useAOS.js` | `pathname` 의존성 추가, 라우트 변경 시 `scrollTo(0,0)` + AOS 리셋 + `requestAnimationFrame` 폴백으로 이미 뷰포트에 있는 요소 즉시 애니메이션 |
+| `src/layouts/PublicLayout.jsx` | `ScrollToTop` 컴포넌트 추가 — 모든 라우트 변경 시 자동 스크롤 최상단 이동 |
+
+> 상세: [docs/dev-log-emoji-to-fontawesome.md](docs/dev-log-emoji-to-fontawesome.md)
+
+---
+
 ## 2026-03-15 — 학습사이트 URL 변경 (DB, Web, React)
 
 ### 변경 개요
