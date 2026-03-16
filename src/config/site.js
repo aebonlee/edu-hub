@@ -1085,7 +1085,7 @@ const site = {
       id: 'linux',
       name: '리눅스마스터',
       nameEn: 'Linux Master',
-      url: '#',
+      url: 'https://linux-study.dreamitbiz.com/',
       icon: 'fa-brands fa-linux',
       color: '#B91C1C',
       category: 'certification',
