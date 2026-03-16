@@ -1,0 +1,1 @@
+async function o(t=1,n=10,a="all"){return{data:[],total:0}}async function r(t){return null}async function u({title:t,content:n,category:a,authorId:e,authorName:s}){return null}async function c(t,{title:n,content:a,category:e}){return null}async function l(t){return!1}async function i(t){}export{r as a,u as c,l as d,o as g,i as s,c as u};

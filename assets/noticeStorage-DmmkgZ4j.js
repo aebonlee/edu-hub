@@ -1,0 +1,1 @@
+async function u(t=1,n=10){return{data:[],total:0}}async function l(t){return null}async function r({title:t,titleEn:n,content:e,contentEn:i,isPinned:a,authorId:c,authorName:o}){return null}async function s(t,{title:n,titleEn:e,content:i,contentEn:a,isPinned:c}){return null}async function d(t){return!1}export{l as a,r as c,d,u as g,s as u};
