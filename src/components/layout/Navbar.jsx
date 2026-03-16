@@ -69,7 +69,11 @@ const Navbar = () => {
   const isActive = (item) => {
     const checkPath = item.activePath || item.path;
     if (checkPath === '/') return location.pathname === '/';
-    return location.pathname.startsWith(checkPath);
+    if (location.pathname.startsWith(checkPath)) return true;
+    if (item.dropdown) {
+      return item.dropdown.some((sub) => location.pathname.startsWith(sub.path));
+    }
+    return false;
   };
 
   const userInitial = (profile?.display_name || profile?.email || '?')[0].toUpperCase();

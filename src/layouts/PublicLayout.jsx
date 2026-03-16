@@ -16,6 +16,8 @@ const Home = lazy(() => import('../pages/Home'));
 const Courses = lazy(() => import('../pages/Courses'));
 const Franchise = lazy(() => import('../pages/Franchise'));
 const About = lazy(() => import('../pages/About'));
+const Notice = lazy(() => import('../pages/Notice'));
+const QnA = lazy(() => import('../pages/QnA'));
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
@@ -50,6 +52,8 @@ const PublicLayout = () => {
             <Route path="/courses/:id" element={<Courses />} />
             <Route path="/franchise" element={<Franchise />} />
             <Route path="/about" element={<About />} />
+            <Route path="/notice" element={<Notice />} />
+            <Route path="/qna" element={<QnA />} />
 
             {/* Auth */}
             <Route path="/login" element={<Login />} />

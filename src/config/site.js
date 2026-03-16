@@ -134,7 +134,17 @@ const site = {
         { path: '/courses/resume-coaching', labelKey: 'site.nav.resumeCoaching' }
       ]
     },
-    { path: '/franchise', labelKey: 'site.nav.franchise', activePath: '/franchise' }
+    {
+      labelKey: 'site.nav.community',
+      path: '/about',
+      activePath: '/about',
+      dropdown: [
+        { path: '/about', labelKey: 'site.nav.aboutHub' },
+        { path: '/notice', labelKey: 'site.nav.notice' },
+        { path: '/franchise', labelKey: 'site.nav.franchiseInquiry' },
+        { path: '/qna', labelKey: 'site.nav.qna' }
+      ]
+    }
   ],
 
   // 푸터 바로가기 링크
@@ -146,7 +156,7 @@ const site = {
     { path: '/courses/coding', labelKey: 'site.nav.coding' },
     { path: '/courses/certification', labelKey: 'site.nav.certification' },
     { path: '/courses/career', labelKey: 'site.nav.career' },
-    { path: '/franchise', labelKey: 'site.nav.franchise' }
+    { path: '/about', labelKey: 'site.nav.community' }
   ],
 
   // Family Site 목록

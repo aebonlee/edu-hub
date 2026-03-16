@@ -226,6 +226,12 @@ export const translations = {
         careerSite: '맞춤 커리어 사이트 제작',
         careerCoaching: '1:1 커리어 코칭',
         resumeCoaching: '이력서 & 자기소개서 코칭',
+        // 커뮤니티
+        community: '커뮤니티',
+        aboutHub: 'Edu Hub 소개',
+        notice: '공지사항',
+        franchiseInquiry: '학습사이트 분양문의',
+        qna: 'Q&A',
         // 학습사이트분양
         franchise: '학습사이트분양'
       },
@@ -336,6 +342,16 @@ export const translations = {
         value4Desc: '학습자와 교육자가 함께 성장하는 커뮤니티를 만듭니다.',
         teamTitle: '운영팀',
         teamDesc: 'DreamIT Edu Hub를 운영하는 사람들입니다.'
+      },
+      notice: {
+        title: '공지사항',
+        subtitle: 'Edu Hub의 새로운 소식을 확인하세요',
+        comingSoon: '공지사항 게시판이 곧 오픈됩니다.'
+      },
+      qna: {
+        title: 'Q&A',
+        subtitle: '궁금한 점을 질문하고 답변을 받아보세요',
+        comingSoon: 'Q&A 게시판이 곧 오픈됩니다.'
       },
       difficulty: {
         beginner: '입문',
@@ -572,6 +588,12 @@ export const translations = {
         careerSite: 'Custom Career Site',
         careerCoaching: '1:1 Career Coaching',
         resumeCoaching: 'Resume & Cover Letter Coaching',
+        // Community
+        community: 'Community',
+        aboutHub: 'About Edu Hub',
+        notice: 'Notice',
+        franchiseInquiry: 'Site Franchise Inquiry',
+        qna: 'Q&A',
         // Franchise
         franchise: 'Site Franchise'
       },
@@ -682,6 +704,16 @@ export const translations = {
         value4Desc: 'We create a community where learners and educators grow together.',
         teamTitle: 'Our Team',
         teamDesc: 'The people behind DreamIT Edu Hub.'
+      },
+      notice: {
+        title: 'Notice',
+        subtitle: 'Check out the latest news from Edu Hub',
+        comingSoon: 'The notice board is coming soon.'
+      },
+      qna: {
+        title: 'Q&A',
+        subtitle: 'Ask questions and get answers',
+        comingSoon: 'The Q&A board is coming soon.'
       },
       difficulty: {
         beginner: 'Beginner',
