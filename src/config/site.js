@@ -82,7 +82,9 @@ const site = {
       dropdown: [
         { path: '/courses/db', labelKey: 'site.nav.db' },
         { path: '/courses/algorithm', labelKey: 'site.nav.algorithm' },
-        { path: '/courses/data-structure', labelKey: 'site.nav.dataStructure' }
+        { path: '/courses/data-structure', labelKey: 'site.nav.dataStructure' },
+        { path: '/courses/info-comm', labelKey: 'site.nav.infoComm' },
+        { path: '/courses/sw-design', labelKey: 'site.nav.swDesign' }
       ]
     },
     {
@@ -602,6 +604,68 @@ const site = {
       featuresEn: ['Implementation practice', 'Visualization tools', 'Performance comparison'],
       target: 'CS 전공자, 개발자 지망생',
       targetEn: 'CS majors, aspiring developers'
+    },
+    {
+      id: 'info-comm',
+      name: '정보통신',
+      nameEn: 'Information & Communications',
+      url: '#',
+      icon: 'fa-solid fa-tower-cell',
+      color: '#0369A1',
+      category: 'computer',
+      description: '네트워크, 프로토콜, 통신 기술 등 정보통신의 핵심 개념을 체계적으로 학습합니다.',
+      descriptionEn: 'Systematically learn core concepts of information and communications including networks, protocols, and telecom technologies.',
+      techStack: ['네트워크', 'TCP/IP', '프로토콜', '보안'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '정보통신 개론과 데이터 통신',
+        '네트워크 구조와 TCP/IP',
+        '무선통신과 모바일 네트워크',
+        '네트워크 보안과 암호화',
+        '클라우드와 IoT 통신 기술'
+      ],
+      curriculumEn: [
+        'Introduction to telecom and data communication',
+        'Network architecture and TCP/IP',
+        'Wireless and mobile networks',
+        'Network security and encryption',
+        'Cloud and IoT communication technologies'
+      ],
+      features: ['이론 + 실습 병행', '네트워크 시뮬레이션', '자격증 연계 학습'],
+      featuresEn: ['Theory & practice combined', 'Network simulation', 'Certification-linked learning'],
+      target: 'CS 전공자, 네트워크 엔지니어 지망생',
+      targetEn: 'CS majors, aspiring network engineers'
+    },
+    {
+      id: 'sw-design',
+      name: '소프트웨어설계 & 구현',
+      nameEn: 'Software Design & Implementation',
+      url: '#',
+      icon: 'fa-solid fa-drafting-compass',
+      color: '#7E22CE',
+      category: 'computer',
+      description: '소프트웨어 설계 원칙부터 UML, 디자인 패턴, 구현까지 체계적으로 학습합니다.',
+      descriptionEn: 'Learn software design principles, UML, design patterns, and implementation systematically.',
+      techStack: ['UML', '디자인패턴', 'OOP', 'TDD'],
+      difficulty: 'advanced',
+      curriculum: [
+        '소프트웨어 개발 생명주기(SDLC)',
+        '요구분석과 UML 모델링',
+        '디자인 패턴과 설계 원칙(SOLID)',
+        '객체지향 프로그래밍과 구현',
+        '테스트 주도 개발(TDD)과 리팩토링'
+      ],
+      curriculumEn: [
+        'Software Development Life Cycle (SDLC)',
+        'Requirements analysis and UML modeling',
+        'Design patterns and SOLID principles',
+        'Object-oriented programming and implementation',
+        'Test-driven development (TDD) and refactoring'
+      ],
+      features: ['설계 문서 실습', '디자인 패턴 적용', '프로젝트 기반 학습'],
+      featuresEn: ['Design document practice', 'Design pattern application', 'Project-based learning'],
+      target: 'SW 개발자 지망생, CS 전공자',
+      targetEn: 'Aspiring SW developers, CS majors'
     },
 
     // ── 코딩학습분야 (coding) ──

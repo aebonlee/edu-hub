@@ -200,6 +200,8 @@ export const translations = {
         computationalThinking: '컴퓨팅 사고',
         algorithm: '알고리즘',
         dataStructure: '자료구조',
+        infoComm: '정보통신',
+        swDesign: '소프트웨어설계 & 구현',
         // 코딩학습분야
         coding: '코딩학습',
         codingLearn: '코딩 학습',
@@ -520,6 +522,8 @@ export const translations = {
         computationalThinking: 'Computational Thinking',
         algorithm: 'Algorithm',
         dataStructure: 'Data Structure',
+        infoComm: 'Info & Communications',
+        swDesign: 'SW Design & Implementation',
         // Coding
         coding: 'Coding',
         codingLearn: 'Coding Learning',
