@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
 import { getComments, createComment, deleteComment } from '../utils/commentStorage';
 
-const CommentSection = ({ postId, postType }) => {
+const CommentSection = ({ postId, postType, titleOverride, onCommentAdded, onCommentDeleted }) => {
   const { t } = useLanguage();
   const { user, isAdmin, profile } = useAuth();
   const [comments, setComments] = useState([]);
@@ -39,6 +39,7 @@ const CommentSection = ({ postId, postType }) => {
       if (newComment) {
         setComments((prev) => [...prev, newComment]);
         setContent('');
+        if (onCommentAdded) onCommentAdded();
       }
     } catch (err) {
       console.error('Comment submit error:', err);
@@ -53,6 +54,7 @@ const CommentSection = ({ postId, postType }) => {
       const success = await deleteComment(commentId);
       if (success) {
         setComments((prev) => prev.filter((c) => c.id !== commentId));
+        if (onCommentDeleted) onCommentDeleted();
       }
     } catch (err) {
       console.error('Comment delete error:', err);
@@ -73,7 +75,7 @@ const CommentSection = ({ postId, postType }) => {
   return (
     <div className="comment-section">
       <h3 className="comment-section-title">
-        {t('comments.title')} ({comments.length})
+        {titleOverride || t('comments.title')} ({comments.length})
       </h3>
 
       {loading ? (

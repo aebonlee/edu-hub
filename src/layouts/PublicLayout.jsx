@@ -17,7 +17,11 @@ const Courses = lazy(() => import('../pages/Courses'));
 const Franchise = lazy(() => import('../pages/Franchise'));
 const About = lazy(() => import('../pages/About'));
 const Notice = lazy(() => import('../pages/Notice'));
+const NoticeDetail = lazy(() => import('../pages/NoticeDetail'));
+const NoticeWrite = lazy(() => import('../pages/NoticeWrite'));
 const QnA = lazy(() => import('../pages/QnA'));
+const QnADetail = lazy(() => import('../pages/QnADetail'));
+const QnAWrite = lazy(() => import('../pages/QnAWrite'));
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
@@ -52,7 +56,11 @@ const PublicLayout = () => {
             <Route path="/courses/:id" element={<Courses />} />
             <Route path="/franchise" element={<Franchise />} />
             <Route path="/about" element={<About />} />
+            <Route path="/notice/write" element={<NoticeWrite />} />
+            <Route path="/notice/:id" element={<NoticeDetail />} />
             <Route path="/notice" element={<Notice />} />
+            <Route path="/qna/write" element={<QnAWrite />} />
+            <Route path="/qna/:id" element={<QnADetail />} />
             <Route path="/qna" element={<QnA />} />
 
             {/* Auth */}
