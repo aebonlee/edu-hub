@@ -175,9 +175,9 @@ export const translations = {
       nav: {
         courses: '학습사이트',
         liberalArts: '교양분야',
-        business: '경영전공분야',
-        computer: '컴퓨터전공분야',
-        certification: '자격증학습분야',
+        business: '경영전공',
+        computer: '컴퓨터전공',
+        certification: '자격증학습',
         // 교양분야
         statistics: '통계학 기초',
         english: '실용 영어',
@@ -229,7 +229,8 @@ export const translations = {
         categoryViewAll: '바로가기',
         categoryLiberalArtsDesc: '통계학, 영어, 글쓰기, 프레젠테이션 등 교양 역량을 키우세요.',
         categoryBusinessDesc: '회계, 마케팅, 경영전략, 재무관리 등 경영 전공 지식을 배우세요.',
-        categoryComputerDesc: 'DB, React, HTML, Web 등 컴퓨터 전공 실무를 학습하세요.',
+        categoryComputerDesc: 'DB, 알고리즘, 자료구조 등 컴퓨터 전공 핵심을 학습하세요.',
+        categoryCodingDesc: 'HTML, Web, React 등 실무 코딩 역량을 키우세요.',
         categoryCertificationDesc: '정보처리기사, 컴활, SQLD, 리눅스마스터 자격증을 준비하세요.',
         sitesTitle: '학습사이트 둘러보기',
         sitesSubtitle: '목표에 맞는 학습사이트를 선택하세요',
@@ -252,9 +253,10 @@ export const translations = {
         comingSoon: '준비중',
         categoryTitle: {
           'liberal-arts': '교양분야',
-          'business': '경영전공분야',
-          'computer': '컴퓨터전공분야',
-          'certification': '자격증학습분야'
+          'business': '경영전공',
+          'computer': '컴퓨터전공',
+          'coding': '코딩학습',
+          'certification': '자격증학습'
         }
       },
       franchise: {
@@ -547,7 +549,8 @@ export const translations = {
         categoryViewAll: 'View All',
         categoryLiberalArtsDesc: 'Build essential skills in statistics, English, writing, and presentation.',
         categoryBusinessDesc: 'Learn business knowledge in accounting, marketing, strategy, and finance.',
-        categoryComputerDesc: 'Master practical CS skills in DB, React, HTML, and Web development.',
+        categoryComputerDesc: 'Master core CS skills in DB, algorithms, and data structures.',
+        categoryCodingDesc: 'Build practical coding skills with HTML, Web, and React.',
         categoryCertificationDesc: 'Prepare for IT certifications like Engineer, Computer Skills, SQLD, and Linux.',
         sitesTitle: 'Explore Learning Sites',
         sitesSubtitle: 'Choose a learning site that matches your goals',
@@ -572,6 +575,7 @@ export const translations = {
           'liberal-arts': 'Liberal Arts',
           'business': 'Business',
           'computer': 'Computer Science',
+          'coding': 'Coding',
           'certification': 'Certification'
         }
       },

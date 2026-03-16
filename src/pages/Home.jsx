@@ -9,6 +9,7 @@ const CATEGORY_DESC_KEYS = {
   'liberal-arts': 'site.home.categoryLiberalArtsDesc',
   'business': 'site.home.categoryBusinessDesc',
   'computer': 'site.home.categoryComputerDesc',
+  'coding': 'site.home.categoryCodingDesc',
   'certification': 'site.home.categoryCertificationDesc'
 };
 
