@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import ErrorBoundary from '../components/ErrorBoundary';
 import AuthGuard from '../components/AuthGuard';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -38,6 +39,7 @@ const PublicLayout = () => {
       <ScrollToTop />
       <Navbar />
       <main>
+        <ErrorBoundary>
         <Suspense fallback={<Loading />}>
           <Routes>
             {/* Home */}
@@ -66,6 +68,7 @@ const PublicLayout = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        </ErrorBoundary>
       </main>
       <Footer />
     </>

@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 import { Routes, Route, NavLink, Link, Navigate } from 'react-router-dom';
+import ErrorBoundary from '../components/ErrorBoundary';
 import AdminGuard from '../components/AdminGuard';
 
 const Dashboard = lazy(() => import('../pages/admin/Dashboard'));
@@ -82,6 +83,7 @@ const AdminLayout = () => {
 
         {/* Main Content */}
         <main className="admin-main">
+          <ErrorBoundary>
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route index element={<Dashboard />} />
@@ -93,6 +95,7 @@ const AdminLayout = () => {
               <Route path="*" element={<Navigate to="/admin" replace />} />
             </Routes>
           </Suspense>
+          </ErrorBoundary>
         </main>
       </div>
     </AdminGuard>
