@@ -47,7 +47,7 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0;
+    gap: 8px;
     align-items: center;
 }
 
@@ -57,7 +57,7 @@
 
 .nav-link {
     display: block;
-    padding: 12px 14px;
+    padding: 12px 20px;
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
@@ -75,8 +75,8 @@
     content: '';
     position: absolute;
     bottom: -1px;
-    left: 14px;
-    right: 14px;
+    left: 20px;
+    right: 20px;
     height: 3px;
     background: var(--primary-blue);
     border-radius: 2px;
@@ -140,6 +140,158 @@
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+/* ── Toolbar (Consolidated Settings) ── */
+.nav-toolbar-wrapper {
+    position: relative;
+}
+
+.nav-toolbar-btn {
+    background: transparent;
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-sm);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-base);
+    padding: 0;
+}
+
+.nav-toolbar-btn:hover {
+    background: var(--bg-light-gray);
+    border-color: var(--primary-blue);
+}
+
+.nav-toolbar-btn svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-secondary);
+}
+
+.nav-toolbar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+}
+
+.nav-toolbar-tooltip {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 999;
+    min-width: 260px;
+    padding: 8px 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    animation: toolbar-fade-in 0.2s ease;
+}
+
+.nav-toolbar-arrow {
+    position: absolute;
+    top: -6px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    border-left: 1px solid var(--border-light);
+    border-top: 1px solid var(--border-light);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+@keyframes toolbar-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-toolbar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.nav-toolbar-item:hover {
+    background: rgba(37, 99, 235, 0.06);
+    color: var(--primary-blue);
+}
+
+.nav-toolbar-item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.nav-toolbar-item:hover svg {
+    opacity: 1;
+    color: var(--primary-blue);
+}
+
+.nav-toolbar-label {
+    flex: 1;
+    white-space: nowrap;
+}
+
+.nav-toolbar-value {
+    font-size: 12px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.nav-toolbar-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background: var(--primary-blue);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.nav-toolbar-colors-row {
+    cursor: default;
+    flex-wrap: wrap;
+}
+
+.nav-toolbar-colors-row:hover {
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.nav-toolbar-colors {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.nav-toolbar-colors .color-dot {
+    width: 20px;
+    height: 20px;
 }
 
 /* ── Search Button ── */
@@ -546,50 +698,19 @@
 
 /* ── Navbar Responsive ── */
 @media (max-width: 768px) {
-  .theme-toggle {
-    width: 32px;
-    height: 32px;
+  .nav-toolbar-btn {
+    width: 34px;
+    height: 34px;
   }
 
-  .theme-toggle svg {
-    width: 16px;
-    height: 16px;
+  .nav-toolbar-btn svg {
+    width: 17px;
+    height: 17px;
   }
 
-  .color-picker-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .color-picker-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .nav-search-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .nav-search-btn svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .cart-icon-link {
-    width: 32px;
-    height: 32px;
-  }
-
-  .cart-icon-svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .lang-switcher {
-    width: 28px;
-    height: 28px;
-    font-size: 9px;
+  .nav-toolbar-tooltip {
+    right: -8px;
+    min-width: 240px;
   }
 
   .nav-login-btn {
@@ -601,5 +722,13 @@
     width: 28px;
     height: 28px;
     font-size: 12px;
+  }
+
+  .nav-menu {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding: 12px 14px;
   }
 }

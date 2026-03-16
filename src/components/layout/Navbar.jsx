@@ -19,7 +19,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [showColorPicker, setShowColorPicker] = useState(false);
+  const [showToolbar, setShowToolbar] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const userMenuRef = useRef(null);
@@ -39,6 +39,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
     setShowUserMenu(false);
+    setShowToolbar(false);
   }, [location]);
 
   useEffect(() => {
@@ -133,84 +134,122 @@ const Navbar = () => {
           </ul>
 
           <div className="nav-actions">
-            <button className="nav-search-btn" onClick={() => setShowSearch(true)} aria-label="Search">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </button>
-            <Link to="/cart" className="cart-icon-link" aria-label="Cart">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="cart-icon-svg">
-                <circle cx="9" cy="21" r="1" />
-                <circle cx="20" cy="21" r="1" />
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-              </svg>
-              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-            </Link>
-            <button className="lang-switcher" onClick={toggleLanguage} aria-label={language === 'ko' ? 'Switch to English' : '한국어로 전환'}>
-              {language === 'ko' ? 'EN' : 'KR'}
-            </button>
-            <div className="color-picker-wrapper">
+            {/* Consolidated toolbar button */}
+            <div className="nav-toolbar-wrapper">
               <button
-                className="color-picker-btn"
-                onClick={() => setShowColorPicker(!showColorPicker)}
-                aria-label="Color theme"
+                className="nav-toolbar-btn"
+                onClick={() => setShowToolbar(!showToolbar)}
+                aria-label="설정 메뉴"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="13.5" cy="6.5" r="2.5" style={{ fill: '#C8102E', stroke: 'none' }} />
-                  <circle cx="17.5" cy="10.5" r="2.5" style={{ fill: '#C87200', stroke: 'none' }} />
-                  <circle cx="8.5" cy="7.5" r="2.5" style={{ fill: '#00855A', stroke: 'none' }} />
-                  <circle cx="6.5" cy="12" r="2.5" style={{ fill: '#0046C8', stroke: 'none' }} />
-                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.04-.24-.3-.39-.65-.39-1.04 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-5.17-4.5-9-10-9z" />
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
                 </svg>
               </button>
-              {showColorPicker && (
+              {showToolbar && (
                 <>
-                  <div className="color-picker-overlay" onClick={() => setShowColorPicker(false)} />
-                  <div className="color-picker-tooltip">
-                    <div className="color-picker-arrow" />
-                    {COLOR_OPTIONS.map((c) => (
-                      <button
-                        key={c.name}
-                        className={`color-dot${colorTheme === c.name ? ' active' : ''}`}
-                        style={{ background: c.color }}
-                        onClick={() => { setColorTheme(c.name); setShowColorPicker(false); }}
-                        aria-label={`${c.name} theme`}
-                      />
-                    ))}
+                  <div className="nav-toolbar-overlay" onClick={() => setShowToolbar(false)} />
+                  <div className="nav-toolbar-tooltip">
+                    <div className="nav-toolbar-arrow" />
+                    {/* Search */}
+                    <button
+                      className="nav-toolbar-item"
+                      onClick={() => { setShowToolbar(false); setShowSearch(true); }}
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                      </svg>
+                      <span className="nav-toolbar-label">{t('nav.search') || '검색'}</span>
+                    </button>
+                    {/* Cart */}
+                    <Link
+                      to="/cart"
+                      className="nav-toolbar-item"
+                      onClick={() => setShowToolbar(false)}
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="9" cy="21" r="1" />
+                        <circle cx="20" cy="21" r="1" />
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                      </svg>
+                      <span className="nav-toolbar-label">{t('nav.cart') || '장바구니'}</span>
+                      {cartCount > 0 && <span className="nav-toolbar-badge">{cartCount}</span>}
+                    </Link>
+                    {/* Language Toggle */}
+                    <button
+                      className="nav-toolbar-item"
+                      onClick={() => { toggleLanguage(); setShowToolbar(false); }}
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                      </svg>
+                      <span className="nav-toolbar-label">{language === 'ko' ? 'English' : '한국어'}</span>
+                      <span className="nav-toolbar-value">{language === 'ko' ? 'EN' : 'KR'}</span>
+                    </button>
+                    {/* Color Theme */}
+                    <div className="nav-toolbar-item nav-toolbar-colors-row">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="13.5" cy="6.5" r="2.5" style={{ fill: '#C8102E', stroke: 'none' }} />
+                        <circle cx="17.5" cy="10.5" r="2.5" style={{ fill: '#C87200', stroke: 'none' }} />
+                        <circle cx="8.5" cy="7.5" r="2.5" style={{ fill: '#00855A', stroke: 'none' }} />
+                        <circle cx="6.5" cy="12" r="2.5" style={{ fill: '#0046C8', stroke: 'none' }} />
+                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.04-.24-.3-.39-.65-.39-1.04 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-5.17-4.5-9-10-9z" />
+                      </svg>
+                      <span className="nav-toolbar-label">{t('nav.colorTheme') || '테마 색상'}</span>
+                      <div className="nav-toolbar-colors">
+                        {COLOR_OPTIONS.map((c) => (
+                          <button
+                            key={c.name}
+                            className={`color-dot${colorTheme === c.name ? ' active' : ''}`}
+                            style={{ background: c.color }}
+                            onClick={() => setColorTheme(c.name)}
+                            aria-label={`${c.name} theme`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    {/* Theme Mode Toggle */}
+                    <button
+                      className="nav-toolbar-item"
+                      onClick={toggleTheme}
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        {mode === 'light' && <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />}
+                        {mode === 'dark' && (
+                          <>
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                          </>
+                        )}
+                        {mode === 'auto' && (
+                          <>
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 3a9 9 0 0 1 0 18" fill="currentColor" opacity="0.3" />
+                            <circle cx="12" cy="12" r="4" />
+                          </>
+                        )}
+                      </svg>
+                      <span className="nav-toolbar-label">
+                        {mode === 'light' ? (t('nav.darkMode') || '다크 모드') : mode === 'dark' ? (t('nav.autoMode') || '자동 모드') : (t('nav.lightMode') || '라이트 모드')}
+                      </span>
+                      <span className="nav-toolbar-value">
+                        {mode === 'light' ? '☀️' : mode === 'dark' ? '🌙' : '🔄'}
+                      </span>
+                    </button>
                   </div>
                 </>
               )}
             </div>
-            <button className="theme-toggle" onClick={toggleTheme} aria-label="테마 전환" data-mode={mode}>
-              {/* Light mode icon (sun) */}
-              <svg className="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="5" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="21" y1="12" x2="23" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-              </svg>
-              {/* Dark mode icon (moon) */}
-              <svg className="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-              </svg>
-              {/* Auto mode icon (sun+moon half) */}
-              <svg className="auto-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 3a9 9 0 0 1 0 18" fill="currentColor" opacity="0.3" />
-                <circle cx="12" cy="12" r="4" />
-                <line x1="12" y1="1" x2="12" y2="3" />
-                <line x1="12" y1="21" x2="12" y2="23" />
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                <line x1="1" y1="12" x2="3" y2="12" />
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              </svg>
-            </button>
             {/* User Auth */}
             {isLoggedIn ? (
               <div className="nav-user-menu" ref={userMenuRef}>
