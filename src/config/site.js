@@ -706,28 +706,28 @@ const site = {
       icon: 'fa-solid fa-laptop-code',
       color: '#10B981',
       category: 'coding',
-      description: '프로그래밍 기초부터 실전 코딩까지, 단계별로 코딩 역량을 키우는 학습 플랫폼',
-      descriptionEn: 'A step-by-step learning platform to build coding skills from basics to practice',
-      techStack: ['Python', 'JavaScript', 'Algorithm', 'Practice'],
+      description: 'C, JAVA, Python 문법 학습과 초급~실전 단계별 코딩 실력 테스트를 제공하는 학습 플랫폼',
+      descriptionEn: 'A learning platform with C, JAVA, Python grammar lessons and skill tests from beginner to advanced',
+      techStack: ['C', 'JAVA', 'Python'],
       difficulty: 'beginner',
       curriculum: [
-        '프로그래밍 기초와 논리적 사고',
-        '변수, 조건문, 반복문',
-        '함수와 모듈화',
-        '자료형과 데이터 처리',
-        '실전 코딩 프로젝트'
+        '초급 — 프로그래밍 기초 문법',
+        '중급 — 조건문, 반복문, 함수 활용',
+        '고급 — 자료구조와 알고리즘 응용',
+        '실전 — 종합 코딩 테스트',
+        'C / JAVA / Python 실력 테스트'
       ],
       curriculumEn: [
-        'Programming basics and logical thinking',
-        'Variables, conditionals, and loops',
-        'Functions and modularization',
-        'Data types and data processing',
-        'Hands-on coding projects'
+        'Beginner — Programming basics & syntax',
+        'Intermediate — Conditionals, loops, functions',
+        'Advanced — Data structures & algorithm application',
+        'Practical — Comprehensive coding tests',
+        'C / JAVA / Python skill tests'
       ],
-      features: ['실습 중심 학습', '단계별 커리큘럼', '코드 자동 채점'],
-      featuresEn: ['Practice-oriented learning', 'Step-by-step curriculum', 'Auto-graded code'],
-      target: '코딩 입문자, 비전공자',
-      targetEn: 'Coding beginners and non-CS majors'
+      features: ['초급~실전 단계별 학습', 'C·JAVA·Python 실력 테스트', '프로그램 문법 학습'],
+      featuresEn: ['Beginner to advanced levels', 'C·JAVA·Python skill tests', 'Programming grammar lessons'],
+      target: '코딩 입문자, 프로그래밍 언어 학습자',
+      targetEn: 'Coding beginners and programming language learners'
     },
 
     // ── 자격증학습분야 (certification) ──
