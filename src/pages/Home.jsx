@@ -7,6 +7,7 @@ import site from '../config/site';
 
 const CATEGORY_DESC_KEYS = {
   'liberal-arts': 'site.home.categoryLiberalArtsDesc',
+  'ai': 'site.home.categoryAiDesc',
   'business': 'site.home.categoryBusinessDesc',
   'computer': 'site.home.categoryComputerDesc',
   'coding': 'site.home.categoryCodingDesc',

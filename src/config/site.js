@@ -41,6 +41,7 @@ const site = {
   // 카테고리 메타 정보
   categories: [
     { id: 'liberal-arts', name: '교양분야', nameEn: 'Liberal Arts', icon: 'fa-solid fa-book-open', path: '/courses/liberal-arts' },
+    { id: 'ai', name: '인공지능활용', nameEn: 'AI Utilization', icon: 'fa-solid fa-robot', path: '/courses/ai' },
     { id: 'business', name: '경영전공분야', nameEn: 'Business', icon: 'fa-solid fa-briefcase', path: '/courses/business' },
     { id: 'computer', name: '컴퓨터전공분야', nameEn: 'Computer Science', icon: 'fa-solid fa-laptop-code', path: '/courses/computer' },
     { id: 'coding', name: '코딩학습', nameEn: 'Coding', icon: 'fa-solid fa-code', path: '/courses/coding' },
@@ -59,6 +60,18 @@ const site = {
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/writing', labelKey: 'site.nav.writing' },
         { path: '/courses/presentation', labelKey: 'site.nav.presentation' }
+      ]
+    },
+    {
+      labelKey: 'site.nav.ai',
+      path: '/courses/ai',
+      activePath: '/courses/ai',
+      dropdown: [
+        { path: '/courses/prompt-engineering', labelKey: 'site.nav.promptEngineering' },
+        { path: '/courses/llm-langchain', labelKey: 'site.nav.llmLangchain' },
+        { path: '/courses/ai-automation', labelKey: 'site.nav.aiAutomation' },
+        { path: '/courses/ai-data-analysis', labelKey: 'site.nav.aiDataAnalysis' },
+        { path: '/courses/ai-image-gen', labelKey: 'site.nav.aiImageGen' }
       ]
     },
     {
@@ -291,6 +304,163 @@ const site = {
       featuresEn: ['Templates provided', 'Video feedback', 'Practice simulation'],
       target: '발표 능력 향상을 원하는 학습자',
       targetEn: 'Learners looking to improve presentation skills'
+    },
+
+    // ── 인공지능활용 (ai) ──
+    {
+      id: 'prompt-engineering',
+      name: '프롬프트 엔지니어링',
+      nameEn: 'Prompt Engineering',
+      url: '#',
+      icon: 'fa-solid fa-comments',
+      color: '#7C3AED',
+      category: 'ai',
+      description: 'ChatGPT, Claude 등 AI 모델에서 원하는 결과를 이끌어내는 프롬프트 작성 기법을 학습합니다.',
+      descriptionEn: 'Learn prompt crafting techniques to get desired results from AI models like ChatGPT and Claude.',
+      techStack: ['ChatGPT', 'Claude', 'Prompt', 'Few-shot'],
+      difficulty: 'beginner',
+      curriculum: [
+        '프롬프트 엔지니어링 개론',
+        '효과적인 프롬프트 구조와 패턴',
+        'Few-shot / Chain-of-Thought 기법',
+        '역할 부여와 시스템 프롬프트 설계',
+        '업무별 프롬프트 실전 활용'
+      ],
+      curriculumEn: [
+        'Introduction to prompt engineering',
+        'Effective prompt structures and patterns',
+        'Few-shot / Chain-of-Thought techniques',
+        'Role assignment and system prompt design',
+        'Practical prompt usage by task type'
+      ],
+      features: ['실습 중심 학습', '다양한 AI 모델 대응', '업무 활용 템플릿'],
+      featuresEn: ['Practice-oriented learning', 'Multi-model support', 'Work-ready templates'],
+      target: 'AI 활용에 관심 있는 모든 학습자',
+      targetEn: 'Anyone interested in utilizing AI'
+    },
+    {
+      id: 'llm-langchain',
+      name: 'LLM & 랭체인',
+      nameEn: 'LLM & LangChain',
+      url: '#',
+      icon: 'fa-solid fa-link',
+      color: '#059669',
+      category: 'ai',
+      description: '대규모 언어 모델(LLM)의 원리를 이해하고 LangChain으로 AI 애플리케이션을 구축합니다.',
+      descriptionEn: 'Understand LLM principles and build AI applications with LangChain.',
+      techStack: ['LLM', 'LangChain', 'Python', 'RAG'],
+      difficulty: 'advanced',
+      curriculum: [
+        'LLM 개념과 동작 원리',
+        'LangChain 프레임워크 기초',
+        'RAG(검색 증강 생성) 구현',
+        '체인과 에이전트 활용',
+        'AI 챗봇 및 서비스 구축 프로젝트'
+      ],
+      curriculumEn: [
+        'LLM concepts and how they work',
+        'LangChain framework basics',
+        'RAG (Retrieval-Augmented Generation) implementation',
+        'Chains and agents in practice',
+        'AI chatbot and service building project'
+      ],
+      features: ['프로젝트 기반 학습', 'RAG 파이프라인 구축', '실전 AI 서비스 개발'],
+      featuresEn: ['Project-based learning', 'RAG pipeline building', 'Real AI service development'],
+      target: 'AI 개발자 지망생, 백엔드 개발자',
+      targetEn: 'Aspiring AI developers, backend developers'
+    },
+    {
+      id: 'ai-automation',
+      name: '업무자동화',
+      nameEn: 'AI Work Automation',
+      url: '#',
+      icon: 'fa-solid fa-gears',
+      color: '#2563EB',
+      category: 'ai',
+      description: 'AI를 활용한 문서 작성, 데이터 처리, 반복 업무 자동화 기법을 학습합니다.',
+      descriptionEn: 'Learn AI-powered automation for document creation, data processing, and repetitive tasks.',
+      techStack: ['ChatGPT', 'Python', 'API 연동', '자동화'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'AI 업무자동화 개론',
+        '문서 작성 및 요약 자동화',
+        '데이터 수집과 정리 자동화',
+        'API 연동을 통한 워크플로우 구축',
+        '반복 업무 자동화 실전 프로젝트'
+      ],
+      curriculumEn: [
+        'Introduction to AI work automation',
+        'Automated document creation and summarization',
+        'Automated data collection and organization',
+        'Workflow building via API integration',
+        'Repetitive task automation project'
+      ],
+      features: ['실무 시나리오 실습', 'API 연동 실습', '자동화 템플릿 제공'],
+      featuresEn: ['Real-world scenario practice', 'API integration practice', 'Automation templates provided'],
+      target: '직장인, 업무 효율화를 원하는 학습자',
+      targetEn: 'Office workers, learners seeking work efficiency'
+    },
+    {
+      id: 'ai-data-analysis',
+      name: 'AI 데이터 분석',
+      nameEn: 'AI Data Analysis',
+      url: '#',
+      icon: 'fa-solid fa-chart-line',
+      color: '#DC2626',
+      category: 'ai',
+      description: 'AI를 활용하여 데이터를 분석하고 인사이트를 도출하는 능력을 키웁니다.',
+      descriptionEn: 'Build the ability to analyze data and derive insights using AI.',
+      techStack: ['Python', 'Pandas', 'ChatGPT', '시각화'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'AI 기반 데이터 분석 개론',
+        '데이터 전처리와 탐색적 분석',
+        'AI 활용 데이터 시각화',
+        '자연어로 데이터 질의하기',
+        '분석 보고서 자동 생성'
+      ],
+      curriculumEn: [
+        'Introduction to AI-based data analysis',
+        'Data preprocessing and exploratory analysis',
+        'AI-powered data visualization',
+        'Querying data with natural language',
+        'Automated analysis report generation'
+      ],
+      features: ['실데이터 분석 실습', 'AI 기반 시각화', '보고서 자동화'],
+      featuresEn: ['Real data analysis practice', 'AI-based visualization', 'Report automation'],
+      target: '데이터 분석가 지망생, 기획자',
+      targetEn: 'Aspiring data analysts, planners'
+    },
+    {
+      id: 'ai-image-gen',
+      name: 'AI 이미지 생성',
+      nameEn: 'AI Image Generation',
+      url: '#',
+      icon: 'fa-solid fa-image',
+      color: '#EA580C',
+      category: 'ai',
+      description: 'Midjourney, DALL-E, Stable Diffusion 등을 활용한 AI 이미지 생성 기법을 학습합니다.',
+      descriptionEn: 'Learn AI image generation techniques using Midjourney, DALL-E, and Stable Diffusion.',
+      techStack: ['Midjourney', 'DALL-E', 'Stable Diffusion', 'Prompt'],
+      difficulty: 'beginner',
+      curriculum: [
+        'AI 이미지 생성 개론',
+        '이미지 프롬프트 작성법',
+        'Midjourney 활용 실습',
+        'DALL-E & Stable Diffusion 비교',
+        '상업용 이미지 제작 프로젝트'
+      ],
+      curriculumEn: [
+        'Introduction to AI image generation',
+        'Image prompt writing techniques',
+        'Midjourney hands-on practice',
+        'DALL-E & Stable Diffusion comparison',
+        'Commercial image creation project'
+      ],
+      features: ['다양한 AI 도구 실습', '프롬프트 패턴 학습', '상업적 활용법'],
+      featuresEn: ['Multi-tool practice', 'Prompt pattern learning', 'Commercial usage techniques'],
+      target: '디자이너, 콘텐츠 크리에이터',
+      targetEn: 'Designers, content creators'
     },
 
     // ── 경영전공분야 (business) ──
