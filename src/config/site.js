@@ -106,7 +106,8 @@ const site = {
         { path: '/courses/engineer', labelKey: 'site.nav.engineer' },
         { path: '/courses/computerSkills', labelKey: 'site.nav.computerSkills' },
         { path: '/courses/sqld', labelKey: 'site.nav.sqld' },
-        { path: '/courses/linux', labelKey: 'site.nav.linux' }
+        { path: '/courses/linux', labelKey: 'site.nav.linux' },
+        { path: '/courses/biz-visual', labelKey: 'site.nav.bizVisual' }
       ]
     },
     { path: '/franchise', labelKey: 'site.nav.franchise', activePath: '/franchise' }
@@ -918,6 +919,37 @@ const site = {
       featuresEn: ['Virtual environment practice', 'Command practice', 'Past exam practice'],
       target: '리눅스마스터 수험생, 시스템 관리자',
       targetEn: 'Linux Master exam candidates, system administrators'
+    },
+    {
+      id: 'biz-visual',
+      name: '경영정보시각화',
+      nameEn: 'Business Information Visualization',
+      url: '#',
+      icon: 'fa-solid fa-chart-pie',
+      color: '#D97706',
+      category: 'certification',
+      description: '경영 데이터를 효과적으로 시각화하고 분석하는 역량을 갖추는 자격증 과정입니다.',
+      descriptionEn: 'A certification course for effectively visualizing and analyzing business data.',
+      techStack: ['Excel', 'Power BI', '데이터분석', '차트설계'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '경영정보 시각화 개론',
+        '데이터 수집과 전처리',
+        '차트 유형과 시각화 원칙',
+        '스프레드시트 활용 시각화',
+        'BI 도구를 활용한 대시보드 구현'
+      ],
+      curriculumEn: [
+        'Introduction to business information visualization',
+        'Data collection and preprocessing',
+        'Chart types and visualization principles',
+        'Spreadsheet-based visualization',
+        'Dashboard implementation with BI tools'
+      ],
+      features: ['실무 데이터 실습', '대시보드 제작', '기출문제 풀이'],
+      featuresEn: ['Real business data practice', 'Dashboard creation', 'Past exam practice'],
+      target: '경영정보시각화 수험생, 데이터 분석가',
+      targetEn: 'Biz visualization exam candidates, data analysts'
     }
   ]
 };

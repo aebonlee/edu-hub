@@ -210,6 +210,7 @@ export const translations = {
         computerSkills: '컴퓨터활용능력',
         sqld: 'SQLD',
         linux: '리눅스마스터',
+        bizVisual: '경영정보시각화',
         // 학습사이트분양
         franchise: '학습사이트분양'
       },
@@ -532,6 +533,7 @@ export const translations = {
         computerSkills: 'Computer Skills',
         sqld: 'SQLD',
         linux: 'Linux Master',
+        bizVisual: 'Biz Info Visualization',
         // Franchise
         franchise: 'Site Franchise'
       },
