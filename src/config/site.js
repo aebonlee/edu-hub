@@ -698,6 +698,37 @@ const site = {
       target: '프론트엔드 개발자 지망생, 웹 퍼블리셔',
       targetEn: 'Aspiring frontend developers and web publishers'
     },
+    {
+      id: 'coding-learn',
+      name: '코딩 학습',
+      nameEn: 'Coding Learning',
+      url: 'https://coding.dreamitbiz.com/',
+      icon: 'fa-solid fa-laptop-code',
+      color: '#10B981',
+      category: 'coding',
+      description: '프로그래밍 기초부터 실전 코딩까지, 단계별로 코딩 역량을 키우는 학습 플랫폼',
+      descriptionEn: 'A step-by-step learning platform to build coding skills from basics to practice',
+      techStack: ['Python', 'JavaScript', 'Algorithm', 'Practice'],
+      difficulty: 'beginner',
+      curriculum: [
+        '프로그래밍 기초와 논리적 사고',
+        '변수, 조건문, 반복문',
+        '함수와 모듈화',
+        '자료형과 데이터 처리',
+        '실전 코딩 프로젝트'
+      ],
+      curriculumEn: [
+        'Programming basics and logical thinking',
+        'Variables, conditionals, and loops',
+        'Functions and modularization',
+        'Data types and data processing',
+        'Hands-on coding projects'
+      ],
+      features: ['실습 중심 학습', '단계별 커리큘럼', '코드 자동 채점'],
+      featuresEn: ['Practice-oriented learning', 'Step-by-step curriculum', 'Auto-graded code'],
+      target: '코딩 입문자, 비전공자',
+      targetEn: 'Coding beginners and non-CS majors'
+    },
 
     // ── 자격증학습분야 (certification) ──
     {
