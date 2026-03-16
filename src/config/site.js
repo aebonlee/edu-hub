@@ -128,13 +128,13 @@ const site = {
 
   // 푸터 바로가기 링크
   footerLinks: [
-    { path: '/', labelKey: 'nav.home' },
     { path: '/courses/liberal-arts', labelKey: 'site.nav.liberalArts' },
+    { path: '/courses/ai', labelKey: 'site.nav.ai' },
     { path: '/courses/business', labelKey: 'site.nav.business' },
     { path: '/courses/computer', labelKey: 'site.nav.computer' },
+    { path: '/courses/coding', labelKey: 'site.nav.coding' },
     { path: '/courses/certification', labelKey: 'site.nav.certification' },
-    { path: '/franchise', labelKey: 'site.nav.franchise' },
-    { path: '/about', labelKey: 'nav.about' }
+    { path: '/franchise', labelKey: 'site.nav.franchise' }
   ],
 
   // Family Site 목록
