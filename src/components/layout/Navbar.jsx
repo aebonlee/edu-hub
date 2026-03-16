@@ -114,7 +114,11 @@ const Navbar = () => {
                     <ul className={`dropdown-menu ${activeDropdown === index ? 'active' : ''}`}>
                       {item.dropdown.map((subItem, subIndex) => (
                         <li key={subIndex}>
-                          <Link to={subItem.path}>{subItem.label}</Link>
+                          {subItem.external ? (
+                            <a href={subItem.path} target="_blank" rel="noopener noreferrer">{subItem.label}</a>
+                          ) : (
+                            <Link to={subItem.path}>{subItem.label}</Link>
+                          )}
                         </li>
                       ))}
                     </ul>

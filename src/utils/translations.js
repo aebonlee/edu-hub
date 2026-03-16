@@ -200,6 +200,9 @@ export const translations = {
         computationalThinking: '컴퓨팅 사고',
         algorithm: '알고리즘',
         dataStructure: '자료구조',
+        // 코딩학습분야
+        coding: '코딩학습',
+        codingLearn: '코딩 학습',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -515,6 +518,9 @@ export const translations = {
         computationalThinking: 'Computational Thinking',
         algorithm: 'Algorithm',
         dataStructure: 'Data Structure',
+        // Coding
+        coding: 'Coding',
+        codingLearn: 'Coding Learning',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',

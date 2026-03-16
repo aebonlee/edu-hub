@@ -48,7 +48,6 @@ const site = {
 
   // 네비게이션 메뉴
   menuItems: [
-    { path: '/', labelKey: 'nav.home' },
     {
       labelKey: 'site.nav.liberalArts',
       path: '/courses/liberal-arts',
@@ -81,11 +80,19 @@ const site = {
       activePath: '/courses/computer',
       dropdown: [
         { path: '/courses/db', labelKey: 'site.nav.db' },
-        { path: '/courses/react', labelKey: 'site.nav.react' },
-        { path: '/courses/html', labelKey: 'site.nav.html' },
-        { path: '/courses/web', labelKey: 'site.nav.web' },
         { path: '/courses/algorithm', labelKey: 'site.nav.algorithm' },
         { path: '/courses/data-structure', labelKey: 'site.nav.dataStructure' }
+      ]
+    },
+    {
+      labelKey: 'site.nav.coding',
+      path: '/courses/coding',
+      activePath: '/courses/coding',
+      dropdown: [
+        { path: '/courses/html', labelKey: 'site.nav.html' },
+        { path: '/courses/web', labelKey: 'site.nav.web' },
+        { path: '/courses/react', labelKey: 'site.nav.react' },
+        { path: 'https://coding.dreamitbiz.com/', labelKey: 'site.nav.codingLearn', external: true }
       ]
     },
     {
@@ -661,7 +668,7 @@ const site = {
       id: 'data-structure',
       name: '자료구조',
       nameEn: 'Data Structure',
-      url: '#',
+      url: 'https://db-study.dreamitbiz.com/',
       icon: 'fa-solid fa-sitemap',
       color: '#0D9488',
       category: 'computer',
