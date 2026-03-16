@@ -33,7 +33,11 @@ export const translations = {
       addedToCart: '담기 완료',
       price: '가격',
       noProducts: '해당 카테고리에 상품이 없습니다.',
-      currency: '원'
+      currency: '원',
+      search: '검색',
+      searchPlaceholder: '상품명 검색...',
+      edit: '수정',
+      delete: '삭제'
     },
     cart: {
       title: '장바구니',
@@ -217,6 +221,11 @@ export const translations = {
         sqld: 'SQLD',
         linux: '리눅스마스터',
         bizVisual: '경영정보시각화',
+        // 진로컨설팅
+        career: '진로컨설팅',
+        careerSite: '맞춤 커리어 사이트 제작',
+        careerCoaching: '1:1 커리어 코칭',
+        resumeCoaching: '이력서 & 자기소개서 코칭',
         // 학습사이트분양
         franchise: '학습사이트분양'
       },
@@ -242,6 +251,7 @@ export const translations = {
         categoryComputerDesc: 'DB, 알고리즘, 자료구조 등 컴퓨터 전공 핵심을 학습하세요.',
         categoryCodingDesc: 'HTML, Web, React 등 실무 코딩 역량을 키우세요.',
         categoryCertificationDesc: '정보처리기사, 컴활, SQLD, 리눅스마스터 자격증을 준비하세요.',
+        categoryCareerDesc: '맞춤 커리어 사이트 제작, 1:1 코칭, 이력서 코칭으로 취업을 준비하세요.',
         sitesTitle: '학습사이트 둘러보기',
         sitesSubtitle: '목표에 맞는 학습사이트를 선택하세요',
         visitSite: '사이트 방문',
@@ -267,8 +277,13 @@ export const translations = {
           'business': '경영전공',
           'computer': '컴퓨터전공',
           'coding': '코딩학습',
-          'certification': '자격증학습'
-        }
+          'certification': '자격증학습',
+          'career': '진로컨설팅'
+        },
+        addToCart: '장바구니 담기',
+        contactForPrice: '가격 문의',
+        priceFrom: '~',
+        loginRequired: '로그인 후 이용 가능합니다'
       },
       franchise: {
         title: '학습사이트 분양 신청',
@@ -364,7 +379,11 @@ export const translations = {
       addedToCart: 'Added',
       price: 'Price',
       noProducts: 'No products in this category.',
-      currency: 'KRW'
+      currency: 'KRW',
+      search: 'Search',
+      searchPlaceholder: 'Search products...',
+      edit: 'Edit',
+      delete: 'Delete'
     },
     cart: {
       title: 'Cart',
@@ -548,6 +567,11 @@ export const translations = {
         sqld: 'SQLD',
         linux: 'Linux Master',
         bizVisual: 'Biz Info Visualization',
+        // Career Consulting
+        career: 'Career Consulting',
+        careerSite: 'Custom Career Site',
+        careerCoaching: '1:1 Career Coaching',
+        resumeCoaching: 'Resume & Cover Letter Coaching',
         // Franchise
         franchise: 'Site Franchise'
       },
@@ -573,6 +597,7 @@ export const translations = {
         categoryComputerDesc: 'Master core CS skills in DB, algorithms, and data structures.',
         categoryCodingDesc: 'Build practical coding skills with HTML, Web, and React.',
         categoryCertificationDesc: 'Prepare for IT certifications like Engineer, Computer Skills, SQLD, and Linux.',
+        categoryCareerDesc: 'Prepare for employment with custom career sites, 1:1 coaching, and resume coaching.',
         sitesTitle: 'Explore Learning Sites',
         sitesSubtitle: 'Choose a learning site that matches your goals',
         visitSite: 'Visit Site',
@@ -598,8 +623,13 @@ export const translations = {
           'business': 'Business',
           'computer': 'Computer Science',
           'coding': 'Coding',
-          'certification': 'Certification'
-        }
+          'certification': 'Certification',
+          'career': 'Career Consulting'
+        },
+        addToCart: 'Add to Cart',
+        contactForPrice: 'Contact for Price',
+        priceFrom: '~',
+        loginRequired: 'Login required to access'
       },
       franchise: {
         title: 'Learning Site Application',

@@ -23,6 +23,7 @@ const Cart = lazy(() => import('../pages/Cart'));
 const Checkout = lazy(() => import('../pages/Checkout'));
 const OrderConfirmation = lazy(() => import('../pages/OrderConfirmation'));
 const OrderHistory = lazy(() => import('../pages/OrderHistory'));
+const Shop = lazy(() => import('../pages/Shop'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 const Loading = () => (
@@ -56,6 +57,7 @@ const PublicLayout = () => {
             <Route path="/mypage/orders" element={<AuthGuard><OrderHistory /></AuthGuard>} />
 
             {/* Shop */}
+            <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />

@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useAuth } from '../contexts/AuthContext';
+import { useCart } from '../contexts/CartContext';
 import SEOHead from '../components/SEOHead';
 import useAOS from '../hooks/useAOS';
 import site from '../config/site';
@@ -10,6 +12,9 @@ const CATEGORY_IDS = site.categories.map((c) => c.id);
 const Courses = () => {
   const { id } = useParams();
   const { t, language } = useLanguage();
+  const { isLoggedIn } = useAuth();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
 
   useAOS();
 
@@ -35,6 +40,31 @@ const Courses = () => {
     : site.categories;
 
   const getDifficulty = (level) => t(`site.difficulty.${level}`);
+
+  const formatPrice = (price) =>
+    language === 'en' ? `₩${price.toLocaleString()}` : `${price.toLocaleString()}원`;
+
+  // Login-gated external link handler
+  const handleVisitSite = (url) => {
+    if (!isLoggedIn) {
+      sessionStorage.setItem('dreamit_return_url', url);
+      navigate('/login', { state: { returnUrl: url } });
+      return;
+    }
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  // Service card: add to cart
+  const handleAddToCart = (ls) => {
+    addItem({
+      id: `service-${ls.id}`,
+      title: ls.name,
+      titleEn: ls.nameEn,
+      price: ls.price,
+      description: ls.description,
+      descriptionEn: ls.descriptionEn,
+    });
+  };
 
   // Page title based on context
   const getPageTitle = () => {
@@ -130,19 +160,43 @@ const Courses = () => {
                         </div>
                       </div>
 
-                      {ls.url === '#' ? (
+                      {/* Action Button — service vs regular site */}
+                      {ls.isService ? (
+                        <div className="edu-service-purchase">
+                          {ls.price > 0 ? (
+                            <>
+                              <span className="edu-service-price">
+                                {formatPrice(ls.price)}{t('site.courses.priceFrom')}
+                              </span>
+                              <button
+                                className="btn btn-primary edu-detail-card-btn"
+                                onClick={() => handleAddToCart(ls)}
+                              >
+                                {t('site.courses.addToCart')}
+                              </button>
+                            </>
+                          ) : (
+                            <>
+                              <span className="edu-service-price edu-service-price-inquiry">
+                                {t('site.courses.contactForPrice')}
+                              </span>
+                              <Link to="/franchise" className="btn btn-primary edu-detail-card-btn">
+                                {t('site.courses.contactForPrice')}
+                              </Link>
+                            </>
+                          )}
+                        </div>
+                      ) : ls.url === '#' ? (
                         <span className="btn btn-secondary edu-detail-card-btn edu-coming-soon">
                           {t('site.courses.comingSoon')}
                         </span>
                       ) : (
-                        <a
-                          href={ls.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <button
                           className="btn btn-primary edu-detail-card-btn"
+                          onClick={() => handleVisitSite(ls.url)}
                         >
                           {t('site.courses.visitSite')} →
-                        </a>
+                        </button>
                       )}
                     </div>
                   ))}

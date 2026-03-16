@@ -2,10 +2,7 @@
    DreamIT Edu Hub - Site Styles
    ============================================ */
 
-/* ── Hide cart icon (education hub — no shopping) ── */
-.cart-icon-link {
-  display: none !important;
-}
+/* Cart icon is now visible (Shop page active) */
 
 /* ── Section base ── */
 .section {
@@ -496,6 +493,33 @@
   margin-top: auto;
   width: 100%;
   text-align: center;
+}
+
+/* ── Service Purchase Row (career consulting etc.) ── */
+.edu-service-purchase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.edu-service-purchase .edu-detail-card-btn {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.edu-service-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.edu-service-price-inquiry {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
 
 /* ── Coming Soon Badge ── */

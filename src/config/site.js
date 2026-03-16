@@ -45,7 +45,8 @@ const site = {
     { id: 'business', name: '경영전공분야', nameEn: 'Business', icon: 'fa-solid fa-briefcase', path: '/courses/business' },
     { id: 'computer', name: '컴퓨터전공분야', nameEn: 'Computer Science', icon: 'fa-solid fa-laptop-code', path: '/courses/computer' },
     { id: 'coding', name: '코딩학습', nameEn: 'Coding', icon: 'fa-solid fa-code', path: '/courses/coding' },
-    { id: 'certification', name: '자격증학습분야', nameEn: 'Certification', icon: 'fa-solid fa-award', path: '/courses/certification' }
+    { id: 'certification', name: '자격증학습분야', nameEn: 'Certification', icon: 'fa-solid fa-award', path: '/courses/certification' },
+    { id: 'career', name: '진로컨설팅', nameEn: 'Career Consulting', icon: 'fa-solid fa-user-tie', path: '/courses/career' }
   ],
 
   // 네비게이션 메뉴
@@ -123,6 +124,16 @@ const site = {
         { path: '/courses/biz-visual', labelKey: 'site.nav.bizVisual' }
       ]
     },
+    {
+      labelKey: 'site.nav.career',
+      path: '/courses/career',
+      activePath: '/courses/career',
+      dropdown: [
+        { path: '/courses/career-site', labelKey: 'site.nav.careerSite' },
+        { path: '/courses/career-coaching', labelKey: 'site.nav.careerCoaching' },
+        { path: '/courses/resume-coaching', labelKey: 'site.nav.resumeCoaching' }
+      ]
+    },
     { path: '/franchise', labelKey: 'site.nav.franchise', activePath: '/franchise' }
   ],
 
@@ -134,6 +145,7 @@ const site = {
     { path: '/courses/computer', labelKey: 'site.nav.computer' },
     { path: '/courses/coding', labelKey: 'site.nav.coding' },
     { path: '/courses/certification', labelKey: 'site.nav.certification' },
+    { path: '/courses/career', labelKey: 'site.nav.career' },
     { path: '/franchise', labelKey: 'site.nav.franchise' }
   ],
 
@@ -1120,6 +1132,107 @@ const site = {
       featuresEn: ['Real business data practice', 'Dashboard creation', 'Past exam practice'],
       target: '경영정보시각화 수험생, 데이터 분석가',
       targetEn: 'Biz visualization exam candidates, data analysts'
+    },
+
+    // ── 진로컨설팅 (career) ──
+    {
+      id: 'career-site',
+      name: '맞춤 커리어 사이트 제작',
+      nameEn: 'Custom Career Site',
+      url: '#',
+      icon: 'fa-solid fa-globe',
+      color: '#2563EB',
+      category: 'career',
+      isService: true,
+      price: 50000,
+      description: '나만의 커리어 포트폴리오 사이트를 맞춤 제작해드립니다. 이력서, 프로젝트, 자기소개를 한눈에 보여주는 전문 사이트.',
+      descriptionEn: 'We create a custom career portfolio site for you. A professional site showcasing your resume, projects, and self-introduction.',
+      techStack: ['포트폴리오', '반응형웹', '도메인연결', '맞춤디자인'],
+      difficulty: 'beginner',
+      curriculum: [
+        '요구사항 분석 및 상담',
+        '맞춤 디자인 시안 제작',
+        '포트폴리오 콘텐츠 구성',
+        '반응형 웹사이트 개발',
+        '도메인 연결 및 배포'
+      ],
+      curriculumEn: [
+        'Requirements analysis and consultation',
+        'Custom design mockup creation',
+        'Portfolio content structuring',
+        'Responsive website development',
+        'Domain connection and deployment'
+      ],
+      features: ['맞춤 디자인', '반응형 웹', '도메인 연결 지원'],
+      featuresEn: ['Custom design', 'Responsive web', 'Domain connection support'],
+      target: '취업 준비생, 이직 희망자, 프리랜서',
+      targetEn: 'Job seekers, career changers, freelancers'
+    },
+    {
+      id: 'career-coaching',
+      name: '1:1 커리어 코칭',
+      nameEn: '1:1 Career Coaching',
+      url: '#',
+      icon: 'fa-solid fa-comments',
+      color: '#7C3AED',
+      category: 'career',
+      isService: true,
+      price: 0,
+      description: '전문 커리어 컨설턴트와 1:1 상담을 통해 진로 방향을 설계하고 취업 전략을 수립합니다.',
+      descriptionEn: 'Design your career path and build employment strategies through 1:1 consultation with professional career consultants.',
+      techStack: ['진로설계', '면접코칭', '취업전략', '커리어맵'],
+      difficulty: 'beginner',
+      curriculum: [
+        '현재 역량 진단 및 분석',
+        '목표 직무/산업 탐색',
+        '맞춤 커리어 로드맵 설계',
+        '면접 전략 및 모의면접',
+        '취업 전략 수립 및 피드백'
+      ],
+      curriculumEn: [
+        'Current skill assessment and analysis',
+        'Target job/industry exploration',
+        'Custom career roadmap design',
+        'Interview strategy and mock interviews',
+        'Employment strategy and feedback'
+      ],
+      features: ['1:1 맞춤 상담', '면접 코칭', '취업 전략'],
+      featuresEn: ['1:1 personalized consultation', 'Interview coaching', 'Job strategy'],
+      target: '취업 준비생, 이직 희망자, 진로 고민자',
+      targetEn: 'Job seekers, career changers, those considering career paths'
+    },
+    {
+      id: 'resume-coaching',
+      name: '이력서 & 자기소개서 코칭',
+      nameEn: 'Resume & Cover Letter Coaching',
+      url: '#',
+      icon: 'fa-solid fa-file-pen',
+      color: '#059669',
+      category: 'career',
+      isService: true,
+      price: 0,
+      description: '채용 담당자의 시선을 사로잡는 이력서와 자기소개서 작성법을 코칭합니다.',
+      descriptionEn: 'Coaching on writing resumes and cover letters that capture the attention of hiring managers.',
+      techStack: ['이력서', '자기소개서', '포트폴리오', '첨삭'],
+      difficulty: 'beginner',
+      curriculum: [
+        '이력서 구조와 핵심 포인트',
+        '직무별 자기소개서 작성법',
+        '포트폴리오 구성 전략',
+        '1:1 첨삭 및 피드백',
+        '최종 완성본 검수'
+      ],
+      curriculumEn: [
+        'Resume structure and key points',
+        'Cover letter writing by job type',
+        'Portfolio structuring strategy',
+        '1:1 editing and feedback',
+        'Final version review'
+      ],
+      features: ['1:1 첨삭', '직무별 맞춤', '포트폴리오 구성'],
+      featuresEn: ['1:1 editing', 'Job-specific customization', 'Portfolio structuring'],
+      target: '취업 준비생, 이직 희망자',
+      targetEn: 'Job seekers, career changers'
     }
   ]
 };

@@ -11,7 +11,8 @@ const CATEGORY_DESC_KEYS = {
   'business': 'site.home.categoryBusinessDesc',
   'computer': 'site.home.categoryComputerDesc',
   'coding': 'site.home.categoryCodingDesc',
-  'certification': 'site.home.categoryCertificationDesc'
+  'certification': 'site.home.categoryCertificationDesc',
+  'career': 'site.home.categoryCareerDesc'
 };
 
 const Home = () => {

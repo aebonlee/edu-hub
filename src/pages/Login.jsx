@@ -12,6 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
+  const returnUrl = location.state?.returnUrl || null;
 
   const [step, setStep] = useState('method'); // 'method' | 'email'
   const [form, setForm] = useState({ email: '', password: '' });
@@ -31,6 +32,12 @@ const Login = () => {
   }, []);
 
   if (isLoggedIn) {
+    // Check for pending returnUrl (external site link that required login)
+    const pendingUrl = returnUrl || sessionStorage.getItem('dreamit_return_url');
+    if (pendingUrl) {
+      sessionStorage.removeItem('dreamit_return_url');
+      window.open(pendingUrl, '_blank', 'noopener,noreferrer');
+    }
     navigate(from, { replace: true });
     return null;
   }
@@ -42,6 +49,11 @@ const Login = () => {
     setError('');
     try {
       await signInWithEmail(form.email, form.password);
+      const pendingUrl = returnUrl || sessionStorage.getItem('dreamit_return_url');
+      if (pendingUrl) {
+        sessionStorage.removeItem('dreamit_return_url');
+        window.open(pendingUrl, '_blank', 'noopener,noreferrer');
+      }
       navigate(from, { replace: true });
     } catch (err) {
       setError(err.message || t('auth.loginError'));
