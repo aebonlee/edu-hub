@@ -61,10 +61,10 @@ const Franchise = () => {
   useAOS();
 
   const benefits = [
-    { icon: 'fa-solid fa-book-open', titleKey: 'benefit1Title', descKey: 'benefit1Desc' },
-    { icon: 'fa-solid fa-coins', titleKey: 'benefit2Title', descKey: 'benefit2Desc' },
+    { icon: 'fa-solid fa-palette', titleKey: 'benefit1Title', descKey: 'benefit1Desc' },
+    { icon: 'fa-solid fa-box-open', titleKey: 'benefit2Title', descKey: 'benefit2Desc' },
     { icon: 'fa-solid fa-wrench', titleKey: 'benefit3Title', descKey: 'benefit3Desc' },
-    { icon: 'fa-solid fa-handshake', titleKey: 'benefit4Title', descKey: 'benefit4Desc' }
+    { icon: 'fa-solid fa-chalkboard-user', titleKey: 'benefit4Title', descKey: 'benefit4Desc' }
   ];
 
   return (
