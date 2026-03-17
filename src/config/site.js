@@ -1154,26 +1154,30 @@ const site = {
       icon: 'fa-solid fa-compass',
       color: '#0EA5E9',
       category: 'career',
-      description: '자기 탐색을 통해 나만의 진로를 발견하는 여정을 시작합니다. 적성, 흥미, 가치관을 분석하여 최적의 진로를 설계합니다.',
-      descriptionEn: 'Start a journey to discover your career path through self-exploration. Analyze your aptitude, interests, and values to design the optimal career.',
-      techStack: ['자기탐색', '적성검사', '진로설계', '가치관분석'],
+      description: '자기 탐색을 통해 나만의 진로를 발견하고, 이력서·자기소개서 작성까지 체계적으로 취업을 준비합니다. 적성, 흥미, 가치관 분석부터 실전 취업 준비까지.',
+      descriptionEn: 'Discover your career path through self-exploration and systematically prepare for employment, from aptitude analysis to resume and cover letter writing.',
+      techStack: ['자기탐색', '적성검사', '진로설계', '이력서작성', '자기소개서'],
       difficulty: 'beginner',
       curriculum: [
         '자기 이해와 탐색',
         '적성 및 흥미 분석',
         '가치관과 직업 세계 탐색',
-        '진로 목표 설정',
-        '진로 로드맵 수립'
+        '진로 목표 설정 및 로드맵 수립',
+        '이력서 작성법과 실전 작성',
+        '자기소개서 작성 전략',
+        '취업 준비 종합 점검'
       ],
       curriculumEn: [
         'Self-understanding and exploration',
         'Aptitude and interest analysis',
         'Values and career world exploration',
-        'Career goal setting',
-        'Career roadmap planning'
+        'Career goal setting and roadmap planning',
+        'Resume writing methods and practice',
+        'Cover letter writing strategy',
+        'Comprehensive employment preparation review'
       ],
-      features: ['자기 탐색', '적성 분석', '진로 로드맵'],
-      featuresEn: ['Self-exploration', 'Aptitude analysis', 'Career roadmap'],
+      features: ['자기 탐색', '적성 분석', '진로 로드맵', '이력서·자기소개서 작성'],
+      featuresEn: ['Self-exploration', 'Aptitude analysis', 'Career roadmap', 'Resume & cover letter writing'],
       target: '진로 고민 학생, 취업 준비생, 진로 전환 희망자',
       targetEn: 'Students exploring careers, job seekers, career changers'
     },
