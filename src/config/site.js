@@ -1055,7 +1055,7 @@ const site = {
       id: 'sqld',
       name: 'SQLD',
       nameEn: 'SQLD Certification',
-      url: '#',
+      url: 'https://sqld.dreamitbiz.com/',
       icon: 'fa-solid fa-magnifying-glass-chart',
       color: '#4F46E5',
       category: 'certification',
