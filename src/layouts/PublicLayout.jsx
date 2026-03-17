@@ -48,26 +48,28 @@ const PublicLayout = () => {
         <ErrorBoundary>
         <Suspense fallback={<Loading />}>
           <Routes>
-            {/* Auth — 로그인 없이 접근 가능 */}
+            {/* 인증 페이지 */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
 
-            {/* 로그인 필수 — 모든 페이지 */}
-            <Route path="/" element={<AuthGuard><Home /></AuthGuard>} />
-            <Route path="/courses" element={<AuthGuard><Courses /></AuthGuard>} />
-            <Route path="/courses/:id" element={<AuthGuard><Courses /></AuthGuard>} />
-            <Route path="/franchise" element={<AuthGuard><Franchise /></AuthGuard>} />
-            <Route path="/about" element={<AuthGuard><About /></AuthGuard>} />
+            {/* 자유 열람 — 로그인 없이 둘러보기 가능 (학습사이트 링크만 로그인 필요) */}
+            <Route path="/" element={<Home />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:id" element={<Courses />} />
+            <Route path="/franchise" element={<Franchise />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/notice" element={<Notice />} />
+            <Route path="/notice/:id" element={<NoticeDetail />} />
+            <Route path="/qna" element={<QnA />} />
+            <Route path="/qna/:id" element={<QnADetail />} />
+            <Route path="/shop" element={<Shop />} />
+
+            {/* 로그인 필수 — 개인 활동 (글쓰기, 결제, 마이페이지) */}
             <Route path="/notice/write" element={<AuthGuard><NoticeWrite /></AuthGuard>} />
-            <Route path="/notice/:id" element={<AuthGuard><NoticeDetail /></AuthGuard>} />
-            <Route path="/notice" element={<AuthGuard><Notice /></AuthGuard>} />
             <Route path="/qna/write" element={<AuthGuard><QnAWrite /></AuthGuard>} />
-            <Route path="/qna/:id" element={<AuthGuard><QnADetail /></AuthGuard>} />
-            <Route path="/qna" element={<AuthGuard><QnA /></AuthGuard>} />
             <Route path="/mypage" element={<AuthGuard><MyPage /></AuthGuard>} />
             <Route path="/mypage/orders" element={<AuthGuard><OrderHistory /></AuthGuard>} />
-            <Route path="/shop" element={<AuthGuard><Shop /></AuthGuard>} />
             <Route path="/cart" element={<AuthGuard><Cart /></AuthGuard>} />
             <Route path="/checkout" element={<AuthGuard><Checkout /></AuthGuard>} />
             <Route path="/order-confirmation" element={<AuthGuard><OrderConfirmation /></AuthGuard>} />
