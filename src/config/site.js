@@ -44,7 +44,7 @@ const site = {
     { id: 'ai', name: '인공지능활용', nameEn: 'AI Utilization', icon: 'fa-solid fa-robot', path: '/courses/ai' },
     { id: 'business', name: '경영전공분야', nameEn: 'Business', icon: 'fa-solid fa-briefcase', path: '/courses/business' },
     { id: 'computer', name: '컴퓨터전공분야', nameEn: 'Computer Science', icon: 'fa-solid fa-laptop-code', path: '/courses/computer' },
-    { id: 'coding', name: '코딩학습', nameEn: 'Coding', icon: 'fa-solid fa-code', path: '/courses/coding' },
+    { id: 'coding', name: '프로그래밍 코딩학습', nameEn: 'Programming & Coding', icon: 'fa-solid fa-code', path: '/courses/coding' },
     { id: 'certification', name: '자격증학습분야', nameEn: 'Certification', icon: 'fa-solid fa-award', path: '/courses/certification' },
     { id: 'career', name: '진로컨설팅', nameEn: 'Career Consulting', icon: 'fa-solid fa-user-tie', path: '/courses/career' }
   ],
@@ -57,6 +57,7 @@ const site = {
       activePath: '/courses/liberal-arts',
       dropdown: [
         { path: '/courses/computational-thinking', labelKey: 'site.nav.computationalThinking' },
+        { path: '/courses/ai-sw-intro', labelKey: 'site.nav.aiSwIntro' },
         { path: '/courses/statistics', labelKey: 'site.nav.statistics' },
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/writing', labelKey: 'site.nav.writing' },
@@ -203,6 +204,37 @@ const site = {
       featuresEn: ['Step-by-step thinking training', 'Practice problems', 'Self-assessment'],
       target: 'IT 입문자, 비전공자, 논리적 사고력 향상을 원하는 학습자',
       targetEn: 'IT beginners, non-CS majors, learners seeking logical thinking improvement'
+    },
+    {
+      id: 'ai-sw-intro',
+      name: 'AI·SW개론',
+      nameEn: 'Intro to AI & SW',
+      url: '#',
+      icon: 'fa-solid fa-microchip',
+      color: '#7C3AED',
+      category: 'liberal-arts',
+      description: '인공지능과 소프트웨어의 기본 개념을 이해하고, AI 시대에 필요한 디지털 소양을 갖춥니다.',
+      descriptionEn: 'Understand the fundamentals of AI and software, and build digital literacy for the AI era.',
+      techStack: ['AI개론', 'SW개론', '컴퓨팅사고', '디지털리터러시'],
+      difficulty: 'beginner',
+      curriculum: [
+        '인공지능의 이해와 역사',
+        '머신러닝·딥러닝 기초 개념',
+        '소프트웨어 개발 프로세스',
+        'AI 활용 사례와 윤리',
+        'SW 기초 실습과 프로젝트'
+      ],
+      curriculumEn: [
+        'Understanding AI and its history',
+        'Machine learning & deep learning basics',
+        'Software development process',
+        'AI use cases and ethics',
+        'SW basics practice and projects'
+      ],
+      features: ['AI·SW 기초 이론', '사례 중심 학습', '비전공자 맞춤'],
+      featuresEn: ['AI & SW fundamentals', 'Case-based learning', 'Non-CS major friendly'],
+      target: '비전공자, AI·SW 입문자, 디지털 소양을 갖추고 싶은 학습자',
+      targetEn: 'Non-CS majors, AI/SW beginners, learners seeking digital literacy'
     },
     {
       id: 'statistics',

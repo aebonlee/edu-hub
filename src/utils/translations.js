@@ -192,6 +192,7 @@ export const translations = {
         statistics: '통계학 기초',
         english: '실용 영어',
         writing: '글쓰기와 소통',
+        aiSwIntro: 'AI·SW개론',
         presentation: '프레젠테이션',
         // 경영전공분야
         accounting: '회계학 원리',
@@ -213,7 +214,7 @@ export const translations = {
         infoComm: '정보통신',
         swDesign: '소프트웨어설계 & 구현',
         // 코딩학습분야
-        coding: '코딩학습',
+        coding: '프로그래밍 코딩학습',
         codingLearn: '코딩 학습',
         // 자격증학습분야
         engineer: '정보처리기사',
@@ -256,7 +257,7 @@ export const translations = {
         categoryAiDesc: '프롬프트 엔지니어링, LLM, 업무자동화 등 AI 활용 역량을 키우세요.',
         categoryBusinessDesc: '회계, 마케팅, 경영전략, 재무관리 등 경영 전공 지식을 배우세요.',
         categoryComputerDesc: 'DB, 알고리즘, 자료구조 등 컴퓨터 전공 핵심을 학습하세요.',
-        categoryCodingDesc: 'HTML, Web, React 등 실무 코딩 역량을 키우세요.',
+        categoryCodingDesc: 'C·JAVA·Python 문법과 HTML, Web, React 등 실무 프로그래밍 역량을 키우세요.',
         categoryCertificationDesc: '정보처리기사, 컴활, SQLD, 리눅스마스터 자격증을 준비하세요.',
         categoryCareerDesc: '맞춤 커리어 사이트 제작, 1:1 코칭, 이력서 코칭으로 취업을 준비하세요.',
         sitesTitle: '학습사이트 둘러보기',
@@ -283,7 +284,7 @@ export const translations = {
           'ai': '인공지능활용',
           'business': '경영전공',
           'computer': '컴퓨터전공',
-          'coding': '코딩학습',
+          'coding': '프로그래밍 코딩학습',
           'certification': '자격증학습',
           'career': '진로컨설팅'
         },
@@ -608,6 +609,7 @@ export const translations = {
         statistics: 'Statistics Basics',
         english: 'Practical English',
         writing: 'Writing & Communication',
+        aiSwIntro: 'Intro to AI & SW',
         presentation: 'Presentation Skills',
         // Business
         accounting: 'Accounting Principles',
@@ -629,7 +631,7 @@ export const translations = {
         infoComm: 'Info & Communications',
         swDesign: 'SW Design & Implementation',
         // Coding
-        coding: 'Coding',
+        coding: 'Programming & Coding',
         codingLearn: 'Coding Learning',
         // Certification
         engineer: 'Info Processing Engineer',
@@ -672,7 +674,7 @@ export const translations = {
         categoryAiDesc: 'Build AI skills in prompt engineering, LLM, and work automation.',
         categoryBusinessDesc: 'Learn business knowledge in accounting, marketing, strategy, and finance.',
         categoryComputerDesc: 'Master core CS skills in DB, algorithms, and data structures.',
-        categoryCodingDesc: 'Build practical coding skills with HTML, Web, and React.',
+        categoryCodingDesc: 'Build programming skills with C, JAVA, Python grammar and practical coding with HTML, Web, and React.',
         categoryCertificationDesc: 'Prepare for IT certifications like Engineer, Computer Skills, SQLD, and Linux.',
         categoryCareerDesc: 'Prepare for employment with custom career sites, 1:1 coaching, and resume coaching.',
         sitesTitle: 'Explore Learning Sites',
@@ -699,7 +701,7 @@ export const translations = {
           'ai': 'AI Utilization',
           'business': 'Business',
           'computer': 'Computer Science',
-          'coding': 'Coding',
+          'coding': 'Programming & Coding',
           'certification': 'Certification',
           'career': 'Career Consulting'
         },
