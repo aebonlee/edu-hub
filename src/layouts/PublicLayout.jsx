@@ -48,33 +48,29 @@ const PublicLayout = () => {
         <ErrorBoundary>
         <Suspense fallback={<Loading />}>
           <Routes>
-            {/* Home */}
-            <Route path="/" element={<Home />} />
-
-            {/* Edu Hub Pages */}
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:id" element={<Courses />} />
-            <Route path="/franchise" element={<Franchise />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/notice/write" element={<NoticeWrite />} />
-            <Route path="/notice/:id" element={<NoticeDetail />} />
-            <Route path="/notice" element={<Notice />} />
-            <Route path="/qna/write" element={<QnAWrite />} />
-            <Route path="/qna/:id" element={<QnADetail />} />
-            <Route path="/qna" element={<QnA />} />
-
-            {/* Auth */}
+            {/* Auth — 로그인 없이 접근 가능 */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+
+            {/* 로그인 필수 — 모든 페이지 */}
+            <Route path="/" element={<AuthGuard><Home /></AuthGuard>} />
+            <Route path="/courses" element={<AuthGuard><Courses /></AuthGuard>} />
+            <Route path="/courses/:id" element={<AuthGuard><Courses /></AuthGuard>} />
+            <Route path="/franchise" element={<AuthGuard><Franchise /></AuthGuard>} />
+            <Route path="/about" element={<AuthGuard><About /></AuthGuard>} />
+            <Route path="/notice/write" element={<AuthGuard><NoticeWrite /></AuthGuard>} />
+            <Route path="/notice/:id" element={<AuthGuard><NoticeDetail /></AuthGuard>} />
+            <Route path="/notice" element={<AuthGuard><Notice /></AuthGuard>} />
+            <Route path="/qna/write" element={<AuthGuard><QnAWrite /></AuthGuard>} />
+            <Route path="/qna/:id" element={<AuthGuard><QnADetail /></AuthGuard>} />
+            <Route path="/qna" element={<AuthGuard><QnA /></AuthGuard>} />
             <Route path="/mypage" element={<AuthGuard><MyPage /></AuthGuard>} />
             <Route path="/mypage/orders" element={<AuthGuard><OrderHistory /></AuthGuard>} />
-
-            {/* Shop */}
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/shop" element={<AuthGuard><Shop /></AuthGuard>} />
+            <Route path="/cart" element={<AuthGuard><Cart /></AuthGuard>} />
+            <Route path="/checkout" element={<AuthGuard><Checkout /></AuthGuard>} />
+            <Route path="/order-confirmation" element={<AuthGuard><OrderConfirmation /></AuthGuard>} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
