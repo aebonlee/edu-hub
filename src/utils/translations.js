@@ -215,7 +215,7 @@ export const translations = {
         swDesign: '소프트웨어설계 & 구현',
         // 코딩학습분야
         coding: '프로그래밍 코딩학습',
-        codingLearn: '코딩 학습',
+        codingLearn: '프로그래밍 코딩학습',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -632,7 +632,7 @@ export const translations = {
         swDesign: 'SW Design & Implementation',
         // Coding
         coding: 'Programming & Coding',
-        codingLearn: 'Coding Learning',
+        codingLearn: 'Programming & Coding',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',
