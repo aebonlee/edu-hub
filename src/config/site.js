@@ -109,7 +109,7 @@ const site = {
         { path: '/courses/html', labelKey: 'site.nav.html' },
         { path: '/courses/web', labelKey: 'site.nav.web' },
         { path: '/courses/react', labelKey: 'site.nav.react' },
-        { path: 'https://coding.dreamitbiz.com/', labelKey: 'site.nav.codingLearn', external: true }
+        { path: '/courses/coding-learn', labelKey: 'site.nav.codingLearn' }
       ]
     },
     {
