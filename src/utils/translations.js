@@ -223,6 +223,7 @@ export const translations = {
         bizVisual: '경영정보시각화',
         // 진로컨설팅
         career: '진로컨설팅',
+        careerJourney: '나를 찾는 여행 - 나의 진로',
         careerSite: '맞춤 커리어 사이트 제작',
         careerCoaching: '1:1 커리어 코칭',
         resumeCoaching: '이력서 & 자기소개서 코칭',
@@ -638,6 +639,7 @@ export const translations = {
         bizVisual: 'Biz Info Visualization',
         // Career Consulting
         career: 'Career Consulting',
+        careerJourney: 'Journey to Find Myself - My Career',
         careerSite: 'Custom Career Site',
         careerCoaching: '1:1 Career Coaching',
         resumeCoaching: 'Resume & Cover Letter Coaching',

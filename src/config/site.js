@@ -129,6 +129,7 @@ const site = {
       path: '/courses/career',
       activePath: '/courses/career',
       dropdown: [
+        { path: '/courses/career-journey', labelKey: 'site.nav.careerJourney' },
         { path: '/courses/career-site', labelKey: 'site.nav.careerSite' },
         { path: '/courses/career-coaching', labelKey: 'site.nav.careerCoaching' },
         { path: '/courses/resume-coaching', labelKey: 'site.nav.resumeCoaching' }
@@ -1145,6 +1146,37 @@ const site = {
     },
 
     // ── 진로컨설팅 (career) ──
+    {
+      id: 'career-journey',
+      name: '나를 찾는 여행 - 나의 진로',
+      nameEn: 'Journey to Find Myself - My Career',
+      url: 'https://career.dreamitbiz.com/',
+      icon: 'fa-solid fa-compass',
+      color: '#0EA5E9',
+      category: 'career',
+      description: '자기 탐색을 통해 나만의 진로를 발견하는 여정을 시작합니다. 적성, 흥미, 가치관을 분석하여 최적의 진로를 설계합니다.',
+      descriptionEn: 'Start a journey to discover your career path through self-exploration. Analyze your aptitude, interests, and values to design the optimal career.',
+      techStack: ['자기탐색', '적성검사', '진로설계', '가치관분석'],
+      difficulty: 'beginner',
+      curriculum: [
+        '자기 이해와 탐색',
+        '적성 및 흥미 분석',
+        '가치관과 직업 세계 탐색',
+        '진로 목표 설정',
+        '진로 로드맵 수립'
+      ],
+      curriculumEn: [
+        'Self-understanding and exploration',
+        'Aptitude and interest analysis',
+        'Values and career world exploration',
+        'Career goal setting',
+        'Career roadmap planning'
+      ],
+      features: ['자기 탐색', '적성 분석', '진로 로드맵'],
+      featuresEn: ['Self-exploration', 'Aptitude analysis', 'Career roadmap'],
+      target: '진로 고민 학생, 취업 준비생, 진로 전환 희망자',
+      targetEn: 'Students exploring careers, job seekers, career changers'
+    },
     {
       id: 'career-site',
       name: '맞춤 커리어 사이트 제작',
