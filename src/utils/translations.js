@@ -191,6 +191,8 @@ export const translations = {
         // 교양분야
         statistics: '통계학 기초',
         english: '실용 영어',
+        japanese: '실용 일본어',
+        chinese: '실용 중국어',
         writing: '글쓰기와 소통',
         aiSwIntro: 'AI·SW개론',
         presentation: '프레젠테이션',
@@ -216,6 +218,8 @@ export const translations = {
         // 코딩학습분야
         coding: '프로그래밍 코딩학습',
         codingLearn: '프로그래밍 코딩학습',
+        javaMaster: '자바 마스터',
+        pythonMaster: '파이썬 마스터',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -608,6 +612,8 @@ export const translations = {
         // Liberal Arts
         statistics: 'Statistics Basics',
         english: 'Practical English',
+        japanese: 'Practical Japanese',
+        chinese: 'Practical Chinese',
         writing: 'Writing & Communication',
         aiSwIntro: 'Intro to AI & SW',
         presentation: 'Presentation Skills',
@@ -633,6 +639,8 @@ export const translations = {
         // Coding
         coding: 'Programming & Coding',
         codingLearn: 'Programming & Coding',
+        javaMaster: 'Java Master',
+        pythonMaster: 'Python Master',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',

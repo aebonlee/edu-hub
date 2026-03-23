@@ -60,6 +60,8 @@ const site = {
         { path: '/courses/ai-sw-intro', labelKey: 'site.nav.aiSwIntro' },
         { path: '/courses/statistics', labelKey: 'site.nav.statistics' },
         { path: '/courses/english', labelKey: 'site.nav.english' },
+        { path: '/courses/japanese', labelKey: 'site.nav.japanese' },
+        { path: '/courses/chinese', labelKey: 'site.nav.chinese' },
         { path: '/courses/writing', labelKey: 'site.nav.writing' },
         { path: '/courses/presentation', labelKey: 'site.nav.presentation' }
       ]
@@ -110,7 +112,9 @@ const site = {
         { path: '/courses/html', labelKey: 'site.nav.html' },
         { path: '/courses/web', labelKey: 'site.nav.web' },
         { path: '/courses/react', labelKey: 'site.nav.react' },
-        { path: '/courses/coding-learn', labelKey: 'site.nav.codingLearn' }
+        { path: '/courses/coding-learn', labelKey: 'site.nav.codingLearn' },
+        { path: '/courses/java-master', labelKey: 'site.nav.javaMaster' },
+        { path: '/courses/python-master', labelKey: 'site.nav.pythonMaster' }
       ]
     },
     {
@@ -271,7 +275,7 @@ const site = {
       id: 'english',
       name: '실용 영어',
       nameEn: 'Practical English',
-      url: '#',
+      url: 'https://english.dreamitbiz.com/',
       icon: 'fa-solid fa-globe',
       color: '#EC4899',
       category: 'liberal-arts',
@@ -297,6 +301,68 @@ const site = {
       featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
       target: '영어 실력 향상을 원하는 학습자',
       targetEn: 'Learners looking to improve English skills'
+    },
+    {
+      id: 'japanese',
+      name: '실용 일본어',
+      nameEn: 'Practical Japanese',
+      url: '#',
+      icon: 'fa-solid fa-language',
+      color: '#DC2626',
+      category: 'liberal-arts',
+      description: '비즈니스 및 일상에서 활용 가능한 실용 일본어 회화와 작문을 학습합니다.',
+      descriptionEn: 'Learn practical Japanese conversation and writing for business and daily life.',
+      techStack: ['회화', '작문', '비즈니스일본어', 'JLPT'],
+      difficulty: 'beginner',
+      curriculum: [
+        '일본어 기초 문법과 발음',
+        '일상 일본어 회화 패턴',
+        '비즈니스 일본어와 경어',
+        '일본어 독해와 작문',
+        'JLPT 실전 대비'
+      ],
+      curriculumEn: [
+        'Basic Japanese grammar and pronunciation',
+        'Daily conversation patterns',
+        'Business Japanese and honorifics',
+        'Japanese reading and writing',
+        'JLPT exam preparation'
+      ],
+      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
+      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      target: '일본어 실력 향상을 원하는 학습자',
+      targetEn: 'Learners looking to improve Japanese skills'
+    },
+    {
+      id: 'chinese',
+      name: '실용 중국어',
+      nameEn: 'Practical Chinese',
+      url: '#',
+      icon: 'fa-solid fa-language',
+      color: '#EA580C',
+      category: 'liberal-arts',
+      description: '비즈니스 및 일상에서 활용 가능한 실용 중국어 회화와 작문을 학습합니다.',
+      descriptionEn: 'Learn practical Chinese conversation and writing for business and daily life.',
+      techStack: ['회화', '작문', '비즈니스중국어', 'HSK'],
+      difficulty: 'beginner',
+      curriculum: [
+        '중국어 기초 문법과 성조',
+        '일상 중국어 회화 패턴',
+        '비즈니스 중국어 표현',
+        '중국어 독해와 작문',
+        'HSK 실전 대비'
+      ],
+      curriculumEn: [
+        'Basic Chinese grammar and tones',
+        'Daily conversation patterns',
+        'Business Chinese expressions',
+        'Chinese reading and writing',
+        'HSK exam preparation'
+      ],
+      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
+      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      target: '중국어 실력 향상을 원하는 학습자',
+      targetEn: 'Learners looking to improve Chinese skills'
     },
     {
       id: 'writing',
@@ -366,7 +432,7 @@ const site = {
       id: 'prompt-engineering',
       name: '프롬프트 엔지니어링',
       nameEn: 'Prompt Engineering',
-      url: '#',
+      url: 'https://ai-prompt.dreamitbiz.com/',
       icon: 'fa-solid fa-comments',
       color: '#7C3AED',
       category: 'ai',
@@ -1018,6 +1084,68 @@ const site = {
       featuresEn: ['C, JAVA, Python grammar lessons', 'Beginner to advanced coding tests', 'Language-specific skill assessment'],
       target: '코딩 입문자, 프로그래밍 언어 학습자',
       targetEn: 'Coding beginners and programming language learners'
+    },
+    {
+      id: 'java-master',
+      name: '자바 마스터',
+      nameEn: 'Java Master',
+      url: 'https://java-study.dreamitbiz.com/',
+      icon: 'fa-brands fa-java',
+      color: '#DC2626',
+      category: 'coding',
+      description: 'Java 프로그래밍의 기초부터 객체지향, 고급 문법까지 체계적으로 마스터하는 학습 플랫폼',
+      descriptionEn: 'A learning platform to systematically master Java programming from basics to OOP and advanced syntax',
+      techStack: ['Java', 'OOP', 'Spring', 'JVM'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'Java 기초 문법과 자료형',
+        '객체지향 프로그래밍(OOP) 핵심',
+        '컬렉션 프레임워크와 제네릭',
+        '예외 처리와 입출력(I/O)',
+        'Java 프로젝트 실전 개발'
+      ],
+      curriculumEn: [
+        'Java basic syntax and data types',
+        'Object-oriented programming (OOP) core concepts',
+        'Collections framework and generics',
+        'Exception handling and I/O',
+        'Java project development practice'
+      ],
+      features: ['단계별 문법 학습', '코딩 실력 테스트', 'OOP 설계 실습'],
+      featuresEn: ['Step-by-step grammar lessons', 'Coding skill tests', 'OOP design practice'],
+      target: 'Java 입문자, 백엔드 개발자 지망생',
+      targetEn: 'Java beginners, aspiring backend developers'
+    },
+    {
+      id: 'python-master',
+      name: '파이썬 마스터',
+      nameEn: 'Python Master',
+      url: 'https://python-study.dreamitbiz.com/',
+      icon: 'fa-brands fa-python',
+      color: '#2563EB',
+      category: 'coding',
+      description: 'Python 프로그래밍의 기초부터 데이터 처리, 자동화까지 체계적으로 마스터하는 학습 플랫폼',
+      descriptionEn: 'A learning platform to systematically master Python from basics to data processing and automation',
+      techStack: ['Python', '데이터처리', '자동화', 'Flask'],
+      difficulty: 'beginner',
+      curriculum: [
+        'Python 기초 문법과 자료형',
+        '함수, 모듈, 패키지 활용',
+        '파일 처리와 데이터 분석 기초',
+        '웹 크롤링과 업무 자동화',
+        'Python 프로젝트 실전 개발'
+      ],
+      curriculumEn: [
+        'Python basic syntax and data types',
+        'Functions, modules, and packages',
+        'File handling and data analysis basics',
+        'Web crawling and task automation',
+        'Python project development practice'
+      ],
+      features: ['단계별 문법 학습', '코딩 실력 테스트', '실무 프로젝트'],
+      featuresEn: ['Step-by-step grammar lessons', 'Coding skill tests', 'Real-world projects'],
+      target: 'Python 입문자, 데이터 분석 지망생',
+      targetEn: 'Python beginners, aspiring data analysts'
     },
 
     // ── 자격증학습분야 (certification) ──
