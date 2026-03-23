@@ -75,7 +75,8 @@ const site = {
         { path: '/courses/llm-langchain', labelKey: 'site.nav.llmLangchain' },
         { path: '/courses/ai-automation', labelKey: 'site.nav.aiAutomation' },
         { path: '/courses/ai-data-analysis', labelKey: 'site.nav.aiDataAnalysis' },
-        { path: '/courses/ai-image-gen', labelKey: 'site.nav.aiImageGen' }
+        { path: '/courses/ai-image-gen', labelKey: 'site.nav.aiImageGen' },
+        { path: '/courses/open-claw', labelKey: 'site.nav.openClaw' }
       ]
     },
     {
@@ -582,6 +583,37 @@ const site = {
       featuresEn: ['Multi-tool practice', 'Prompt pattern learning', 'Commercial usage techniques'],
       target: '디자이너, 콘텐츠 크리에이터',
       targetEn: 'Designers, content creators'
+    },
+    {
+      id: 'open-claw',
+      name: 'Open Claw',
+      nameEn: 'Open Claw',
+      url: '#',
+      icon: 'fa-solid fa-hand',
+      color: '#0891B2',
+      category: 'ai',
+      description: 'Open Claw 프레임워크를 활용한 AI 에이전트 구축과 오픈소스 AI 도구 활용법을 학습합니다.',
+      descriptionEn: 'Learn to build AI agents with the Open Claw framework and utilize open-source AI tools.',
+      techStack: ['Open Claw', 'AI Agent', 'Python', '오픈소스'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'Open Claw 프레임워크 개론',
+        'AI 에이전트 설계와 구현',
+        '오픈소스 AI 도구 활용',
+        '멀티 에이전트 시스템 구축',
+        'Open Claw 실전 프로젝트'
+      ],
+      curriculumEn: [
+        'Introduction to Open Claw framework',
+        'AI agent design and implementation',
+        'Utilizing open-source AI tools',
+        'Building multi-agent systems',
+        'Open Claw hands-on project'
+      ],
+      features: ['오픈소스 AI 실습', '에이전트 설계', '프로젝트 기반 학습'],
+      featuresEn: ['Open-source AI practice', 'Agent design', 'Project-based learning'],
+      target: 'AI 개발자, 오픈소스 AI 활용에 관심 있는 학습자',
+      targetEn: 'AI developers, learners interested in open-source AI'
     },
 
     // ── 경영전공분야 (business) ──
