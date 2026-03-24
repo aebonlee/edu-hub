@@ -207,10 +207,10 @@ export const translations = {
         uxDesign: '고객경험디자인',
         digitalBiz: '디지털비즈니스전략세미나',
         // 컴퓨터전공분야
-        db: 'DB 학습',
+        db: '데이터 베이스',
         react: 'React 학습',
-        html: 'HTML 학습',
-        web: 'Web 학습',
+        html: 'HTML5 + CSS3 & Glossary',
+        web: 'Vibe Backend',
         computationalThinking: '컴퓨팅 사고',
         algorithm: '알고리즘',
         dataStructure: '자료구조',
@@ -221,6 +221,7 @@ export const translations = {
         codingLearn: '프로그래밍 코딩학습',
         javaMaster: '자바 마스터',
         pythonMaster: '파이썬 마스터',
+        cLanguage: 'C언어 학습',
         // 자격증학습분야
         engineer: '정보처리기사',
         computerSkills: '컴퓨터활용능력',
@@ -629,10 +630,10 @@ export const translations = {
         uxDesign: 'CX Design',
         digitalBiz: 'Digital Biz Strategy',
         // Computer Science
-        db: 'DB Learning',
+        db: 'Database',
         react: 'React Learning',
-        html: 'HTML Learning',
-        web: 'Web Learning',
+        html: 'HTML5 + CSS3 & Glossary',
+        web: 'Vibe Backend',
         computationalThinking: 'Computational Thinking',
         algorithm: 'Algorithm',
         dataStructure: 'Data Structure',
@@ -643,6 +644,7 @@ export const translations = {
         codingLearn: 'Programming & Coding',
         javaMaster: 'Java Master',
         pythonMaster: 'Python Master',
+        cLanguage: 'C Language',
         // Certification
         engineer: 'Info Processing Engineer',
         computerSkills: 'Computer Skills',

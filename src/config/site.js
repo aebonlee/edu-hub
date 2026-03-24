@@ -115,7 +115,8 @@ const site = {
         { path: '/courses/react', labelKey: 'site.nav.react' },
         { path: '/courses/coding-learn', labelKey: 'site.nav.codingLearn' },
         { path: '/courses/java-master', labelKey: 'site.nav.javaMaster' },
-        { path: '/courses/python-master', labelKey: 'site.nav.pythonMaster' }
+        { path: '/courses/python-master', labelKey: 'site.nav.pythonMaster' },
+        { path: '/courses/c-language', labelKey: 'site.nav.cLanguage' }
       ]
     },
     {
@@ -170,8 +171,8 @@ const site = {
   familySites: [
     { name: 'DB 학습', url: 'https://db-study.dreamitbiz.com' },
     { name: 'React 학습', url: 'https://reactstudy.dreamitbiz.com' },
-    { name: 'HTML 학습', url: 'https://html.dreamitbiz.com' },
-    { name: 'Web 학습', url: 'https://webstudy.dreamitbiz.com' },
+    { name: 'HTML5 + CSS3 & Glossary', url: 'https://html.dreamitbiz.com' },
+    { name: 'Vibe Backend', url: 'https://webstudy.dreamitbiz.com' },
     { name: 'AHP 연구 플랫폼', url: 'https://ahp-basic.dreamitbiz.com' },
     { name: '핵심역량 자가측정', url: 'https://competency.dreamitbiz.com' }
   ],
@@ -838,7 +839,7 @@ const site = {
     // ── 컴퓨터전공분야 (computer) ──
     {
       id: 'db',
-      name: 'DB 학습',
+      name: '데이터 베이스',
       nameEn: 'Database Learning',
       url: 'https://db-study.dreamitbiz.com',
       icon: 'fa-solid fa-database',
@@ -995,8 +996,8 @@ const site = {
     // ── 코딩학습분야 (coding) ──
     {
       id: 'html',
-      name: 'HTML 학습',
-      nameEn: 'HTML Learning',
+      name: 'HTML5 + CSS3 & Glossary',
+      nameEn: 'HTML5 + CSS3 & Glossary',
       url: 'https://html.dreamitbiz.com',
       icon: 'fa-brands fa-html5',
       color: '#F97316',
@@ -1026,8 +1027,8 @@ const site = {
     },
     {
       id: 'web',
-      name: 'Web 학습',
-      nameEn: 'Web Development',
+      name: 'Vibe Backend',
+      nameEn: 'Vibe Backend',
       url: 'https://webstudy.dreamitbiz.com',
       icon: 'fa-solid fa-code',
       color: '#8B5CF6',
