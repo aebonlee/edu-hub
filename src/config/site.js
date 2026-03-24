@@ -1179,6 +1179,37 @@ const site = {
       target: 'Python 입문자, 데이터 분석 지망생',
       targetEn: 'Python beginners, aspiring data analysts'
     },
+    {
+      id: 'c-language',
+      name: 'C언어 학습',
+      nameEn: 'C Language Learning',
+      url: 'http://c-study.dreamitbiz.com/',
+      icon: 'fa-solid fa-microchip',
+      color: '#6366F1',
+      category: 'coding',
+      description: 'C언어의 기초 문법부터 포인터, 메모리 관리까지 시스템 프로그래밍의 핵심을 체계적으로 학습합니다.',
+      descriptionEn: 'Systematically learn core system programming from C language basics to pointers and memory management.',
+      techStack: ['C', '포인터', '메모리관리', '자료구조'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'C언어 기초 문법과 자료형',
+        '제어문과 함수 활용',
+        '배열과 문자열 처리',
+        '포인터와 메모리 관리',
+        '구조체와 파일 입출력'
+      ],
+      curriculumEn: [
+        'C language basic syntax and data types',
+        'Control statements and functions',
+        'Arrays and string handling',
+        'Pointers and memory management',
+        'Structures and file I/O'
+      ],
+      features: ['단계별 문법 학습', '코딩 실력 테스트', '시스템 프로그래밍 실습'],
+      featuresEn: ['Step-by-step grammar lessons', 'Coding skill tests', 'System programming practice'],
+      target: 'C언어 입문자, 시스템 프로그래밍 지망생',
+      targetEn: 'C language beginners, aspiring system programmers'
+    },
 
     // ── 자격증학습분야 (certification) ──
     {
