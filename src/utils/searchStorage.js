@@ -4,19 +4,7 @@
  */
 
 import getSupabase from './supabase';
-
-function toCamelKey(key) {
-  return key.replace(/_([a-z])/g, (_, c) => c.toUpperCase());
-}
-
-function toCamel(row) {
-  if (!row) return null;
-  const out = {};
-  for (const [k, v] of Object.entries(row)) {
-    out[toCamelKey(k)] = v;
-  }
-  return out;
-}
+import { toCamel } from './dbHelpers';
 
 /**
  * 통합 검색: blog_posts, board_posts, gallery_items에서 ilike 병렬 검색
