@@ -62,6 +62,7 @@ const site = {
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/japanese', labelKey: 'site.nav.japanese' },
         { path: '/courses/chinese', labelKey: 'site.nav.chinese' },
+        { path: '/courses/korean', labelKey: 'site.nav.korean' },
         { path: '/courses/writing', labelKey: 'site.nav.writing' },
         { path: '/courses/presentation', labelKey: 'site.nav.presentation' }
       ]
