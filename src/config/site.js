@@ -331,8 +331,8 @@ const site = {
         'Japanese reading and writing',
         'JLPT exam preparation'
       ],
-      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
-      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      features: ['API 기반 TTS 음성 서비스', '실전 시나리오', '자가 평가'],
+      featuresEn: ['API-based TTS voice service', 'Real-life scenarios', 'Self-assessment'],
       target: '일본어 실력 향상을 원하는 학습자',
       targetEn: 'Learners looking to improve Japanese skills'
     },
