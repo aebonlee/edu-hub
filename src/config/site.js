@@ -300,8 +300,8 @@ const site = {
         'Reading comprehension and summary',
         'Practice mock tests'
       ],
-      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
-      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      features: ['API 기반 TTS 음성 서비스', '실전 시나리오', '자가 평가'],
+      featuresEn: ['API-based TTS voice service', 'Real-life scenarios', 'Self-assessment'],
       target: '영어 실력 향상을 원하는 학습자',
       targetEn: 'Learners looking to improve English skills'
     },
@@ -362,8 +362,8 @@ const site = {
         'Chinese reading and writing',
         'HSK exam preparation'
       ],
-      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
-      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      features: ['API 기반 TTS 음성 서비스', '실전 시나리오', '자가 평가'],
+      featuresEn: ['API-based TTS voice service', 'Real-life scenarios', 'Self-assessment'],
       target: '중국어 실력 향상을 원하는 학습자',
       targetEn: 'Learners looking to improve Chinese skills'
     },
