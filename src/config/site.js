@@ -367,6 +367,37 @@ const site = {
       targetEn: 'Learners looking to improve Chinese skills'
     },
     {
+      id: 'korean',
+      name: '실용 한국어',
+      nameEn: 'Practical Korean',
+      url: 'https://korean.dreamitbiz.com/',
+      icon: 'fa-solid fa-language',
+      color: '#2563EB',
+      category: 'liberal-arts',
+      description: '외국인 및 다문화 학습자를 위한 실용 한국어 회화와 작문을 학습합니다.',
+      descriptionEn: 'Learn practical Korean conversation and writing for foreigners and multicultural learners.',
+      techStack: ['회화', '작문', '비즈니스한국어', 'TOPIK'],
+      difficulty: 'beginner',
+      curriculum: [
+        '한국어 기초 문법과 발음',
+        '일상 한국어 회화 패턴',
+        '비즈니스 한국어 표현',
+        '한국어 독해와 작문',
+        'TOPIK 실전 대비'
+      ],
+      curriculumEn: [
+        'Basic Korean grammar and pronunciation',
+        'Daily conversation patterns',
+        'Business Korean expressions',
+        'Korean reading and writing',
+        'TOPIK exam preparation'
+      ],
+      features: ['원어민 음성 제공', '실전 시나리오', '자가 평가'],
+      featuresEn: ['Native speaker audio', 'Real-life scenarios', 'Self-assessment'],
+      target: '한국어 실력 향상을 원하는 학습자',
+      targetEn: 'Learners looking to improve Korean skills'
+    },
+    {
       id: 'writing',
       name: '글쓰기와 소통',
       nameEn: 'Writing & Communication',
@@ -1217,7 +1248,7 @@ const site = {
       id: 'engineer',
       name: '정보처리기사',
       nameEn: 'Information Processing Engineer',
-      url: '#',
+      url: 'https://eip.dreamitbiz.com/',
       icon: 'fa-solid fa-clipboard-list',
       color: '#0D9488',
       category: 'certification',
