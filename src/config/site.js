@@ -77,7 +77,7 @@ const site = {
         { path: '/courses/ai-automation', labelKey: 'site.nav.aiAutomation' },
         { path: '/courses/ai-data-analysis', labelKey: 'site.nav.aiDataAnalysis' },
         { path: '/courses/ai-image-gen', labelKey: 'site.nav.aiImageGen' },
-        { path: '/courses/open-claw', labelKey: 'site.nav.openClaw' }
+        { path: 'https://openclaw.dreamitbiz.com/', labelKey: 'site.nav.openClaw', external: true }
       ]
     },
     {
@@ -621,7 +621,7 @@ const site = {
       id: 'open-claw',
       name: 'Open Claw',
       nameEn: 'Open Claw',
-      url: '#',
+      url: 'https://openclaw.dreamitbiz.com/',
       icon: 'fa-solid fa-hand',
       color: '#0891B2',
       category: 'ai',
