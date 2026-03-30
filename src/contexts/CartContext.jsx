@@ -6,7 +6,7 @@ const STORAGE_KEY = 'dreamitbiz_cart';
 
 const loadCart = () => {
   try {
-    const saved = sessionStorage.getItem(STORAGE_KEY);
+    const saved = localStorage.getItem(STORAGE_KEY);
     return saved ? JSON.parse(saved) : [];
   } catch {
     return [];
@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(loadCart);
 
   useEffect(() => {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(cartItems));
   }, [cartItems]);
 
   const addItem = useCallback((product) => {

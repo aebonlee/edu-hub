@@ -533,6 +533,31 @@
   font-weight: 600;
 }
 
+/* ── Upcoming Course Card ── */
+.edu-detail-card-upcoming {
+  position: relative;
+  opacity: 0.75;
+}
+.edu-detail-card-upcoming:hover {
+  opacity: 0.85;
+}
+.edu-upcoming-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(245, 158, 11, 0.12);
+  color: #D97706;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
 /* ============================================
    Coming Soon Page (Notice, QnA placeholder)
    ============================================ */
@@ -1073,6 +1098,11 @@
   background: var(--bg-medium-gray);
   border-color: var(--border-medium);
   color: var(--text-secondary);
+}
+
+[data-theme="dark"] .edu-upcoming-badge {
+  background: rgba(245, 158, 11, 0.18);
+  color: #FBBF24;
 }
 
 /* ── Dark Mode Icon Container Overrides ── */

@@ -110,11 +110,16 @@ const Courses = () => {
                   {sitesInCat.map((ls, idx) => (
                     <div
                       key={ls.id}
-                      className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}`}
+                      className={`edu-detail-card ${id === ls.id ? 'highlighted' : ''}${!ls.isService && ls.url === '#' ? ' edu-detail-card-upcoming' : ''}`}
                       id={`course-${ls.id}`}
                       data-aos="fade-up"
                       data-aos-delay={idx * 100}
                     >
+                      {!ls.isService && ls.url === '#' && (
+                        <span className="edu-upcoming-badge">
+                          <i className="fa-solid fa-clock"></i> {t('site.courses.comingSoon')}
+                        </span>
+                      )}
                       <div className="edu-detail-card-top">
                         <span className="edu-site-icon edu-site-icon-lg" style={{ color: ls.color }}><i className={ls.icon}></i></span>
                         <div>
