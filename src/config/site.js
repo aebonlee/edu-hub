@@ -433,7 +433,7 @@ const site = {
       id: 'presentation',
       name: '프레젠테이션',
       nameEn: 'Presentation Skills',
-      url: '#',
+      url: 'https://presentation.dreamitbiz.com/',
       icon: 'fa-solid fa-microphone',
       color: '#F59E0B',
       category: 'liberal-arts',
