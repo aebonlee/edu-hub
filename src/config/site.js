@@ -867,6 +867,37 @@ const site = {
       target: '경영 전공자, 스타트업 종사자, 디지털 전략 관심자',
       targetEn: 'Business majors, startup professionals, digital strategy enthusiasts'
     },
+    {
+      id: 'planning',
+      name: '기획',
+      nameEn: 'Business Planning',
+      url: 'https://planning.dreamitbiz.com',
+      icon: 'fa-solid fa-lightbulb',
+      color: '#F59E0B',
+      category: 'business',
+      description: '기획의 이론과 도구, 사례 분석, 프롬프트 실습을 통해 기획 역량을 체계적으로 키우고, 사업계획서 작성까지 학습합니다.',
+      descriptionEn: 'Systematically build planning skills through theory, tools, case studies, and prompt-based practice, including business plan writing.',
+      techStack: ['기획이론', '기획도구', '사례분석', '프롬프트실습', '사업계획서'],
+      difficulty: 'intermediate',
+      curriculum: [
+        '기획의 기본 개념과 프로세스',
+        '기획 도구 활용법 (SWOT, 캔버스 등)',
+        '실제 사례 분석과 벤치마킹',
+        'AI 프롬프트를 활용한 기획 실습',
+        '사업계획서 작성 실전'
+      ],
+      curriculumEn: [
+        'Basic planning concepts and processes',
+        'Planning tools (SWOT, Canvas, etc.)',
+        'Real case analysis and benchmarking',
+        'AI prompt-based planning practice',
+        'Business plan writing workshop'
+      ],
+      features: ['이론 학습', '기획 도구 실습', '사례 분석', '프롬프트 실습', '사업계획서 작성'],
+      featuresEn: ['Theory learning', 'Planning tool practice', 'Case analysis', 'Prompt practice', 'Business plan writing'],
+      target: '경영학 전공자, 기획 입문자, 창업 준비자',
+      targetEn: 'Business majors, planning beginners, startup founders'
+    },
 
     // ── 컴퓨터전공분야 (computer) ──
     {
