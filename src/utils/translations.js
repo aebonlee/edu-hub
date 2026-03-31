@@ -207,6 +207,7 @@ export const translations = {
         selfBranding: '셀프 브랜딩 마케팅',
         uxDesign: '고객경험디자인',
         digitalBiz: '디지털비즈니스전략세미나',
+        planning: '전략적 기획',
         // 컴퓨터전공분야
         db: '데이터 베이스',
         react: 'React 학습',
@@ -631,6 +632,7 @@ export const translations = {
         selfBranding: 'Self-Branding Marketing',
         uxDesign: 'CX Design',
         digitalBiz: 'Digital Biz Strategy',
+        planning: 'Strategic Planning',
         // Computer Science
         db: 'Database',
         react: 'React Learning',

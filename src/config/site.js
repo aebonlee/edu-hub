@@ -91,7 +91,8 @@ const site = {
         { path: '/courses/marketing-intro', labelKey: 'site.nav.marketingIntro' },
         { path: '/courses/self-branding', labelKey: 'site.nav.selfBranding' },
         { path: '/courses/ux-design', labelKey: 'site.nav.uxDesign' },
-        { path: '/courses/digital-biz', labelKey: 'site.nav.digitalBiz' }
+        { path: '/courses/digital-biz', labelKey: 'site.nav.digitalBiz' },
+        { path: '/courses/planning', labelKey: 'site.nav.planning' }
       ]
     },
     {
@@ -869,8 +870,8 @@ const site = {
     },
     {
       id: 'planning',
-      name: '기획',
-      nameEn: 'Business Planning',
+      name: '전략적 기획',
+      nameEn: 'Strategic Planning',
       url: 'https://planning.dreamitbiz.com',
       icon: 'fa-solid fa-lightbulb',
       color: '#F59E0B',
