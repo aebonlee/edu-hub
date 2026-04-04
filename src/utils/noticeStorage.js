@@ -19,12 +19,12 @@ export async function getNotices(page = 1, limit = 10) {
 
   // 전체 카운트
   const { count } = await client
-    .from('notices')
+    .from('eh_notices')
     .select('*', { count: 'exact', head: true });
 
   // 고정글 먼저, 나머지는 최신순
   const { data, error } = await client
-    .from('notices')
+    .from('eh_notices')
     .select('*')
     .order('is_pinned', { ascending: false })
     .order('created_at', { ascending: false })
@@ -47,20 +47,20 @@ export async function getNotice(id) {
 
   // 조회수 증가 (RPC 없이 직접 업데이트)
   const { data: current } = await client
-    .from('notices')
+    .from('eh_notices')
     .select('view_count')
     .eq('id', Number(id))
     .single();
 
   if (current) {
     await client
-      .from('notices')
+      .from('eh_notices')
       .update({ view_count: (current.view_count || 0) + 1 })
       .eq('id', Number(id));
   }
 
   const { data, error } = await client
-    .from('notices')
+    .from('eh_notices')
     .select('*')
     .eq('id', Number(id))
     .single();
@@ -80,7 +80,7 @@ export async function createNotice({ title, titleEn, content, contentEn, isPinne
   if (!client) return null;
 
   const { data, error } = await client
-    .from('notices')
+    .from('eh_notices')
     .insert({
       title,
       title_en: titleEn || null,
@@ -110,7 +110,7 @@ export async function updateNotice(id, { title, titleEn, content, contentEn, isP
   if (!client) return null;
 
   const { data, error } = await client
-    .from('notices')
+    .from('eh_notices')
     .update({
       title,
       title_en: titleEn || null,
@@ -138,7 +138,7 @@ export async function deleteNotice(id) {
   if (!client) return false;
 
   const { error } = await client
-    .from('notices')
+    .from('eh_notices')
     .delete()
     .eq('id', Number(id));
 

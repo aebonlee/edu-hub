@@ -9,9 +9,9 @@ export async function getDashboardStats() {
   if (!client) return { orders: 0, revenue: 0, members: 0, products: 0 };
 
   const [ordersRes, membersRes, productsRes] = await Promise.all([
-    client.from('orders').select('id, total_amount, status'),
+    client.from('eh_orders').select('id, total_amount, status'),
     client.from('user_profiles').select('id', { count: 'exact', head: true }),
-    client.from('products').select('id', { count: 'exact', head: true }).eq('is_active', true),
+    client.from('eh_products').select('id', { count: 'exact', head: true }).eq('is_active', true),
   ]);
 
   const orders = ordersRes.data || [];
@@ -36,8 +36,8 @@ export async function getAllOrders({ page = 1, limit = 20, status = null } = {})
   const to = from + limit - 1;
 
   let query = client
-    .from('orders')
-    .select('*, order_items(*)', { count: 'exact' })
+    .from('eh_orders')
+    .select('*, eh_order_items(*)', { count: 'exact' })
     .order('created_at', { ascending: false })
     .range(from, to);
 
@@ -56,7 +56,7 @@ export async function updateOrderStatus(orderId, status) {
   const client = getSupabase();
   if (!client) return null;
   const { data, error } = await client
-    .from('orders')
+    .from('eh_orders')
     .update({ status, updated_at: new Date().toISOString() })
     .eq('id', orderId)
     .select()

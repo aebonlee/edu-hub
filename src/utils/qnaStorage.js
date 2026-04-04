@@ -19,7 +19,7 @@ export async function getQnaPosts(page = 1, limit = 10, filter = 'all') {
   const from = (page - 1) * limit;
   const to = from + limit - 1;
 
-  let query = client.from('qna_posts').select('*', { count: 'exact' });
+  let query = client.from('eh_qna_posts').select('*', { count: 'exact' });
 
   if (filter === 'answered') query = query.eq('is_answered', true);
   else if (filter === 'unanswered') query = query.eq('is_answered', false);
@@ -46,20 +46,20 @@ export async function getQnaPost(id) {
   if (!client) return null;
 
   const { data: current } = await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .select('view_count')
     .eq('id', Number(id))
     .single();
 
   if (current) {
     await client
-      .from('qna_posts')
+      .from('eh_qna_posts')
       .update({ view_count: (current.view_count || 0) + 1 })
       .eq('id', Number(id));
   }
 
   const { data, error } = await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .select('*')
     .eq('id', Number(id))
     .single();
@@ -79,7 +79,7 @@ export async function createQnaPost({ title, content, category, authorId, author
   if (!client) return null;
 
   const { data, error } = await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .insert({
       title,
       content,
@@ -107,7 +107,7 @@ export async function updateQnaPost(id, { title, content, category }) {
   if (!client) return null;
 
   const { data, error } = await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .update({
       title,
       content,
@@ -133,7 +133,7 @@ export async function deleteQnaPost(id) {
   if (!client) return false;
 
   const { error } = await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .delete()
     .eq('id', Number(id));
 
@@ -152,7 +152,7 @@ export async function syncAnswerCount(postId) {
   if (!client) return;
 
   const { count } = await client
-    .from('comments')
+    .from('eh_comments')
     .select('*', { count: 'exact', head: true })
     .eq('post_id', Number(postId))
     .eq('post_type', 'qna');
@@ -160,7 +160,7 @@ export async function syncAnswerCount(postId) {
   const answerCount = count || 0;
 
   await client
-    .from('qna_posts')
+    .from('eh_qna_posts')
     .update({
       answer_count: answerCount,
       is_answered: answerCount > 0
