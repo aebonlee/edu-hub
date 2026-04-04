@@ -77,6 +77,9 @@ const site = {
         { path: '/courses/ai-automation', labelKey: 'site.nav.aiAutomation' },
         { path: '/courses/ai-data-analysis', labelKey: 'site.nav.aiDataAnalysis' },
         { path: '/courses/ai-image-gen', labelKey: 'site.nav.aiImageGen' },
+        { path: 'https://ai-agent.dreamitbiz.com/', labelKey: 'site.nav.aiAgent', external: true },
+        { path: 'https://fine-tuning.dreamitbiz.com/', labelKey: 'site.nav.fineTuning', external: true },
+        { path: 'https://claude.dreamitbiz.com/', labelKey: 'site.nav.claudeMaster', external: true },
         { path: 'https://openclaw.dreamitbiz.com/', labelKey: 'site.nav.openClaw', external: true }
       ]
     },
@@ -617,6 +620,99 @@ const site = {
       featuresEn: ['Multi-tool practice', 'Prompt pattern learning', 'Commercial usage techniques'],
       target: '디자이너, 콘텐츠 크리에이터',
       targetEn: 'Designers, content creators'
+    },
+    {
+      id: 'ai-agent',
+      name: 'AI Agent 업무혁신',
+      nameEn: 'AI Agent Work Lab',
+      url: 'https://ai-agent.dreamitbiz.com/',
+      icon: 'fa-solid fa-user-gear',
+      color: '#4F46E5',
+      category: 'ai',
+      description: '생성형 AI를 넘어 실무에 적용하는 AI Agent 학습 플랫폼. 리서치, 문서화, 자동화, 아이디어 구체화를 위한 실무형 AI Agent 교육을 제공합니다.',
+      descriptionEn: 'An AI Agent learning platform that goes beyond generative AI to real-world applications. Provides practical AI Agent training for research, documentation, automation, and idea development.',
+      techStack: ['AI Agent', 'Claude', 'ChatGPT', 'Automation'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'AI Agent 개념과 실무 활용',
+        '리서치 자동화 Agent 구축',
+        '문서 작성 및 요약 Agent',
+        '업무 프로세스 자동화 Agent',
+        '멀티 Agent 협업 시스템 구축'
+      ],
+      curriculumEn: [
+        'AI Agent concepts and practical applications',
+        'Building research automation agents',
+        'Document writing and summarization agents',
+        'Business process automation agents',
+        'Building multi-agent collaboration systems'
+      ],
+      features: ['실무 중심 Agent 실습', '다양한 AI 모델 활용', '업무 자동화 파이프라인'],
+      featuresEn: ['Practice-focused agent training', 'Multi AI model utilization', 'Work automation pipelines'],
+      target: 'AI를 업무에 활용하고 싶은 직장인, 기획자, 개발자',
+      targetEn: 'Office workers, planners, and developers who want to use AI at work'
+    },
+    {
+      id: 'fine-tuning',
+      name: 'AI 파인튜닝',
+      nameEn: 'AI Fine-Tuning',
+      url: 'https://fine-tuning.dreamitbiz.com/',
+      icon: 'fa-solid fa-sliders',
+      color: '#9333EA',
+      category: 'ai',
+      description: 'AI 모델을 내 목적에 맞게 미세조정(Fine-Tuning)하는 방법을 학습합니다. 커스텀 데이터셋 구축부터 모델 배포까지 전 과정을 다룹니다.',
+      descriptionEn: 'Learn how to fine-tune AI models for your specific needs. Covers the entire process from custom dataset creation to model deployment.',
+      techStack: ['Fine-Tuning', 'Python', 'Hugging Face', 'LoRA'],
+      difficulty: 'advanced',
+      curriculum: [
+        'Fine-Tuning 개념과 원리',
+        '커스텀 데이터셋 구축 방법',
+        'LoRA/QLoRA를 활용한 효율적 학습',
+        '모델 평가와 최적화',
+        '파인튜닝 모델 배포 및 활용'
+      ],
+      curriculumEn: [
+        'Fine-tuning concepts and principles',
+        'Building custom datasets',
+        'Efficient training with LoRA/QLoRA',
+        'Model evaluation and optimization',
+        'Fine-tuned model deployment and utilization'
+      ],
+      features: ['실습 중심 학습', 'GPU 환경 제공', '모델 커스터마이징'],
+      featuresEn: ['Practice-oriented learning', 'GPU environment provided', 'Model customization'],
+      target: 'AI 모델을 직접 커스터마이징하고 싶은 개발자, 연구자',
+      targetEn: 'Developers and researchers who want to customize AI models'
+    },
+    {
+      id: 'claude-master',
+      name: 'Claude 마스터',
+      nameEn: 'Claude Master',
+      url: 'https://claude.dreamitbiz.com/',
+      icon: 'fa-solid fa-wand-magic-sparkles',
+      color: '#D97706',
+      category: 'ai',
+      description: 'Anthropic의 Claude AI를 완벽하게 활용하는 방법을 학습합니다. Claude API, 프롬프트 최적화, 실무 활용 사례까지 체계적으로 다룹니다.',
+      descriptionEn: 'Learn to fully utilize Anthropic\'s Claude AI. Systematically covers Claude API, prompt optimization, and real-world use cases.',
+      techStack: ['Claude', 'API', 'Prompt Engineering', 'MCP'],
+      difficulty: 'intermediate',
+      curriculum: [
+        'Claude AI 소개와 특장점',
+        'Claude API 활용 기초',
+        '고급 프롬프트 최적화 기법',
+        'Claude MCP(Model Context Protocol) 활용',
+        'Claude 기반 AI 서비스 구축 프로젝트'
+      ],
+      curriculumEn: [
+        'Introduction to Claude AI and its strengths',
+        'Claude API fundamentals',
+        'Advanced prompt optimization techniques',
+        'Using Claude MCP (Model Context Protocol)',
+        'Building AI services with Claude project'
+      ],
+      features: ['Claude 전문 학습', 'API 실습 환경', 'MCP 프로토콜 활용'],
+      featuresEn: ['Claude-specialized learning', 'API practice environment', 'MCP protocol utilization'],
+      target: 'Claude AI를 깊이 활용하고 싶은 개발자, 업무 전문가',
+      targetEn: 'Developers and professionals who want to deeply utilize Claude AI'
     },
     {
       id: 'open-claw',
