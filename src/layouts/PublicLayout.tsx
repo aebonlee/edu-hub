@@ -55,6 +55,7 @@ const PublicLayout = () => {
 
             {/* 자유 열람 — 로그인 없이 둘러보기 가능 (학습사이트 링크만 로그인 필요) */}
             <Route path="/" element={<Home />} />
+            <Route path="/hubs" element={<Courses />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<Courses />} />
             <Route path="/franchise" element={<Franchise />} />
