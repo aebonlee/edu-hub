@@ -1,28 +1,17 @@
-import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import useCountUp from '../hooks/useCountUp';
 import useAOS from '../hooks/useAOS';
 import site from '../config/site';
 
-const CATEGORY_DESC_KEYS = {
-  'liberal-arts': 'site.home.categoryLiberalArtsDesc',
-  'ai': 'site.home.categoryAiDesc',
-  'business': 'site.home.categoryBusinessDesc',
-  'computer': 'site.home.categoryComputerDesc',
-  'coding': 'site.home.categoryCodingDesc',
-  'certification': 'site.home.categoryCertificationDesc',
-  'career': 'site.home.categoryCareerDesc'
-};
-
 const Home = () => {
   const { t, language } = useLanguage();
 
   useAOS();
 
-  const statSites = useCountUp(20, 1500, true, 0);
-  const statStudents = useCountUp(500, 2000, true, 200);
-  const statCategories = useCountUp(4, 1500, true, 400);
+  const statHubs = useCountUp(7, 1500, true, 0);
+  const statSites = useCountUp(53, 2000, true, 200);
+  const statStudents = useCountUp(500, 2000, true, 400);
   const statCompletion = useCountUp(95, 2000, true, 600);
 
   return (
@@ -64,12 +53,12 @@ const Home = () => {
               {t('site.home.heroDesc')}
             </p>
             <div className="hero-buttons">
-              <Link to="/courses" className="btn btn-primary">
+              <a href="#hub-section" className="btn btn-primary">
                 {t('site.home.ctaStart')}
-              </Link>
-              <Link to="/franchise" className="btn btn-secondary">
+              </a>
+              <a href="/franchise" className="btn btn-secondary">
                 {t('site.home.ctaFranchise')}
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -80,6 +69,11 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title text-center">{t('site.home.statsTitle')}</h2>
           <div className="edu-stats-grid">
+            <div className="edu-stats-card" ref={statHubs.ref}>
+              <span className="edu-stats-number">{statHubs.count}</span>
+              <span className="edu-stats-suffix"></span>
+              <p className="edu-stats-label">{t('site.home.statHubs')}</p>
+            </div>
             <div className="edu-stats-card" ref={statSites.ref}>
               <span className="edu-stats-number">{statSites.count}</span>
               <span className="edu-stats-suffix">+</span>
@@ -90,11 +84,6 @@ const Home = () => {
               <span className="edu-stats-suffix">+</span>
               <p className="edu-stats-label">{t('site.home.statStudents')}</p>
             </div>
-            <div className="edu-stats-card" ref={statCategories.ref}>
-              <span className="edu-stats-number">{statCategories.count}</span>
-              <span className="edu-stats-suffix"></span>
-              <p className="edu-stats-label">{t('site.home.statCategories')}</p>
-            </div>
             <div className="edu-stats-card" ref={statCompletion.ref}>
               <span className="edu-stats-number">{statCompletion.count}</span>
               <span className="edu-stats-suffix">%</span>
@@ -104,32 +93,44 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Category Cards Section */}
-      <section className="edu-sites-section">
+      {/* Hub Cards Section */}
+      <section id="hub-section" className="edu-sites-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">{t('site.home.categoriesTitle')}</h2>
             <p className="section-subtitle">{t('site.home.categoriesSubtitle')}</p>
           </div>
           <div className="edu-category-grid">
-            {site.categories.map((cat, idx) => {
-              const coursesInCat = site.learningSites.filter((s) => s.category === cat.id);
-              return (
-                <div key={cat.id} className="edu-category-card" data-aos="fade-up" data-aos-delay={idx * 100}>
-                  <div className="edu-category-card-icon"><i className={cat.icon}></i></div>
-                  <h3>{language === 'en' ? cat.nameEn : cat.name}</h3>
-                  <span className="edu-category-count">
-                    {coursesInCat.length}{t('site.home.categoryCoursesCount')}
-                  </span>
-                  <p className="edu-category-desc">
-                    {t(CATEGORY_DESC_KEYS[cat.id])}
-                  </p>
-                  <Link to={cat.path} className="btn btn-secondary edu-category-btn">
-                    {t('site.home.categoryViewAll')} →
-                  </Link>
+            {site.hubs.map((hub, idx) => (
+              <div key={hub.id} className="edu-category-card" data-aos="fade-up" data-aos-delay={idx * 100}>
+                <div className="edu-category-card-icon" style={{ color: hub.color }}>
+                  <i className={hub.icon}></i>
                 </div>
-              );
-            })}
+                <h3>{language === 'en' ? hub.name : hub.nameKo}</h3>
+                <span className="edu-category-count">
+                  {hub.siteCount}{t('site.home.categoryCoursesCount')}
+                </span>
+                <p className="edu-category-desc">
+                  {language === 'en' ? hub.descriptionEn : hub.description}
+                </p>
+                <div className="edu-hub-sites-tags">
+                  {(language === 'en' ? hub.sitesEn : hub.sites).slice(0, 5).map((s) => (
+                    <span key={s} className="edu-tech-tag">{s}</span>
+                  ))}
+                  {hub.siteCount > 5 && (
+                    <span className="edu-tech-tag">+{hub.siteCount - 5}</span>
+                  )}
+                </div>
+                <a
+                  href={hub.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary edu-category-btn"
+                >
+                  {t('site.home.categoryViewAll')} →
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -140,9 +141,9 @@ const Home = () => {
           <div className="cta-content text-center">
             <h2>{t('site.home.ctaBottomTitle')}</h2>
             <p>{t('site.home.ctaBottomDesc')}</p>
-            <Link to="/courses" className="btn btn-primary-large">
+            <a href="/franchise" className="btn btn-primary-large">
               {t('site.home.ctaBottomBtn')}
-            </Link>
+            </a>
           </div>
         </div>
       </section>

@@ -158,9 +158,9 @@ const Franchise = () => {
                       required
                     >
                       <option value="">{t('site.franchise.formSiteSelect')}</option>
-                      {site.learningSites.map((ls) => (
-                        <option key={ls.id} value={ls.id}>
-                          {language === 'en' ? ls.nameEn : ls.name}
+                      {site.hubs.map((hub) => (
+                        <option key={hub.id} value={hub.id}>
+                          {language === 'en' ? hub.name : hub.nameKo}
                         </option>
                       ))}
                     </select>

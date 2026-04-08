@@ -37,7 +37,11 @@ const Footer = () => {
             <ul>
               {site.footerLinks.map((link, i) => (
                 <li key={i}>
-                  <Link to={link.path}>{t(link.labelKey)}</Link>
+                  {link.external ? (
+                    <a href={link.path} target="_blank" rel="noopener noreferrer">{t(link.labelKey)}</a>
+                  ) : (
+                    <Link to={link.path}>{t(link.labelKey)}</Link>
+                  )}
                 </li>
               ))}
             </ul>
