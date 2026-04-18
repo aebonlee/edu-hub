@@ -10,7 +10,7 @@ export async function getDashboardStats() {
 
   const [ordersRes, membersRes, productsRes] = await Promise.all([
     client.from('eh_orders').select('id, total_amount, status'),
-    client.from('user_profiles').select('id', { count: 'exact', head: true }),
+    client.from('user_profiles').select('id', { count: 'exact', head: true }).contains('visited_sites', [window.location.hostname]),
     client.from('eh_products').select('id', { count: 'exact', head: true }).eq('is_active', true),
   ]);
 
