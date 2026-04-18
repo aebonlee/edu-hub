@@ -86,7 +86,7 @@ const Shop = () => {
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  className={`shop-filter-tab ${activeCategory === cat ? 'active' : ''}`}
+                  className={`shop-filter-btn ${activeCategory === cat ? 'active' : ''}`}
                   onClick={() => setActiveCategory(cat)}
                 >
                   {t(`shop.${cat}`)}
@@ -116,7 +116,7 @@ const Shop = () => {
               {filtered.map((product) => (
                 <div key={product.id} className={`product-card ${product.isSoldOut ? 'sold-out' : ''} ${!product.isActive ? 'inactive' : ''}`}>
                   {product.imageUrl && (
-                    <div className="product-image">
+                    <div className="product-thumbnail">
                       <img src={product.imageUrl} alt={isEn ? product.titleEn : product.title} />
                     </div>
                   )}
